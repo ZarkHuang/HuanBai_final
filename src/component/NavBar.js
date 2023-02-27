@@ -94,7 +94,7 @@ return(
                         <a href="#">關於循環杯</a>
                         <ul className="drop-menu">
                             <li className="drop-menu_item"><a href="/evnIntro">什麼是循環杯</a></li>
-                            <li className="drop-menu_item"><a href="/lazyBag">循環懶人包</a></li>
+                            <li className="drop-menu_item"><a href="/fordummies">循環懶人包</a></li>
                             <li className="drop-menu_item"><a href="/news">相關消息</a></li>
                             <li className="drop-menu_item"><a href="/psych">心理測驗</a></li>
                         </ul>

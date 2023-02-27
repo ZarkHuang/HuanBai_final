@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap");
+
+
+/*End Invest*/
+/*End How Is Works*/
+.how-is-works {
+  background: url("https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/how-is-works-bg.png") no-repeat;
+  background-color: #66BB6A;
+  margin: auto;
+}
+
+.works__content {
+  max-width: 70rem;
+  margin: auto;
+  color: #ffffff;
+  padding: 0 1.5rem;
+}
+
+.works__head {
+  text-align: center;
+}
+
+.works__title {
+  font-size: 3.6rem;
+}
+
+.works__description {
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.works__body {
+  margin: 5rem 0 10rem;
+}
+
+.form_progressbar {
+  display: flex;
+  grid-column-gap: 13rem;
+}
+
+.progressbar__step {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 7.2rem;
+  height: 7.2rem;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.progressbar__step.active {
+  background-color: #ffffff;
+  color: #66BB6A;
+}
+.progressbar__step.active:not(:first-child)::after {
+  height: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: progressBarStepAnimate 0.5s linear forwards;
+}
+.progressbar__step:not(:first-child)::before, .progressbar__step:not(:first-child)::after {
+  position: absolute;
+  content: "";
+  right: 100%;
+  width: 13rem;
+  height: 1px;
+  background-color: #ffffff;
+  pointer-events: none;
+}
+
+@keyframes progressBarStepAnimate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.works__footer {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+}
+
+.works__step__content {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  grid-gap: 2.5rem;
+  transition: 0.5s all linear;
+  padding: 3rem;
+  position: relative;
+  align-items: center;
+}
+.works__step__content::before {
+  position: absolute;
+  content: "";
+  left: 1.5rem;
+  top: 1.5rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.75);
+  border-radius: 0.8rem;
+}
+
+.works__step_title {
+  font-size: 2.4rem;
+  flex: 5;
+}
+
+.works__step_description {
+  flex: 6;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  /* Opportunities*/
+  .opportunity {
+    width: 100%;
+  }
+
+  /*End Opportunities*/
+  /*How Is Works*/
+  .form_progressbar {
+    grid-column-gap: 7rem;
+    justify-content: center;
+  }
+
+  .progressbar__step {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .progressbar__step:not(:first-child)::before, .progressbar__step:not(:first-child)::after {
+    width: 7rem;
+  }
+
+  .works__step__content {
+    flex-direction: column;
+  }
+
+  .works__step_title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .works__footer {
+    width: 100%;
+  }
+
+
+}
+@media screen and (max-width: 500px) {
+  /*Global*/
+.opportunities__title,
+.invest__title,
+.works__title,
+.testimonials__title,
+.farm-invest__title {
+    font-size: 3rem;
+  }
+
+  .invest__description,
+.works__description {
+    font-size: 1.6rem;
+  }
+
+  /*End Global*/
+  /*Hero*/
+  .hero__title {
+    font-size: 3.2rem;
+  }
+
+  /*End Opportunities*/
+  /*Invest Section*/
+  .invest__body {
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  }
+
+  .invest__item__title {
+    font-size: 2.4rem;
+  }
+
+  /*End Invest Section*/
+  /*How Is Works*/
+  .form_progressbar {
+    grid-column-gap: 4rem;
+    justify-content: center;
+  }
+
+  .progressbar__step {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .progressbar__step:not(:first-child)::before, .progressbar__step:not(:first-child)::after {
+    width: 4rem;
+  }
+
+  .works__step_title {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  /*Invest Section*/
+  .invest__body {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+
+  /*End Invest Section*/
+  /*How Is Works*/
+  .progressbar__step {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /*End How Is Works*/
+  /*Testimonials */
+  .testimonial__profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /*End Testimonials*/
+  /*Farm Invest*/
+  .btn__farm--invest {
+    width: 80%;
+    min-width: initial;
+  }
+
+  /*End Farm Invest*/
+}

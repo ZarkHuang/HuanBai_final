@@ -1,0 +1,184 @@
+
+:root{
+  --mainColor-white: #FEFCFC;
+--mainColor-blue: #162F3A;
+--subColor-blue: #2D5363;
+--subColor-lightBlue: #9BC9DD;
+--mainColor-green: #64C676;
+}
+
+.fordummies-container{
+  background-color: var(--mainColor-white);
+  margin: 10rem auto;
+}
+
+/*End Opportunities*/
+/* Invest*/
+.invest {
+    margin: auto;
+  }
+  
+  .invest__head {
+    max-width: 70rem;
+  }
+  
+  .invest__title {
+    font-size: 3.6rem;
+  }
+  
+  .invest__description {
+    margin-top: 1.5rem;
+    color: #324148;
+    font-size: 1.8rem;
+  }
+  
+  .invest__body {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-gap: 2.5rem;
+  }
+  
+  .invest__item {
+    padding: 2.5rem;
+  }
+  .invest__item:nth-child(1) {
+    background: url("../../../img/fordummeis_img/searchBox-bg.jpg") no-repeat center/cover;
+  }
+  .invest__item:nth-child(2) {
+    background: url("../../../img/fordummeis_img/img-news3.jpg") no-repeat center/cover;
+  }
+  
+  .invest__item__subtitle {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    position: relative;
+  }
+  .invest__item__subtitle::after {
+    position: absolute;
+    content: "";
+    top: 3rem;
+    left: 0;
+    width: 5.6rem;
+    height: 4px;
+    background-color: #ffffff;
+  }
+  
+  .invest__item__body {
+    margin: 5rem 0 2.5rem;
+  }
+  
+  .invest__item__title {
+    color: #ffffff;
+    font-size: 3.1rem;
+    max-width: 30rem;
+  }
+  
+  .invest__item_description {
+    font-size: 1.6rem;
+    color: #ffffff;
+    max-width: 30rem;
+  }
+  
+  .btn__invest {
+    color: #66BB6A;
+    display: inline-block;
+    width: 20rem;
+    text-align: center;
+    -webkit-box-shadow: 1px 10px 30px -10px #66bb6a;
+    -moz-box-shadow: 1px 10px 30px -10px #66bb6a;
+    box-shadow: 1px 10px 30px -10px #66bb6a;
+    display: inline-block;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+.btn__invest:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: -2;
+}
+.btn__invest:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #66BB6A;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.btn__invest:hover {
+  color: #ffffff;
+}
+.btn__invest:hover:before {
+  width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    /*Global*/
+  .opportunities__title,
+  .invest__title,
+  .works__title,
+  .testimonials__title,
+  .farm-invest__title {
+      font-size: 3rem;
+    }
+  
+    .invest__description,
+  .works__description {
+      font-size: 1.6rem;
+    }
+
+    /*End Opportunities*/
+    /*Invest Section*/
+    .invest__body {
+      grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    }
+  
+    .invest__item__title {
+      font-size: 2.4rem;
+    }
+
+  }
+  @media screen and (max-width: 360px) {
+    /*Invest Section*/
+    .invest__body {
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    }
+  
+    /*End Invest Section*/
+    /*How Is Works*/
+    .progressbar__step {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    /*End How Is Works*/
+    /*Testimonials */
+    .testimonial__profile {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /*End Testimonials*/
+    /*Farm Invest*/
+    .btn__farm--invest {
+      width: 80%;
+      min-width: initial;
+    }
+  
+    /*End Farm Invest*/
+  }

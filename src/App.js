@@ -1,5 +1,4 @@
 import {
-    BrowserRouter,
     Routes,
     Route,
   } from "react-router-dom";
@@ -21,6 +20,7 @@ import Votes from "./pages/votes";
 import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
+import Fordummies from "./pages/fordummies";
 
 // import './style/'
 
@@ -37,7 +37,7 @@ function App(){
             <Route path="/brand" element={<Brand/>} />
             <Route path="/contactUs" element={<ContactUs/>} />
             <Route path="/shopIntro" element={<ShopIntro/>} />
-            <Route path="/lazyBag" element={<LazyBag/>} />
+            <Route path="/fordummies" element={<Fordummies/>} />
             <Route path="/map" element={<Map/>} />
             <Route path="/shop" element={<Shop/>} />
             <Route path="/news" element={<News/>} />
