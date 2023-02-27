@@ -1,8 +1,8 @@
-function Map(){
+function Shop(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default Shop;

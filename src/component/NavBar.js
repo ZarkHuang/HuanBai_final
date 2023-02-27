@@ -3,7 +3,8 @@ import logoImg from "../img/index/headerLogo.svg";
 function NavBar(){
     
 return(
-  <div className="container navBarBg">
+  <div className="navBarBg">
+  <div className="container navBarBox">
     <div className="headerWrap_top">
         <div className="row">
         <div className="col-lg-3 navMenu_box">
@@ -22,6 +23,11 @@ return(
             <nav className="rwd_navMenu_box">
                 <img className="rwd_navMenu_logo" src="./img/index/footerLogo.svg" alt="" />
                 <ul className="rwd_navMenu">
+
+                    <li className="rwd_navMenu_item">
+                        <a href="/" className="rwd_navMenu_sub_item rwd_navMenu_item_a">首頁</a>
+                    </li>
+
                     <li className="rwd_navMenu_item">
                         <a className="rwd_navMenu_sub_item rwd_navMenu_item_a">關於我們</a>
                         <ul className="rwd_navMenu_sub">
@@ -30,6 +36,7 @@ return(
                             <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-3</a></li>
                         </ul>
                     </li>
+                    
                     <li className="rwd_navMenu_item">
                         <a className="rwd_navMenu_item_a">循環地圖</a>
                         <ul className="rwd_navMenu_sub">
@@ -72,42 +79,44 @@ return(
         <div className="col-lg-7 navBarRow">
             <nav className="navBar_box">
                 <ul className="navBar">
+
                     <li className="navBar_item">
                         <a href="#">關於我們</a>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="#">測試頁面-1</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-2</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-3</a></li>
-
+                            <li className="drop-menu_item"><a href="/brand">品牌簡介</a></li>
+                            <li className="drop-menu_item"><a href="/contactUs">與我們聯絡</a></li>                  
                         </ul>
                     </li>
                     <li className="navBar_item">
-                        <a href="#">循環地圖</a>
+                        <a href="/map">循環地圖</a>
+                    </li>
+                    <li className="navBar_item">
+                        <a href="#">關於循環杯</a>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="#">測試頁面-1</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-2</a></li>
+                            <li className="drop-menu_item"><a href="/evnIntro">什麼是循環杯</a></li>
+                            <li className="drop-menu_item"><a href="/lazyBag">循環懶人包</a></li>
+                            <li className="drop-menu_item"><a href="/news">相關消息</a></li>
+                            <li className="drop-menu_item"><a href="/psych">心理測驗</a></li>
                         </ul>
                     </li>
                     <li className="navBar_item">
-                        <a href="#">什麼是循環杯</a>
-                        <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="#">測試頁面-1</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-2</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-3</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-4</a></li>
-                        </ul>
+                      <a href="/shop">線上商店</a>
+          
                     </li>
-                    <li className="navBar_item"><a href="#">循環懶人包</a></li>
                     <li className="navBar_item">
-                        <a href="#">相關消息</a>
+                      <a href="/votes">投票專區</a>
+          
+                    </li>
+                
+                    <li className="navBar_item">
+                        <a href="/" data-bs-toggle='modal' data-bs-target='#edison'>會員專區</a>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="#">測試頁面-1</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-2</a></li>
-                            <li className="drop-menu_item"><a href="#">測試頁面-3</a></li>
-
+                            <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li>
                         </ul>
                     </li>
-                    <li className="navBar_item"><a href="#"  data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a></li>
+                    {/* <li className="navBar_item"><a href="#"  data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a></li> */}
                 </ul>
             </nav>
         </div>
@@ -184,6 +193,7 @@ return(
   </div>
     </div>
     </div>
+</div>
 
 
 )

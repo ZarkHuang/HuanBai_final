@@ -1,13 +1,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"
-// import "../bootstrap-5.3-2/bootstrap";
-// import "../style/index/";
-// import "../style/layout.css";
 import ToTop from "../component/ToTop";
 import Scroll from "../component/Scroll";
-import NavBar from "../component/NavBar";
-import Footer from "../component/Footer";
+// import NavBar from "../component/NavBar";
+// import Footer from "../component/Footer";
 import decDot1 from "../img/index/decSpan/decDot1.svg"
 import decDot2 from "../img/index/decSpan/decDot2.svg"
 import decDot3 from "../img/index/decSpan/decDot3.svg"

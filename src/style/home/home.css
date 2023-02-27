@@ -709,10 +709,6 @@ html a, body a {
   }
 }
 @media (max-width: 768px) {
-  .indexBox {
-    border-radius: 0 0 136px 136px;
-  }
-
   .rwd_linkBtn {
     width: 100%;
   }

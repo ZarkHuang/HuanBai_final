@@ -1,8 +1,8 @@
-function Map(){
+function LazyBag(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default LazyBag;

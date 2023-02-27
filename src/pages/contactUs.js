@@ -1,8 +1,8 @@
-function Map(){
+function ContactUs(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default ContactUs;

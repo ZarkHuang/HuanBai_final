@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+#root {
+  background-color: #64C676;
+}
+
 #toTop {
   position: fixed;
   font-size: 60px;
@@ -26,6 +30,13 @@
 
 .navBarBg {
   background-color: #FEFCFC;
+}
+
+.navBarBox {
+  background-color: #FEFCFC;
+  position: relative;
+  z-index: 99;
+  padding-bottom: 65px;
 }
 
 .headerWrap {
@@ -222,8 +233,16 @@
   animation-delay: 0.7s;
 }
 
+.wrapBox {
+  width: 100%;
+  background-color: #FEFCFC;
+  border-radius: 0 0 205px 205px;
+  min-height: 672px;
+  overflow: hidden;
+}
+
 footer {
-  margin-top: 125px;
+  margin-top: 90px;
   min-height: 210px;
 }
 footer .footerRow {

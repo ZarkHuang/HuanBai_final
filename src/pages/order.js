@@ -1,8 +1,8 @@
-function Map(){
+function Order(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default Order;

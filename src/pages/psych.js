@@ -1,8 +1,8 @@
-function Map(){
+function Psych(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default Psych;

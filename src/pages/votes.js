@@ -1,8 +1,8 @@
-function Map(){
+function Votes(){
 
     return(
         <div>test</div>
     );
 };
 
-export default Map;
+export default Votes;

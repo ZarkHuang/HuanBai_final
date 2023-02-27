@@ -7,14 +7,19 @@
     --fontSize-H5:18px;
 }
 
+#edison{
+  z-index: 99;
+}
 
 #edison p{
   font-size: var(--fontSize-H5);
+  z-index: 8;
 }
 .modal{
   --bs-modal-border-radius:0;
   --bs-modal-border-color:0;
   --bs-modal-border-width:0;
+  
 }
 #edison .modal-content{
   background-color: var(--mainColor-white);
