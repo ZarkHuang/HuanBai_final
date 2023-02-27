@@ -30,17 +30,16 @@
 
 .navBarBg {
   background-color: #FEFCFC;
+  padding-bottom: 90px;
 }
 
 .navBarBox {
   background-color: #FEFCFC;
   position: relative;
   z-index: 99;
-  padding-bottom: 65px;
 }
 
 .headerWrap {
-  padding-top: 94px;
   padding-bottom: 80px;
   position: relative;
 }
@@ -563,8 +562,4 @@ footer .termsBox_item a {
   .headerWrap .scrollWrap {
     display: none;
   }
-}
-
-.fordummies-container{
-  margin: 10rem auto;
 }
