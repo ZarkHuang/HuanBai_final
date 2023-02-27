@@ -25,51 +25,45 @@ return(
                 <ul className="rwd_navMenu">
 
                     <li className="rwd_navMenu_item">
-                        <a href="/" className="rwd_navMenu_sub_item rwd_navMenu_item_a">首頁</a>
-                    </li>
-
-                    <li className="rwd_navMenu_item">
                         <a className="rwd_navMenu_sub_item rwd_navMenu_item_a">關於我們</a>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-1</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-2</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-3</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">品牌簡介</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">與我們聯絡</a></li>
+                            
                         </ul>
                     </li>
                     
                     <li className="rwd_navMenu_item">
                         <a className="rwd_navMenu_item_a">循環地圖</a>
-                        <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-1</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-2</a></li>
-                        </ul>
 
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">什麼是循環杯</a>
+                        <a className="rwd_navMenu_item_a">關於循環杯</a>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-1</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-2</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-3</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-3</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">什麼是循環杯</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">循環懶人包</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">相關消息</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">心理測驗</a></li>
                         </ul>
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">循環懶人包</a>
+                        <a className="rwd_navMenu_item_a">線上商店</a>
 
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">相關消息</a>
+                        <a className="rwd_navMenu_item_a">投票專區</a>
+                   
+                    </li>
+                    <li className="rwd_navMenu_item">
+                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>會員專區</a>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-1</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-2</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">測試頁面-3</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">會員資訊</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">投票紀錄</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">訂單記錄</a></li>
                         </ul>
+                   
                     </li>
-                    <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a>
 
-                    </li>
                 </ul>
             </nav>
             {/* <!--//////////////////////--> */}

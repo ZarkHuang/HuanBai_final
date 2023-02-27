@@ -11,7 +11,6 @@ import EvnIntro from "./pages/evnIntro";
 import Brand from "./pages/brand";
 import ContactUs from "./pages/contactUs";
 import ShopIntro from "./pages/shop";
-import LazyBag from "./pages/lazyBag";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
 import News from "./pages/news";
