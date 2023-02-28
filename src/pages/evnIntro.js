@@ -11,7 +11,7 @@ import whitePot2 from "../img/evnIntro/decoPot/decoPot_white2.svg";
 import whitePot3 from "../img/evnIntro/decoPot/decoPot_white3.svg";
 import needTextDeco from "../img/evnIntro/needBox-textDeco.svg";
 import benefitsDeco from "../img/evnIntro/benefitsBg-deco.svg";
-import benefitsIcon from ".../img/evnIntro/benefits-Icon.svg";
+import benefitsIcon from "../img/evnIntro/benefits-Icon.svg";
 
 
 function EvnIntro(){
