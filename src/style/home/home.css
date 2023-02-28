@@ -10,6 +10,10 @@ html a, body a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1640px;
+}
+
 #root {
   overflow-x: hidden;
 }
@@ -520,6 +524,7 @@ html a, body a {
   margin-left: 10px;
   position: relative;
   bottom: 2px;
+  width: 18px;
 }
 
 .contactUs_wrap {
