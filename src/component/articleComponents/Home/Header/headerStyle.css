@@ -59,3 +59,55 @@ input{
     font-weight: 500;
 }
 
+
+
+.copy {
+  display: block;
+  max-width: 500px;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: lightgray;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.copy-white {
+  color: gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-small{
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--mainColor-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.head-small {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--mainColor-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.head-centered {
+  text-align: center;
+}

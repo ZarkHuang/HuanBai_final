@@ -19,11 +19,16 @@ h1{
 
 .blog-goBack{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
     color: var(--mainColor-green);
     font-weight: 500;
     margin-top: 1rem;
     display: block;
+    padding:0 0 0 20px;
+}
+
+.blog-goBack span{
+    color: #64C676;
 }
 
 .blog-wrap header{

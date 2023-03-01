@@ -24,7 +24,7 @@ const News = () => {
   return (
     <>
       <ScrollToTop />
-      <Link to="/#" className='blog-goBack' >
+      <Link to="/news" className='blog-goBack' >
         <span> &#8592; </span> <span>Go Back</span>
       </Link>
       

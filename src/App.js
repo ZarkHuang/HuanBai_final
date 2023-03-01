@@ -23,6 +23,8 @@ import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
+import News from "./pages/News";
+import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 // import './style/'
 
 
@@ -41,7 +43,10 @@ function App(){
             <Route path="/fordummies" element={<Fordummies/>} />
             <Route path="/map" element={<Map/>} />
             <Route path="/shop" element={<Shop/>} />
-            <Route path="/news" element={<Article/>} />
+            <Route path='/news' element={<Article/>} />
+            <Route path='/news/:id' element={<News/>}/>
+            <Route path='/page1' element={<EmptyList />}/>
+            <Route path='/page2' element={<EmptyList/>}/>
             <Route path="/psych" element={<Psych/>} />
             <Route path="/psychtest" element={<PsychologicalTestPage />} />
             <Route path="/votes" element={<Votes/>} />
