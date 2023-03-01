@@ -20,6 +20,7 @@ import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
+import GoLog from "./pages/memberpage/GoLogin";
 
 // import './style/'
 
@@ -43,8 +44,9 @@ function App(){
             <Route path="/psych" element={<Psych/>} />
             <Route path="/votes" element={<Votes/>} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
-            <Route path="/member" element={<Member/>} />
+            <Route path="/member/*" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
+            <Route path="/golog" element={<GoLog/>} />
 
            </Routes>
             </div>
