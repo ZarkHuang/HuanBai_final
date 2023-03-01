@@ -15,12 +15,14 @@ import Map from "./pages/map";
 import Shop from "./pages/shop";
 import News from "./pages/news";
 import Psych from "./pages/psych";
+import PsychologicalTestPage from "./pages/psychologicalTest";
 import Votes from "./pages/votes";
+import Vote from "./pages/vote";
 import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
-
+import Answer from "./pages/answer"
 // import './style/'
 
 
@@ -41,10 +43,14 @@ function App(){
             <Route path="/shop" element={<Shop/>} />
             <Route path="/news" element={<News/>} />
             <Route path="/psych" element={<Psych/>} />
+            <Route path="/psychtest" element={<PsychologicalTestPage />} />
             <Route path="/votes" element={<Votes/>} />
+            <Route path="/Vote/:voteId" element={< Vote />} />
+            <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
+
 
            </Routes>
             </div>
