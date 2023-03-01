@@ -265,6 +265,103 @@ app.get("/member/changepassword",loginApi,function(req,res){
 
 
 
+// get所有投票內容
+app.get("/vote", (req, res) => {
+    const q = "SELECT * FROM `votes`"
+    conn.query(q, (err, data) => {
+        if (err) return res.json(err) // 失敗回傳什麼
+        return res.json(data)           // 成功回傳交換回來的資料
+
+    })
+})
+
+// get 單一個，投票內容
+app.get("/vote/:voteId", (req, res) => {
+
+    const q = "SELECT * FROM votes WHERE voteId = ?"
+    conn.query(q,
+        [req.params.voteId],
+        (err, data) => {
+            if (err) return res.json(err);
+            return res.json(data);
+        });
+})
+
+// 更改投票票數的
+app.post('/updateOption1', (req, res) => {
+    const option1 = req.body.option;
+    const voteId = req.body.voteId;
+
+    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1',
+        [voteId], (err, data) => {
+            console.log("voteErr:", err)
+            if (err) return res.json(err); // 失敗回傳什麼
+            console.log("votedata", data)
+            return res.json(data);            // 成功回傳交換回來的資料
+        });
+});
+
+app.post('/updateOption2', (req, res) => {
+    const option2 = req.body.option;
+    const voteId = req.body.voteId;
+
+    conn.query('UPDATE votes SET numberOfOption2 = numberOfOption2 + 1 WHERE voteId = ? and option2 =  option2',
+        [voteId], (err, data) => {
+            if (err) return res.json(err); // 失敗回傳什麼
+            return res.json(data);            // 成功回傳交換回來的資料
+        });
+});
+
+app.post('/updateOption3', (req, res) => {
+    const option3 = req.body.option;
+    const voteId = req.body.voteId;
+
+    conn.query('UPDATE votes SET numberOfOption3 = numberOfOption3 + 1 WHERE voteId = ? and option3 =  option3',
+        [voteId], (err, data) => {
+            if (err) return res.json(err); // 失敗回傳什麼
+            return res.json(data);            // 成功回傳交換回來的資料
+        });
+});
+
+app.post('/updateOption4', (req, res) => {
+    const option4 = req.body.option;
+    const voteId = req.body.voteId;
+
+    conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1 WHERE voteId = ? and option4 =  option4',
+        [voteId], (err, data) => {
+            if (err) return res.json(err); // 失敗回傳什麼
+            return res.json(data);            // 成功回傳交換回來的資料
+        });
+});
+
+
+// 顯示投票結果的
+app.get("/vote/answer/:voteId", (req, res) => {
+
+    const q = "SELECT * FROM votes WHERE voteId = ?"
+    conn.query(q,
+        [req.params.voteId],
+        (err, data) => {
+            if (err) return res.json(err);
+            const voteData = data[0];  // 取得第一筆資料，即該投票資料
+            const totalVotes = voteData.numberOfOption1 + voteData.numberOfOption2 + voteData.numberOfOption3 + voteData.numberOfOption4;
+            const percentage1 = (voteData.numberOfOption1 / totalVotes * 100).toFixed(0);
+            const percentage2 = (voteData.numberOfOption2 / totalVotes * 100).toFixed(0);
+            const percentage3 = (voteData.numberOfOption3 / totalVotes * 100).toFixed(0);
+            const percentage4 = (voteData.numberOfOption4 / totalVotes * 100).toFixed(0);
+            return res.json({
+                data,
+                totalVotes,
+                percentage1,
+                percentage2,
+                percentage3,
+                percentage4
+            });
+        });
+})
+
+
+
 
 
 
