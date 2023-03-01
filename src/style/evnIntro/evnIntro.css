@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+.evnIntroBox {
+  margin-top: 80px;
+}
+.evnIntroBox .evnIntro-row {
+  align-items: center;
+}
+.evnIntroBox .evnIntro_l-left {
+  margin-left: 43px;
+  position: relative;
+  top: -17px;
+}
+.evnIntroBox .evnIntro_l-left .textBox {
+  letter-spacing: 1px;
+}
+.evnIntroBox .evnIntro_l-left .textBox .subTitle {
+  font-size: 26px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #9BC9DD;
+  font-weight: 700;
+  color: #9BC9DD;
+}
+.evnIntroBox .evnIntro_l-left .textBox .mainTitle {
+  font-size: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  color: #64C676;
+}
+.evnIntroBox .evnIntro_l-left .contentText {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #4D5051;
+  font-weight: 400;
+  line-height: 38px;
+  margin-top: 35px;
+  padding-right: 40px;
+}
+.evnIntroBox .evnIntro_l-right {
+  position: relative;
+  text-align: center;
+}
+.evnIntroBox .evnIntro_l-right .decoPot {
+  position: absolute;
+}
+.evnIntroBox .evnIntro_l-right .decoPot1 {
+  width: 48px;
+  left: 48px;
+  top: 36px;
+}
+.evnIntroBox .evnIntro_l-right .decoPot2 {
+  width: 22px;
+  right: 48px;
+  top: 36px;
+}
+.evnIntroBox .evnIntro_l-right .decoPot3 {
+  width: 32px;
+  right: 29px;
+  top: 315px;
+}
+.evnIntroBox .evnIntro_l-right .decoPot4 {
+  width: 26px;
+  right: 47px;
+  top: 370px;
+}
+.evnIntroBox .evnIntro_imgBox {
+  position: relative;
+  display: inline-block;
+}
+.evnIntroBox .evnIntro_imgBox .img-evnIntro {
+  width: 513px;
+}
+.evnIntroBox .evnIntro_imgBox .img-evnCupIll {
+  width: 134px;
+  position: absolute;
+  left: 182px;
+  top: 169px;
+}
+
+.needBox {
+  margin-top: 100px;
+}
+.needBox_bg {
+  background-color: #64C676;
+  height: 637px;
+  overflow: hidden;
+  position: relative;
+}
+.needBox_bg .decoBg1 {
+  width: 482px;
+  position: absolute;
+  bottom: -14px;
+  left: 0px;
+}
+.needBox_bg .decoBg2 {
+  width: 600px;
+  position: absolute;
+  right: 0;
+  bottom: -39px;
+}
+.needBox .textBox {
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 90px;
+}
+.needBox .textBox .subTitle {
+  font-size: 26px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #9BC9DD;
+  font-weight: 700;
+  color: #FEFCFC;
+}
+.needBox .textBox .mainTitle {
+  font-size: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  color: #FEFCFC;
+}
+.needBox .textBox .mainTitle {
+  margin-top: 15px;
+}
+.needBox_introWrap {
+  margin-top: -350px;
+  z-index: 5;
+  position: relative;
+  text-align: center;
+}
+.needBox_introWrap .whitePot1 {
+  width: 84px;
+  left: 150px;
+  top: 14px;
+}
+.needBox_introWrap .whitePot2 {
+  width: 92px;
+  right: 130px;
+  top: -49px;
+}
+.needBox_introWrap .whitePot3 {
+  width: 26px;
+  right: 122px;
+  top: 279px;
+}
+.needBox_introWrap .whitePot1, .needBox_introWrap .whitePot2, .needBox_introWrap .whitePot3 {
+  position: absolute;
+}
+.needBox_content {
+  background: #FFFFFF;
+  box-shadow: 6px 12px 16px rgba(102, 143, 102, 0.12);
+  border-radius: 34px;
+  max-width: 768px;
+  display: inline-block;
+  padding: 34px 83px;
+  overflow: hidden;
+  position: relative;
+}
+.needBox_content_textDeco {
+  width: 250px;
+  position: absolute;
+  z-index: 2;
+  right: -4px;
+  top: -38px;
+}
+.needBox_textBox {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #4D5051;
+  font-weight: 400;
+  line-height: 38px;
+  z-index: 5;
+  position: relative;
+}
+.needBox_textBox:nth-of-type(1) {
+  margin-bottom: 45px;
+}
+.needBox_textBox:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.needBox_textBox_title {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.needBox_textBox_text {
+  text-align: left;
+}
+
+.startBox {
+  margin-top: 150px;
+}
+.startBox .textBox {
+  letter-spacing: 1px;
+  margin-left: 43px;
+}
+.startBox .textBox .subTitle {
+  font-size: 26px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #9BC9DD;
+  font-weight: 700;
+  color: #9BC9DD;
+}
+.startBox .textBox .mainTitle {
+  font-size: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  color: #162F3A;
+}
+
+.benefitsBox {
+  margin-top: 120px;
+}
+.benefitsBox_bg {
+  height: 603px;
+  background-color: #9BC9DD;
+  overflow: hidden;
+  position: relative;
+}
+.benefitsBox_bg-deco {
+  width: 400px;
+  position: absolute;
+  top: -1px;
+  left: -14px;
+}
+.benefitsBox .textBox {
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 90px;
+}
+.benefitsBox .textBox .subTitle {
+  font-size: 26px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #9BC9DD;
+  font-weight: 700;
+  color: #FEFCFC;
+}
+.benefitsBox .textBox .mainTitle {
+  font-size: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  color: #FEFCFC;
+}
+.benefitsBox .textBox .mainTitle {
+  margin-top: 15px;
+}
+.benefitsBox .benefits_list {
+  margin: 0 40px;
+  margin-top: -290px;
+}
+.benefitsBox .benefits_item {
+  background: #FEFCFC;
+  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.08);
+  border-radius: 34px;
+  padding: 6px;
+  margin: 0 25px;
+  position: relative;
+}
+.benefitsBox .benefits_item_bg {
+  height: 202px;
+  border-radius: 30px 30px 0px 0px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.benefitsBox .benefits_item .bgImg1 {
+  background-image: url("../../img/evnIntro/img-benefits1.svg");
+}
+.benefitsBox .benefits_item .bgImg2 {
+  background-image: url("../../img/evnIntro/img-benefits2.svg");
+}
+.benefitsBox .benefits_item .bgImg3 {
+  background-image: url("../../img/evnIntro/img-benefits3.svg");
+}
+.benefitsBox .benefits_item_content {
+  padding: 25px 30px 60px 30px;
+}
+.benefitsBox .benefits_item_title {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #162F3A;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.benefitsBox .benefits_item_text {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #4D5051;
+  font-weight: 400;
+  line-height: 38px;
+}
+.benefitsBox .ico-benefits {
+  width: 32px;
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+}
+
+.policyBox {
+  margin-top: 260px;
+  margin-bottom: 240px;
+}
+.policyBox .textBox {
+  letter-spacing: 1px;
+}
+.policyBox .textBox .subTitle {
+  font-size: 26px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #9BC9DD;
+  font-weight: 700;
+  color: #9BC9DD;
+}
+.policyBox .textBox .mainTitle {
+  font-size: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #64C676;
+  font-weight: 700;
+  color: #64C676;
+}
+
+.policy-row {
+  align-items: end;
+}
+.policy_textWrap {
+  margin-left: 43px;
+  margin-right: 43px;
+}
+.policy_Intro {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #4D5051;
+  font-weight: 400;
+  line-height: 38px;
+  margin-top: 50px;
+}
+.policy_list {
+  display: flex;
+  justify-content: space-evenly;
+}
+.policy_item {
+  background: #EFEDED;
+  border-radius: 29px;
+  width: 162px;
+  height: 171px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.policy_item:nth-of-type(1) img {
+  width: 105px;
+}
+.policy_item:nth-of-type(2) img {
+  width: 113px;
+}
+.policy_item:nth-of-type(3) img {
+  width: 118px;
+}
+.policy_item:nth-of-type(4) img {
+  width: 102px;
+}
