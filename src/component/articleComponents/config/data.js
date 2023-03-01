@@ -94,19 +94,6 @@ export const blogList = [
       authorAvatar: '/assets/images/author.jpg',
       createdAt: 'June 03, 2021',
       cover: '/assets/images/Synthwave-Postmodern.jpg',
-    },
-    {
-      id: 7,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'art',
-      subCategory: ['skill', 'design', 'passion'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/Synthwave-Postmodern.jpg',
-    },
+    }
   ];
   

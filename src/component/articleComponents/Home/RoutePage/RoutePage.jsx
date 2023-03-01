@@ -11,6 +11,7 @@ const  RoutePage =() => {
   const [ blogs, setBlogs] = useState(blogList);
   const [toggle,setToggle] = useState(1)
   const [searchKey, setSearchKey] = useState(blogList);
+  const [Active, setActive] = useState('#64C676');
 
 
 
@@ -18,7 +19,7 @@ const  RoutePage =() => {
     setToggle(id);
     setBlogs(blogList);
     setSearchKey('');
-    
+    setActive(id); // 新增的狀態
   }
 
   function updateToggleNews(id){
@@ -44,12 +45,13 @@ const  RoutePage =() => {
 
 
   return (
-    <div className='container d-flex align-center justify-content-center'>
+    <div className=' align-center justify-content-center'>
       <div className='col-12 tab p-5'>
-        <ul className='d-flex'>
-          <li className='flex-fill' onClick={()=>updateToggle(1)}>全部</li>
-          <li className='flex-fill' onClick={()=>updateToggleNews(2)}>新聞</li>
-          <li className='flex-fill' onClick={()=>updateToggleArticle(3)}>文章</li>
+        <ul className='d-flex routerpage'>
+        <li className={toggle === 1 ? 'flex-fill active' : 'flex-fill'} onClick={()=>updateToggle(1)}>全部</li>
+        <li className={toggle === 2 ? 'flex-fill active' : 'flex-fill'} onClick={()=>updateToggleNews(2)}>新聞</li>
+        <li className={toggle === 3 ? 'flex-fill active' : 'flex-fill'} onClick={()=>updateToggleArticle(3)}>文章</li>
+
         </ul>
         <div className={toggle === 1 ? "show-content" : "content"}>
           {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs}/>} 

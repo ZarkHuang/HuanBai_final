@@ -16,33 +16,18 @@
 }
 
 body{
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   padding: 5rem 0 0 0;
 }
 
 button,
 input{
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
-.container{
-  max-width: 1140px;
-  width: 95%;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
 
 /* common style */
 
-.home-header{
-    text-align: center;
-    margin-top: 5rem;
-}
-
-.home-header h2{
-    color: var(--subColor-blue);
-    font-size: 2rem;
-}
 
 .home-header h1{
     font-size: 3rem;
@@ -60,54 +45,34 @@ input{
 }
 
 
-
-.copy {
-  display: block;
-  max-width: 500px;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: lightgray;
-  line-height: 1.8em;
+/* titel text */
+.home-header{
   text-align: center;
+  margin:10rem 0;
 }
 
-.copy-white {
-  color: gray;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-.content-small{
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 1.2em;
-  font-family: 'Noto Sans TC', sans-serif;
-  color: var(--mainColor-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.head-small {
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
-  line-height: 1.2em;
-  font-weight: 600;
-  font-family: 'Noto Sans TC', sans-serif;
-  color: var(--mainColor-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.head-centered {
+.opportunities__head {
   text-align: center;
+  max-width: 70rem;
+  margin: 0 auto 10rem;
+}
+
+.opportunities__title {
+  font-size: 3.6rem;
+  color: #64C676 !important;
+}
+
+.opportunities__description {
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #263238;
+}
+
+@media screen and (max-width: 500px) {
+  /*Global*/
+.opportunities__title {
+    font-size: 3rem;
+  }
 }

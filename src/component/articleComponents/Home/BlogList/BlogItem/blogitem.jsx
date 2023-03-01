@@ -29,7 +29,7 @@ const BlogItem = ({
       <Chip label={category} />
       <h3>{title}</h3>
       <p className='blogItem-desc'>{description1}</p>
-      <footer>
+      <footer className='article-footer'>
         <div className='blogItem-author'>
           <img src={authorAvatar} alt='avatar' />
           <div>

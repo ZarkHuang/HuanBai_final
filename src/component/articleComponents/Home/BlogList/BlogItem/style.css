@@ -60,6 +60,18 @@ body{
   }
 
 
+  .blogItem-box{
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .blogItem-box{
+      margin-bottom: 3rem;
+      padding: 0;
+    }
+  }
+
   .blogItem-desc {
     position: relative;
     max-height: 42px;
@@ -79,8 +91,9 @@ body{
   .blogItem-wrap footer {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin:2rem 0;
     justify-content: space-between;
+    min-height:0;
   }
   
   .blogItem-link {
@@ -107,4 +120,3 @@ body{
     color: #a9a9a9;
     font-weight: 600;
   }
-  
