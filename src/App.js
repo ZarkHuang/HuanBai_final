@@ -31,20 +31,20 @@ function App(){
             <NavBar/>     
             <div className="wrapBox">    
            <Routes>
-            <Route path="/Huanbai" element={<Home/>} />
-            <Route path="/Huanbai/evnIntro" element={<EvnIntro/>} />
-            <Route path="/Huanbai/brand" element={<Brand/>} />
-            <Route path="/Huanbai/contactUs" element={<ContactUs/>} />
-            <Route path="/Huanbai/shopIntro" element={<ShopIntro/>} />
-            <Route path="/Huanbai/fordummies" element={<Fordummies/>} />
-            <Route path="/Huanbai/map" element={<Map/>} />
-            <Route path="/Huanbai/shop" element={<Shop/>} />
-            <Route path="/Huanbai/news" element={<News/>} />
-            <Route path="/Huanbai/psych" element={<Psych/>} />
-            <Route path="/Huanbai/votes" element={<Votes/>} />
-            <Route path="/Huanbai/voteRecord" element={<VoteRecord/>} />
-            <Route path="/Huanbai/member" element={<Member/>} />
-            <Route path="/Huanbai/order" element={<Order/>} />
+            <Route path="Huanbai/" element={<Home/>} />
+            <Route path="Huanbai/evnIntro" element={<EvnIntro/>} />
+            <Route path="Huanbai/brand" element={<Brand/>} />
+            <Route path="Huanbai/contactUs" element={<ContactUs/>} />
+            <Route path="Huanbai/shopIntro" element={<ShopIntro/>} />
+            <Route path="Huanbai/fordummies" element={<Fordummies/>} />
+            <Route path="Huanbai/map" element={<Map/>} />
+            <Route path="Huanbai/shop" element={<Shop/>} />
+            <Route path="Huanbai/news" element={<News/>} />
+            <Route path="Huanbai/psych" element={<Psych/>} />
+            <Route path="Huanbai/votes" element={<Votes/>} />
+            <Route path="Huanbai/voteRecord" element={<VoteRecord/>} />
+            <Route path="Huanbai/member" element={<Member/>} />
+            <Route path="Huanbai/order" element={<Order/>} />
 
            </Routes>
             </div>
