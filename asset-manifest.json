@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Huanbai/static/css/main.130bb011.css",
-    "main.js": "/Huanbai/static/js/main.aac4341f.js",
+    "main.css": "/Huanbai/static/css/main.2774a152.css",
+    "main.js": "/Huanbai/static/js/main.581268cb.js",
     "static/js/787.1bdcadad.chunk.js": "/Huanbai/static/js/787.1bdcadad.chunk.js",
     "static/media/searchBox-bg.jpg": "/Huanbai/static/media/searchBox-bg.3a15128e0f82ce425f0a.jpg",
     "static/media/img-news2.jpg": "/Huanbai/static/media/img-news2.13b06c9e0c24244ec33f.jpg",
@@ -13,11 +13,14 @@
     "static/media/benefitsBg-deco.svg": "/Huanbai/static/media/benefitsBg-deco.bc4ad1b8be36484cb01291656d539a48.svg",
     "static/media/img-news1.jpg": "/Huanbai/static/media/img-news1.4ba9dad73d91bdbb6d81.jpg",
     "static/media/aboutUs-img3.jpg": "/Huanbai/static/media/aboutUs-img3.4fa358620465b76009a7.jpg",
+    "static/media/straw2.png": "/Huanbai/static/media/straw2.a689eddc01addf6f1adf.png",
     "static/media/img-news5.jpg": "/Huanbai/static/media/img-news5.a3e7e580be147f277c83.jpg",
     "static/media/aboutUs-img2.jpg": "/Huanbai/static/media/aboutUs-img2.93e6049e72207c29576c.jpg",
     "static/media/needBox-deco1.svg": "/Huanbai/static/media/needBox-deco1.47a2523df7816d4826160e8f02257351.svg",
     "static/media/needBox-deco2.svg": "/Huanbai/static/media/needBox-deco2.9a0c37718a707c1b205403813b568627.svg",
     "static/media/aboutUs-img5.jpg": "/Huanbai/static/media/aboutUs-img5.63c6b912114b106402c2.jpg",
+    "static/media/cup1.jpg": "/Huanbai/static/media/cup1.3aa85f2621282cbff90e.jpg",
+    "static/media/cupcozy3.jpg": "/Huanbai/static/media/cupcozy3.19a5de2ab58c1fc0e3e7.jpg",
     "static/media/aboutUs-img1.jpg": "/Huanbai/static/media/aboutUs-img1.722652db8da34e2d7655.jpg",
     "static/media/footerLogo.svg": "/Huanbai/static/media/footerLogo.f6b1bad2ef25bd213a7b4090db11ba21.svg",
     "static/media/headerLogo.svg": "/Huanbai/static/media/headerLogo.8161c7f2f5c879dfc03094a250d809cb.svg",
@@ -44,12 +47,12 @@
     "static/media/decDot3.svg": "/Huanbai/static/media/decDot3.374ce71fb69ccd98fb231d2fc3d0edbb.svg",
     "static/media/decDot4.svg": "/Huanbai/static/media/decDot4.39a850629b3910b5f34956ddf792ec61.svg",
     "static/media/decDot7.svg": "/Huanbai/static/media/decDot7.066308e050dfae004ed4fe6bee3b0ffa.svg",
-    "main.130bb011.css.map": "/Huanbai/static/css/main.130bb011.css.map",
-    "main.aac4341f.js.map": "/Huanbai/static/js/main.aac4341f.js.map",
+    "main.2774a152.css.map": "/Huanbai/static/css/main.2774a152.css.map",
+    "main.581268cb.js.map": "/Huanbai/static/js/main.581268cb.js.map",
     "787.1bdcadad.chunk.js.map": "/Huanbai/static/js/787.1bdcadad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.130bb011.css",
-    "static/js/main.aac4341f.js"
+    "static/css/main.2774a152.css",
+    "static/js/main.581268cb.js"
   ]
 }
