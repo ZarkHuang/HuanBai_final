@@ -4,9 +4,6 @@ import "./Opportunities.css";
 
 const Opportunities = () => {
 
-
-
-  
   return (
     <section className="opportunities">
       <div className="opportunities__img">
@@ -32,47 +29,40 @@ const Opportunities = () => {
               alt="Icon"
               className="opportunity__icon"
             />
-            <h4 className="opportunity__title">Connect with our farmers</h4>
+            <h4 className="opportunity__title">品質把關 好安心</h4>
             <p className="opportunity__description">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            容器選用食品級PP材質，符合食藥署《食品器具容器包裝衛生標準》。清洗委託專業清洗廠，符合衛福部《餐具清洗良好作業指引》，每季SGS檢驗合格。
             </p>
           </div>
 
           <div
             className="opportunity"
-
           >
             <img
               src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/opportunites/opportunity-2.svg"
               alt="Icon"
-              className="opportunity__icon"
+              className="opportunity__icon icon2"
             />
-            <h4 className="opportunity__title">Grow your business</h4>
+            <h4 className="opportunity__title">多點借還 好方便</h4>
             <p className="opportunity__description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+            與全台餐飲店家合作，外帶外送直接使用循環容器盛裝你的餐點，享用完畢後，歸還到任一合作店家或自助歸還站。這裡借，那裡還，就是這麼方便！
             </p>
           </div>
+
           <div
             className="opportunity"
-
           >
             <img
               src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/opportunites/opportunity-3.svg"
               alt="Icon"
               className="opportunity__icon"
             />
-            <h4 className="opportunity__title">Social Impact Invesment</h4>
+            <h4 className="opportunity__title">享受美食 零廢棄</h4>
             <p className="opportunity__description">
-              At vero eos et accusamus et iusto odio praesentium atque corrupti
-              quos dolores et quas molestias excepturi sint occaecati cupiditate
-              non provident, similique sunt in culpa qui officia deserunt
-              mollitia
+            享受美食也可以不垃圾，循環容器透過清洗取代拋棄，邀請你一起選擇對環境更好的外帶方式！
             </p>
           </div>
+          
         </div>
       </div>
     </section>

@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap");
 
 
+
+:root{
+  --mainColor-white: #FEFCFC;
+  --mainColor-blue: #162F3A;
+  --subColor-blue: #2D5363;
+  --subColor-lightBlue: #9BC9DD;
+  --mainColor-green: #64C676;
+}
 /*End Invest*/
 /*End How Is Works*/
 .how-is-works {
@@ -92,6 +100,8 @@
   padding: 3rem;
   position: relative;
   align-items: center;
+  color: var(--mainColor-white);
+  margin: auto;
 }
 .works__step__content::before {
   position: absolute;
@@ -108,6 +118,7 @@
 .works__step_title {
   font-size: 2.4rem;
   flex: 5;
+  margin: auto;
 }
 
 .works__step_description {
