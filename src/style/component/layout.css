@@ -252,6 +252,9 @@ footer .socialWrap {
   justify-content: flex-start;
   align-items: center;
 }
+footer .socialWrap img:nth-of-type(1) {
+  width: 316px;
+}
 footer .socialList {
   display: flex;
   justify-content: space-evenly;

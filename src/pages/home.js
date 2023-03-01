@@ -21,6 +21,7 @@ import aboutUs3 from "../img/index/aboutUs-img3.jpg"
 import aboutUs4 from "../img/index/aboutUs-img4.jpg"
 import aboutUs5 from "../img/index/aboutUs-img5.jpg"
 import btnMore from "../img/index/btn-more.svg"
+import imgPhone from "../img/index/img-phone.svg"
 
 
 function Home(){
@@ -199,8 +200,8 @@ function Home(){
                             </div>
                             <div className="col-lg-1"></div>
                             <div className="col-lg-6">
-                                <div className="testImg" data-aos="zoom-in" data-aos-duration="1200">
-                                    待補圖
+                                <div className="imgPhone" data-aos="zoom-in" data-aos-duration="1200">
+                                   <img src={imgPhone} />
                                 </div>
                             </div>
                         </div>

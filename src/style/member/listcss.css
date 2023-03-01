@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+:root{
+    --mainColor-white:#FEFCFC;
+    --mainColor-blue:#162F3A;
+    --subColor-blue:#2D5363; 
+    --mainColor-seBlue:#70A0B4;
+    --subColor-lightBlue:#9BC9DD;
+    --mainColor-greenDark:#50A960;
+    --mainColor-green:#64C676;
+    --hoverColor-green:#91FFA5;
+    --mainColor-lightGreen:#B2FFC0;
+    --lightColor-light:#F4FFF6;
+    --mainColor-gray:#666666;
+    --mainColor-black:#000000;
+    --fontSize-H1:50px;
+    --fontSize-H2:38px;
+    --fontSize-H3:28px;
+    --fontSize-H4:21px;
+    --fontSize-H5:18px;
+    --fontSize-H6:16px;
+    --fontSize-P:14px;
+    --fontSize-SMALL:12px;
+    --shadow-100:0px 0px 2px rgba(0 0 0 / 0.1);
+    --shadow-200:0px 4px 8px rgba(0 0 0 / 0.2);
+    --shadow-300:0px 4px 8px rgba(0 0 0 / 0.3);
+    --shadow-400:0px 6px 16px rgba(0 0 0 / 0.3);
+    --borderRadius-10:10px;
+    --borderRadius-100:100%;
+}
+
+.col-form-label{
+    font-size: var(--fontSize-H5);
+}
+
+.Etopic{
+    font-size: 34px;
+    
+    
+}

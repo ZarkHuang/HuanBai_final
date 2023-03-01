@@ -1,7 +1,10 @@
+import IndexPsychologicalTest from "../component/indexPsychologicalTest/indexPsychologicalTest";
+
 function Psych(){
 
     return(
-        <div>test</div>
+        < IndexPsychologicalTest />
+        // <p>123</p>
     );
 };
 

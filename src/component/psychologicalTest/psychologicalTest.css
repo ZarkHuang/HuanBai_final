@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --mainColor-white: #FEFCFC;
+  --mainColor-blue: #162F3A;
+  --subColor-blue: #2D5363;
+  --subColor-lightBlue: #9BC9DD;
+  --mainColor-green: #64C676;
+}
+
+#scoreId {
+  background: #fff;
+  color: 000;
+  font-size: 18px;
+  width: 200px;
+  margin: 0 auto;
+  font-weight: 600;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz {
+  width: 975px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.question {
+  background-color: var(--mainColor-green);
+  color: white;
+  padding: 10px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 80%;
+  margin-left: 10%;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+
+.answer {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 10%;
+  background: #ffffff;
+  border: 4px solid var(--mainColor-green);
+  border-radius: 15px;
+  min-height: 50px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+  color: var(--mainColor-blue);
+  font-size: 24px;
+  font-family: "Noto Sans TC", sans-serif;
+  align-items: center;
+  padding-left: 10px;
+
+}
+
+.answer div:focus {
+  background-color: rgb(33, 95, 95);
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+.answers {
+  display: inline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.answer-text {
+  font-weight: 600px;
+  display: flex;
+  align-items: center;
+  margin-left: 500px;
+}
+
+
+#test-next-button {
+  margin: 10px auto;
+  color: #fdfdfd;
+  background: var(--mainColor-green);
+  width: 300px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 75px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+
+.rowContainer {
+  background-color: #64C676;
+  border-radius: 50px;
+  height: 75%;
+}
+
+
+
+#testAnswerWords {
+  position: right;
+  color: white;
+  font-weight: bold;
+
+
+
+}
+
+#title p {
+  display: inline;
+}
+
+#animalName {
+  font-size: 36px;
+}
+
+#animalHashtag {
+  font-size: 28px;
+  /* margin-left: 40px; */
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+#animalDescription {
+  font-size: 24px;
+  margin-top: 100px;
+}
+
+
+
+.testAnswerRowSave {
+  padding: 50px 25px 50px 25px;
+
+}
+
+#saveImage {
+  border: 3px solid black;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+
+}
+
+#shareImage {
+  border: 3px solid black;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+
+}
+
+#btnToMap {
+  border: 3px solid black;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+
+}
+
+/* #shareImage * {
+  display: inline;
+} */
+
+
+
+.correct-answer {
+  border: 5px solid #2D5363;
+}
+
+.shareBtns {
+
+  width: 30px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+
+
+@media only screen and (max-width: 557px) {
+  .answerImg {
+    max-width: 100%;
+    object-fit: cover;
+    max-height: max-content;
+
+  }
+
+  .rowContainer {
+    margin: 10px;
+  }
+
+
+}
+
+@media only screen and (min-width: 776px) {
+  .answerImg {
+    padding-right: 0;
+  }
+
+  .testIcons svg {
+    width: 25px;
+    margin-left: 20px;
+  }
+
+
+}
+
+.answerImg {
+  max-width: 100%;
+  width: 800px;
+  object-fit: cover;
+  max-height: max-content;
+}

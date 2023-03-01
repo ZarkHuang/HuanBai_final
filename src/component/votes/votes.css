@@ -1,0 +1,141 @@
+:root {
+    --mainColor-white: #FEFCFC;
+    --mainColor-blue: #162F3A;
+    --subColor-blue: #2D5363;
+    --subColor-lightBlue: #9BC9DD;
+    --mainColor-green: #64C676;
+}
+
+.allVotes {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.votenames {
+    /* background-color: rgb(196, 160, 160); */
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* justify-content:left;   */
+}
+
+/* body {
+    display: block;
+    /* justify-content: center; */
+/* align-items: center; */
+/* height: 100vh; */
+/* margin: 50px;
+    background-color: rgb(67, 190, 190) ;
+    color: red;
+}  */
+
+.voteCard {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 350px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+    background-color: #64C676;
+    display: inline-block;
+}
+
+
+.voteCard:hover .drop-down-window {
+    font-size: 24px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.voteCard:hover .img {
+    filter: blur(1.5px);
+    transform: scale(1);
+}
+
+.voteCard .img-cont {
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    height: 250PX;
+   
+
+    /* background-image: url('../img/1pexels-laura-the-explaura-3608263.jpg'); */
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+
+.voteCard .img-cont span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: light;
+    font-size: 30px;
+    opacity: 0;
+    transform: translatey(-100%);
+    transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+    font-family: sans-serif;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+
+
+.voteCard .img-cont img {
+    z-index: 0;
+    width: 100%;
+    transform: scale(1.2);
+    transition: all 0.3s;
+    /* background-color: #9BC9DD; */
+}
+
+.voteCard .content-cont {
+    padding: 20px;
+}
+
+.voteCard .content-cont span {
+    display: block;
+}
+
+.voteCard .content-cont .voteCard-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 32px;
+}
+
+.voteCard .content-cont .btn-goVote {
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+    float: right;
+    border-radius: 5px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.voteCard .content-cont .btn-goVote:hover {
+   text-decoration: underline;
+}
+
+.voteCard .content-cont .voteCard-body {
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+
+.linkToVote {
+    color: #162F3A;
+}
+
+.linkToVote:hover {
+    color: #162F3A;
+}

@@ -1,0 +1,95 @@
+import React, { useEffect, useState } from 'react'; // 改狀態的
+import axios from 'axios'; // 
+import { Link } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import "./vote.css"
+
+
+
+
+
+const Votecm = () => {
+    const { voteId } = useParams();
+    const voteIdNumber = parseInt(voteId, 10);
+    const [votecm, setVotecm] = useState([]);
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [voteResult, setVoteResult] = useState(null);
+
+    useEffect(() => {
+        const fecthAllVotecm = async () => {
+            try {
+                const res = await axios.get(`http://localhost:1802/vote/${voteIdNumber}`);
+                setVotecm(res.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fecthAllVotecm();
+    }, [voteIdNumber]);
+
+
+    // 改顏色邊框顏色的
+    function handleClick(option, event) {
+        console.log(option);
+        document.querySelectorAll('.voteAnswer').forEach((answer) => {
+            answer.classList.remove('highlight');
+        });
+        event.target.classList.add('highlight');
+    }
+
+    function handleClick(option) {
+        setSelectedOption(option);
+        console.log(option);
+    }
+
+    // ㄅㄤ
+    const handleVoteSubmit = async () => {
+        try {
+            const res = await axios.post('http://localhost:3001/vote', {
+                option: selectedOption,
+            });
+            setVoteResult(res.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    console.log("123", votecm);
+
+    return (
+
+        votecm.map((ooo) => (
+
+            <div className="votePoll" >
+                <div className="question">{ooo.voteName}</div>
+                <div className="voteAnswers">
+                    <button className="voteAnswer">
+                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
+                            {ooo.option1}
+                        </Link>
+                    </button>
+                    <button className="voteAnswer">
+                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
+                            {ooo.option2}
+                        </Link>
+                    </button>
+                    <button className="voteAnswer">
+                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
+                            {ooo.option3}
+                        </Link>
+                    </button>
+                    <button className="voteAnswer" onClick={() => handleClick(ooo.option1)}>
+                        {/* <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote"> */}
+                            {ooo.option4}
+                        {/* </Link> */}
+                    </button>
+                </div>
+            </div>
+
+        ))
+
+    );
+
+}
+
+export default Votecm;

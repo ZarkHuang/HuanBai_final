@@ -1,7 +1,9 @@
+import Votescm from "../component/votes/votes";
+
 function Votes(){
 
     return(
-        <div>test</div>
+        < Votescm />
     );
 };
 

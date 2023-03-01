@@ -78,6 +78,17 @@ $(document).ready(function () {
 		$("#oop").show();
 		$("#signinbtn").css("background-color", "var(--mainColor-green4)");
 		$("#ooa").hide();
-	  })
+	})
+
+	//會員修改
+	$("#EdiChangeInfo").on("click",function(){
+		$("#infoCantChange").hide()
+		$("#InfoCanChange").show()
+	})
+	$("#EdiChangeInfoBack").on("click",function(){
+		$("#InfoCanChange").hide()
+		$("#infoCantChange").show()
+	})
 
 });
+

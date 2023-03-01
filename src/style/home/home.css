@@ -352,12 +352,8 @@ html a, body a {
   transition: all 0.3s ease-in-out;
 }
 
-.testImg {
-  width: 100%;
-  height: 607px;
-  background-color: #E9F8FF;
-  border-radius: 110px;
-  text-align: center;
+.imgPhone img {
+  width: 698px;
 }
 
 .news_wrap {

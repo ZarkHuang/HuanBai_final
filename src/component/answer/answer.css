@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+.answerPoll {
+    position: relative;
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 10%;
+    height: 550px;
+    background-color: var(--mainColor-green);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(35, 30, 128, 0.05);
+}
+
+.votePoll .question {
+    /* padding: 20px; */
+    font-size: 28px;
+    border-bottom: 1px solid #4C788C;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.votePoll.answers {
+    padding: 20px 20px 10px;
+    background-color: #4C788C;
+
+
+}
+
+.voteAnswer {
+    position: relative;
+    width: 90%;
+    height: 40px;
+    padding: 0px 10px;
+    line-height: 40px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border-radius: 10px; 
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--mainColor-white);;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+
+
+.answerBackColor {
+    width: 100%;
+    background-color: rgb(161, 195, 223);
+    color: black;
+    min-width: 25px;
+    overflow: visible;
+    height: 20px;
+}
+
+.voteAnswerWords {
+    color: black;
+    display: flex;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.voteAnswer.highlight {
+    border: 2px solid black;
+}
+
+.linkToAnswer {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.answerBackColorWord {
+    visibility: hidden
+}
+
+
+@media only screen and (min-width: 660px) {
+    /* .answerPoll {
+        width: 40%;
+        margin-left: 30%;
+        padding: 15px;
+        margin-top: 5px;
+    } */
+
+    .answerPoll .question {
+        font-size: 28px;
+    }
+
+    .voteAnswer {
+        font-size: 24px;
+        padding: 15px;
+        height: auto;
+    }
+}
