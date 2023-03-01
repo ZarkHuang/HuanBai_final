@@ -99,6 +99,8 @@ a {
 .opportunity__icon {
   max-height: 5.6rem;
   width: initial;
+  height: 5.6rem;
+  padding: 1rem;
 }
 
 .opportunity__title {
@@ -146,8 +148,4 @@ a {
   .opportunity__icon {
     width: inherit;
   }
-}
-
-.opportunities__body :hover{
-  background-color: var(--mainColor-green);
 }
