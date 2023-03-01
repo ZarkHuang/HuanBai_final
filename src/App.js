@@ -31,7 +31,7 @@ function App(){
             <NavBar/>     
             <div className="wrapBox">    
            <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/Huanbai" element={<Home/>} />
             <Route path="/evnIntro" element={<EvnIntro/>} />
             <Route path="/brand" element={<Brand/>} />
             <Route path="/contactUs" element={<ContactUs/>} />
