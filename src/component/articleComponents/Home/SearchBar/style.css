@@ -1,0 +1,78 @@
+
+/* Global style */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --mainColor-white: #FEFCFC;
+    --mainColor-blue: #162F3A;
+    --subColor-blue: #2D5363;
+    --subColor-lightBlue: #9BC9DD;
+    --mainColor-green: #64C676;
+}
+
+*,*::after,*::before{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button,
+input{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container{
+  max-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+
+/* common style system */
+
+.searchBar-wrap{
+    background-color: var(--mainColor-white);
+    width: fit-content;
+    margin: 2.5rem auto 0 auto;
+    padding: 0  0  5rem 0;
+    border-radius: 5px;
+}
+
+.searchBar-wrap form{
+    display: flex;
+    align-items: center;
+}
+
+.searchBar-wrap input{
+    background-color: #f0f0f0;
+    outline: none;
+    border: none;
+}
+
+.searchBar-wrap input:active{
+    background-color: #fff;
+}
+
+.searchBar-wrap input:focus{
+    background-color: #fff;
+}
+
+
+.searchBar-wrap span{
+    padding-right: .3rem;
+    cursor: pointer;
+}
+
+.searchBar-wrap button{
+    outline: none;
+    border: none;
+    padding: .3rem;
+    border-radius: 5px ;
+    color: #f0f0f0;
+    background-color: var(--mainColor-green);
+    cursor: pointer;
+}

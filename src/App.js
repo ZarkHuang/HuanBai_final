@@ -13,7 +13,7 @@ import ContactUs from "./pages/contactUs";
 import ShopIntro from "./pages/shop";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
-import News from "./pages/news";
+import Article from "./pages/article";
 import Psych from "./pages/psych";
 import PsychologicalTestPage from "./pages/psychologicalTest";
 import Votes from "./pages/votes";
@@ -41,7 +41,7 @@ function App(){
             <Route path="/fordummies" element={<Fordummies/>} />
             <Route path="/map" element={<Map/>} />
             <Route path="/shop" element={<Shop/>} />
-            <Route path="/news" element={<News/>} />
+            <Route path="/news" element={<Article/>} />
             <Route path="/psych" element={<Psych/>} />
             <Route path="/psychtest" element={<PsychologicalTestPage />} />
             <Route path="/votes" element={<Votes/>} />
