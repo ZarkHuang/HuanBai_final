@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+.mt-50{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+:root{
+  --mainColor-white: #FEFCFC;
+  --mainColor-blue: #162F3A;
+  --subColor-blue: #2D5363;
+  --subColor-lightBlue: #9BC9DD;
+  --mainColor-green: #64C676;
+}
+
+
+@media screen and (max-width: 750px) {
+  .Accordion{
+    width: 100%;
+    padding: 0;
+    width: 90vw;
+  }
+}
+
