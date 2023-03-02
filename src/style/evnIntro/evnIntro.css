@@ -78,7 +78,7 @@
 }
 
 .needBox {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .needBox_bg {
   background-color: #64C676;
@@ -208,6 +208,60 @@
   color: #64C676;
   font-weight: 700;
   color: #162F3A;
+}
+.startBox .startStep_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-flow: wrap;
+  margin: 0 auto;
+  margin-top: 140px;
+  margin-bottom: 180px;
+}
+.startBox .startStep_item {
+  text-align: center;
+  margin: 20px;
+}
+.startBox .startStep_textBox {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.startBox .startStep_textBox_number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #9BC9DD;
+  font-size: 36px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #FEFCFC;
+  font-weight: 700;
+  text-align: center;
+}
+.startBox .startStep_textBox_number span {
+  display: inline-block;
+  position: relative;
+  bottom: 6px;
+}
+.startBox .startStep_textBox_text {
+  min-width: 184px;
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #162F3A;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.075em;
+  margin-left: 45px;
+}
+.startBox .imgStep1 {
+  width: 132px;
+}
+.startBox .imgStep2 {
+  width: 402px;
+}
+.startBox .imgStep3 {
+  width: 295px;
 }
 
 .benefitsBox {

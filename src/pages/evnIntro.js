@@ -16,6 +16,10 @@ import shop711 from "../img/evnIntro/shop-711.svg";
 import shopMD from "../img/evnIntro/shop-MD.svg";
 import shopMB from "../img/evnIntro/shop-MB.svg";
 import shopKFC from "../img/evnIntro/shop-KFC.svg";
+import imgStep1 from "../img/evnIntro/img-step1.svg";
+import imgStep2 from "../img/evnIntro/img-step2.svg";
+import imgStep3 from "../img/evnIntro/img-step3.svg";
+
 
 
 function EvnIntro(){
@@ -102,6 +106,34 @@ function EvnIntro(){
                     <div className="subTitle">How to start</div>
                     <div className="mainTitle">如何開始</div>
                 </div>
+                <div className="startStep_list">
+                <div className="startStep_item">
+                <img className="imgStep1" src={imgStep1} />
+                <div className="startStep_textBox">
+                <div className="startStep_textBox_number"><span>1</span></div>
+                <div className="startStep_textBox_text">使用Huanbai<br/>
+查找附近店家據點</div>
+                </div>
+                </div>
+                <div className="startStep_item">
+                <img className="imgStep2" src={imgStep2} />
+                <div className="startStep_textBox">
+                <div className="startStep_textBox_number"><span>2</span></div>
+                <div className="startStep_textBox_text"> 依據店家循環杯<br/>
+租借資訊進行租杯</div>
+                </div>
+                </div>
+                <div className="startStep_item">
+                <img className="imgStep3" src={imgStep3} />
+                <div className="startStep_textBox">
+                <div className="startStep_textBox_number"><span>3</span></div>
+                <div className="startStep_textBox_text"> 無論在何地都可<br/>
+隨時環保享受暢飲</div>
+                </div>
+                </div>
+
+                </div>
+               
             </div>
         </div>
          {/* 經濟效益 */}
