@@ -1,16 +1,7 @@
-:root{
-    --mainColor-white: #FEFCFC;
---mainColor-blue: #162F3A;
---subColor-blue: #2D5363;
---subColor-lightBlue: #9BC9DD;
---mainColor-green: #64C676;
-}
-
 h1{
     font-size: 48px;
     color: var(--mainColor-blue);
 }
-
 .blog-wrap{
     max-width: 80%;
     margin: 0 auto;
@@ -83,8 +74,9 @@ h1{
     margin: 3rem 0 0 0;
 }
 
-a{
+.connection {
     color: #64C676;
+    font-size: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -94,3 +86,61 @@ a{
         padding:0 0 0 20px;
     }
 }
+
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 20px;
+    color: #999;
+  }
+  
+  
+.btn__farm--invest {
+    border: 1px solid #66BB6A;
+    color: #ffffff;
+    display: inline-block;
+    min-width: 25rem;
+    margin-top: 4rem;
+    -webkit-box-shadow: 1px 10px 30px -10px #66bb6a;
+    -moz-box-shadow: 1px 10px 30px -10px #66bb6a;
+    box-shadow: 1px 10px 30px -10px #66bb6a;
+    /*
+    Button hover effect resource
+    https://codepen.io/alticreation/pen/zBZwOP
+    */
+    display: inline-block;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .btn__farm--invest:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #66BB6A;
+    z-index: -2;
+  }
+  .btn__farm--invest:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  .btn__farm--invest:hover {
+    color: #66BB6A;
+  }
+  .btn__farm--invest:hover:before {
+    width: 100%;
+  }

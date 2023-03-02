@@ -40,12 +40,16 @@ body {
 .tab{
   /* border: 1px solid var(--mainColor-blue); */
   background-color: var(--mainColor-white);
-  margin-top: 3rem 0 3rem 0;
 }
 
 .tab ul{
+  margin: auto;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   padding: auto;
+  width: 60%;
+  margin-bottom: 5rem;
 }
 
 .tab ul li{
@@ -76,19 +80,18 @@ body {
   height: 100%;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 600;
+  font-size: 2rem;
   color: var(--mainColor-blue);
+  border-radius: 20px;
+  margin: 0 3rem;
+  padding: 0.5rem;
+  border: 1px solid var(--mainColor-green);
 }
 
 .active-tab {
   background-color: #64C676;
 }
 
-.flex-fill{
-  -webkit-box-shadow: 1px 10px 30px -10px #66bb6a;
-  -moz-box-shadow: 1px 10px 30px -10px #66bb6a;
-  box-shadow: 1px 10px 30px -10px #66bb6a;
-  margin: 0 1rem;
-}
 
 .flex-fill.active{
   background-color: #64C676;

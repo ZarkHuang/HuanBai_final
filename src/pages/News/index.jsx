@@ -46,12 +46,14 @@ const News = () => {
           <p className='blog-desc'>{blog.description1}</p>
           <h5 className='blog-subtitle'>{blog.subtitle}</h5>
           <p className='blog-desc'>{blog.description2}</p>
-          <img src={blog.contentCover} alt='cover' />
 
           <div className='detail'>
           <p className='blog-cc'>詳細（PR TIMES）</p>
-          <a href="https://e-info.org.tw/node/235747"> 連結 </a>
+          <div class="form-group">
+              <button type="submit" class="btn btn__farm--invest" value="Send"><a className='sendmessage' target="_blank" href="https://e-info.org.tw/node/235747">Send a Message</a></button>
           </div>
+          </div>
+          
         </div>
       ) : (
         <EmptyList />

@@ -52,7 +52,7 @@ const Contactus = () => {
                               <textarea name="message" id="" rows="15" placeholder="Your message starts with…"></textarea>
                           </div>
                           <div class="form-group">
-                              <button type="submit" class="btn btn__farm--invest" value="Send">Send a Message</button>
+                              <button type="submit" class="form-btn btn__farm--invest" value="Send">Send a Message</button>
                           </div>
                       </form>
                   </div>

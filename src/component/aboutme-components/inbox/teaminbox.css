@@ -10,16 +10,6 @@
   --mainColor-green: #64C676;
 }
 
-
-html, body {
-  width: 100%;
-  height: 100%;
-  background-color: var(--mainColor-white);
-  color: #2B292D;
-  font-size: 10px;
-  
-}
-
 img {
   width: 100%;
   max-width: 100%;
@@ -28,15 +18,6 @@ img {
 .organizations img {
   width: 5rem;
 }
-
-.sevenlogo img {
-  width: 4rem;
-}
-
-ul {
-  list-style-type: none;
-}
-
 
 
 h1 {
@@ -80,6 +61,12 @@ section {
 
 .section-content {
   display: flex;
+}
+
+.section-content .litttttt{
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto;
 }
 
 .section-head-title {

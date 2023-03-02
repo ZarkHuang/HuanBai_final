@@ -52,16 +52,6 @@ const Votecm = () => {
                     option,
                     voteId,
                 });
-<<<<<<< HEAD
-                if(res.data==="no"){
-                    alert("AAAA")
-                    window.location="/golog"
-                }
-                if(res.data==="aa"){
-                    setVoteResult(res.data);
-                    console.log("handleVoteSubmit",option);
-                }
-=======
                 if (res.data === "noooo") {
                     alert("投票沒登入，不行呦")
                     window.location = "/golog"
@@ -73,7 +63,6 @@ const Votecm = () => {
                 // setVoteResult(res.data);
                 // console.log("handleVoteSubmit", option);
                 // window.location = `/Vote/answer/${voteId} `;
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
             } catch (err) {
                 console.log(err);
             }
@@ -113,21 +102,6 @@ const Votecm = () => {
 
     // 把資料給後端
     const handleVoteSubmit4 =
-<<<<<<< HEAD
-    async (option) => {
-        try {
-            const res = await axios.post(`http://localhost:3344/updateOption4`, {
-                option,
-                voteId,
-            });
-            setVoteResult(res.data);
-            console.log("handleVoteSubmit",option);
-            window.location="/"
-        } catch (err) {
-            console.log(err);
-        }
-    };
-=======
         async (option) => {
             try {
                 const res = await axios.post(`http://localhost:3344/updateOption4`, {
@@ -141,7 +115,6 @@ const Votecm = () => {
                 console.log(err);
             }
         };
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
 
 
 

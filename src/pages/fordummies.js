@@ -6,9 +6,10 @@ import Invest from '../component/fordummies/invest/invest';
 import Opportunities from '../component/fordummies/Opportunities/Opportunities';
 
 
+
 const Fordummies = () => {
   return (
-    <div className="fordummies-container">
+    <div>
       <Hero/>
       <Opportunities/>
       <Invest/>

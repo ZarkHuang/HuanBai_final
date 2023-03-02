@@ -23,7 +23,7 @@ const Invest = () => {
               </p>
             </div>
             <div class="invest__item__footer">
-              <a href="#" class="btn btn__invest">
+              <a href="#" class="invest-btn btn__invest">
                 Learn More
               </a>
             </div>
@@ -39,7 +39,7 @@ const Invest = () => {
               </p>
             </div>
             <div class="invest__item__footer">
-              <a href="#" class="btn btn__invest">
+              <a href="#" class="invest-btn btn__invest">
                 Learn More
               </a>
             </div>
