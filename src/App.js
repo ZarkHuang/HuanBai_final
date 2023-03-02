@@ -8,7 +8,6 @@ import NavBar from "./component/NavBar"
 import Footer from "./component/Footer"
 import Home from "./pages/home";
 import EvnIntro from "./pages/evnIntro";
-import Brand from "./pages/brand";
 import ShopIntro from "./pages/shop";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
@@ -25,6 +24,8 @@ import Answer from "./pages/answer"
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
+import Brand from "./pages/aboutme/aboutme";
+
 // import './style/'
 
 
