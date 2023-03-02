@@ -3,7 +3,7 @@ import axios from 'axios'; //
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import "./vote.css"
-
+import GoLog from '../../pages/memberpage/GoLogin';
 
 
 
@@ -27,6 +27,14 @@ const Votecm = () => {
         fecthAllVotecm();
     }, [voteIdNumber]);
 
+    useEffect(() => {
+        axios.get('http://localhost:3344/checkAuth', { withCredentials: true }).then((responseAuth) => {
+            console.log(responseAuth)
+            if (responseAuth.data === "尚未登入") {
+                console.log('not login yet')
+            }
+        })
+    }, []);
 
     // 改顏色邊框顏色的，要用的話下面的code記得改
     // function handleOptionClick(event) {
@@ -44,30 +52,40 @@ const Votecm = () => {
                     option,
                     voteId,
                 });
-                setVoteResult(res.data);
-                console.log("handleVoteSubmit",option);
+                if (res.data === "noooo") {
+                    alert("投票沒登入，不行呦")
+                    window.location = "/golog"
+                }
+                if (res.data === "aaa") {
+                    setVoteResult(res.data);
+                    console.log("handleVoteSubmit1", handleVoteSubmit1, "option", option)
+                }
+                // setVoteResult(res.data);
+                // console.log("handleVoteSubmit", option);
+                // window.location = `/Vote/answer/${voteId} `;
             } catch (err) {
                 console.log(err);
             }
         };
 
-            // 把資料給後端
+    // 把資料給後端
     const handleVoteSubmit2 =
-    async (option) => {
-        try {
-            const res = await axios.post(`http://localhost:3344/updateOption2`, {
-                option,
-                voteId,
-            });
-            setVoteResult(res.data);
-            console.log("handleVoteSubmit",option);
-        } catch (err) {
-            console.log(err);
-        }
-    };
+        async (option) => {
+            try {
+                const res = await axios.post(`http://localhost:3344/updateOption2`, {
+                    option,
+                    voteId,
+                });
+                setVoteResult(res.data);
+                console.log("handleVoteSubmit", option);
+                window.location = `/Vote/answer/${voteId} `;
+            } catch (err) {
+                console.log(err);
+            }
+        };
 
-        // 把資料給後端
-        const handleVoteSubmit3 =
+    // 把資料給後端
+    const handleVoteSubmit3 =
         async (option) => {
             try {
                 const res = await axios.post(`http://localhost:3344/updateOption3`, {
@@ -75,26 +93,28 @@ const Votecm = () => {
                     voteId,
                 });
                 setVoteResult(res.data);
-                console.log("handleVoteSubmit",option);
+                console.log("handleVoteSubmit", option);
+                window.location = `/Vote/answer/${voteId} `;
             } catch (err) {
                 console.log(err);
             }
         };
 
-            // 把資料給後端
+    // 把資料給後端
     const handleVoteSubmit4 =
-    async (option) => {
-        try {
-            const res = await axios.post(`http://localhost:3344/updateOption4`, {
-                option,
-                voteId,
-            });
-            setVoteResult(res.data);
-            console.log("handleVoteSubmit",option);
-        } catch (err) {
-            console.log(err);
-        }
-    };
+        async (option) => {
+            try {
+                const res = await axios.post(`http://localhost:3344/updateOption4`, {
+                    option,
+                    voteId,
+                });
+                setVoteResult(res.data);
+                console.log("handleVoteSubmit", option);
+                window.location = `/Vote/answer/${voteId} `;
+            } catch (err) {
+                console.log(err);
+            }
+        };
 
 
 
@@ -108,24 +128,16 @@ const Votecm = () => {
                 <div className="voteAnswers">
                     {/* 投票選項 */}
                     <button className="voteAnswer" onClick={() => handleVoteSubmit1(ooo.option1)}>
-                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
                         {ooo.option1}
-                        </Link>
                     </button>
                     <button className="voteAnswer" onClick={() => handleVoteSubmit2(ooo.option2)}>
-                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
                         {ooo.option2}
-                        </Link>
                     </button>
                     <button className="voteAnswer" onClick={() => handleVoteSubmit3(ooo.option3)}>
-                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
                         {ooo.option3}
-                        </Link>
                     </button>
                     <button className="voteAnswer" onClick={() => handleVoteSubmit4(ooo.option4)} >
-                        <Link to={`/Vote/answer/${ooo.voteId}`} className="linkToVote">
                         {ooo.option4}
-                        </Link>
                     </button>
                 </div>
             </div>
