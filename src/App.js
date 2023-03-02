@@ -25,6 +25,8 @@ import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
+import GoLog from "./pages/memberpage/GoLogin";
+
 // import './style/'
 
 
@@ -55,6 +57,7 @@ function App(){
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
+            <Route path="/goLog" element={<GoLog/>} />
 
 
            </Routes>
