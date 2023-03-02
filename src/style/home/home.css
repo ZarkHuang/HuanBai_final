@@ -546,7 +546,6 @@ html a, body a {
 }
 .contactUs_Box {
   margin-top: 140px;
-  padding: 0 109px;
   display: flex;
   justify-content: space-between;
   align-items: center;
