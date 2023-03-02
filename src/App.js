@@ -9,7 +9,6 @@ import Footer from "./component/Footer"
 import Home from "./pages/home";
 import EvnIntro from "./pages/evnIntro";
 import Brand from "./pages/brand";
-import ContactUs from "./pages/contactUs";
 import ShopIntro from "./pages/shop";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
@@ -25,6 +24,7 @@ import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
+import Contactus from "./pages/contact";
 // import './style/'
 
 
@@ -38,7 +38,7 @@ function App(){
             <Route path="/" element={<Home/>} />
             <Route path="/evnIntro" element={<EvnIntro/>} />
             <Route path="/brand" element={<Brand/>} />
-            <Route path="/contactUs" element={<ContactUs/>} />
+            <Route path="/contactUs" element={<Contactus/>} />
             <Route path="/shopIntro" element={<ShopIntro/>} />
             <Route path="/fordummies" element={<Fordummies/>} />
             <Route path="/map" element={<Map/>} />
