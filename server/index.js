@@ -291,13 +291,20 @@ app.get("/vote/:voteId", (req, res) => {
 app.post('/updateOption1', (req, res) => {
     const option1 = req.body.option;
     const voteId = req.body.voteId;
+    const userId = req.session.user.uid;
 
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1',
-        [voteId], (err, data) => {
-            console.log("voteErr:", err)
+    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1;把uid加進去的sql語法'
+        [voteId,userId], (err, data) => {
+            console.log("AAAAAA")
+            if(req.session.user===undefined){
+                res.send("no")
+            }else{
+                res.send("aa")
+            }
+            /* console.log("voteErr:", err)
             if (err) return res.json(err); // 失敗回傳什麼
             console.log("votedata", data)
-            return res.json(data);            // 成功回傳交換回來的資料
+            return res.json(data); */            // 成功回傳交換回來的資料
         });
 });
 

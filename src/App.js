@@ -23,6 +23,8 @@ import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
+import GoLogIn from "../src/pages/memberpage/GoLogIn"
+import GoSignUp from "./pages/memberpage/GoSignUp";
 // import './style/'
 
 
@@ -48,8 +50,10 @@ function App(){
             <Route path="/Vote/:voteId" element={< Vote />} />
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
-            <Route path="/member" element={<Member/>} />
+            <Route path="/member/*" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
+            <Route path="/gologin" element={<GoLogIn/>} />
+            <Route path="/gosignup" element={<GoSignUp/>} />
 
 
            </Routes>

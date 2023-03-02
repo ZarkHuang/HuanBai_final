@@ -44,8 +44,14 @@ const Votecm = () => {
                     option,
                     voteId,
                 });
-                setVoteResult(res.data);
-                console.log("handleVoteSubmit",option);
+                if(res.data==="no"){
+                    alert("AAAA")
+                    window.location="/golog"
+                }
+                if(res.data==="aa"){
+                    setVoteResult(res.data);
+                    console.log("handleVoteSubmit",option);
+                }
             } catch (err) {
                 console.log(err);
             }
@@ -91,6 +97,7 @@ const Votecm = () => {
             });
             setVoteResult(res.data);
             console.log("handleVoteSubmit",option);
+            window.location="/"
         } catch (err) {
             console.log(err);
         }
