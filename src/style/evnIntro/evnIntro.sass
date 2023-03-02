@@ -73,7 +73,7 @@
                 top: 169px
 //為什麽需要循環杯
 .needBox
-    margin-top: 100px
+    margin-top: 150px
     &_bg
         background-color: $mainColor-green
         height: 637px
@@ -156,6 +156,52 @@
     .textBox
         +titleBox($subColor-lightBlue,$mainColor-blue)    
         margin-left: 43px
+    .startStep
+        &_list
+            display: flex
+            justify-content: space-between
+            align-items: end
+            flex-flow: wrap
+            // max-width: 1200px
+            margin: 0 auto
+            // min-height: 500px
+            margin-top: 140px
+            margin-bottom: 180px
+        &_item
+            text-align: center
+            margin: 20px
+        &_textBox
+            display: flex
+            align-items: center 
+            margin-top: 80px
+            &_number
+                width: 48px
+                height: 48px
+                border-radius: 50%
+                background-color: $subColor-lightBlue
+                +fz-TC(36px,$mainColor-white)
+                text-align: center
+                span
+                    display: inline-block
+                    position: relative
+                    bottom: 6px
+                   
+                        
+
+            &_text
+                min-width: 184px
+                +fz-TC
+                line-height: 26px
+                text-align: center
+                letter-spacing: 0.075em
+                margin-left: 45px
+    .imgStep
+        &1
+            width: 132px
+        &2
+            width: 402px
+        &3
+            width: 295px
 //經濟效益
 .benefitsBox
     margin-top: 120px
