@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root{
+  --mainColor-white: #FEFCFC;
+  --mainColor-blue: #162F3A;
+  --subColor-blue: #2D5363;
+  --subColor-lightBlue: #9BC9DD;
+  --mainColor-green: #64C676;
+}
+
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  background-color: var(--mainColor-white);
+  color: #2B292D;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  line-height: 8rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1.3rem 2rem;
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+.btn:hover {
+  -webkit-box-shadow: 1px 1px 8px 0px #2b292d;
+  -moz-box-shadow: 1px 1px 8px 0px #2b292d;
+  box-shadow: 1px 1px 8px 0px #2b292d;
+}
+
+/* ----------------
+Hero樣式（杯子旋轉）
+----------------- */
+
+.cup-content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  clip-path: border-box;
+  transform: translateZ(0);
+}
+
+.block {
+  position: relative;
+  height: 100vh;
+}
+
+[class*=item-parallax] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.item-parallax-media {
+  z-index: 1;
+}
+.item-parallax-media img {
+  will-change: transform;
+}
+
+.item-parallax-content {
+  z-index: 2;
+}
+
+.block:nth-child(1) .item-parallax-content {
+  transform: translateY(calc( var(--yBlock-1) * 0.5px ));
+}
+
+.block:nth-child(1) .item-parallax-media img {
+  transform: translateY(calc( var(--yBlock-1) * 0.1px ));
+}
+
+.block:nth-child(2) .item-parallax-content {
+  transform: translateY(calc( var(--yBlock-2) * 0.5px ));
+}
+
+.block:nth-child(2) .item-parallax-media img {
+  transform: translateY(calc( var(--yBlock-2) * 0.1px ));
+}
+
+.block:nth-child(3) .item-parallax-content {
+  transform: translateY(calc( var(--yBlock-3) * 0.5px ));
+}
+
+.block:nth-child(3) .item-parallax-media img {
+  transform: translateY(calc( var(--yBlock-3) * 0.1px ));
+}
+
+.block:nth-child(4) .item-parallax-content {
+  transform: translateY(calc( var(--yBlock-4) * 0.5px ));
+}
+
+.block:nth-child(4) .item-parallax-media img {
+  transform: translateY(calc( var(--yBlock-4) * 0.1px ));
+}
+
+.block:nth-child(5) .item-parallax-content {
+  transform: translateY(calc( var(--yBlock-5) * 0.5px ));
+}
+
+.block:nth-child(5) .item-parallax-media img {
+  transform: translateY(calc( var(--yBlock-5) * 0.1px ));
+}
+
+html {
+  background-color: #64C676;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.centered-content {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.head-large {
+  margin-bottom: 5vw;
+  font-size: 10vw;
+  line-height: 1.2em;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white;
+}
+
+/* ----------
+
+    text
+
+----------- */
+
+.head-small {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--mainColor-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.head-centered {
+  text-align: center;
+}
+
+.copy {
+  display: block;
+  max-width: 500px;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: lightgray;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.copy-white {
+  color: gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-small{
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--mainColor-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.contenr-small{
+  display: block;
+  max-width: 500px;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size:1.2rem;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+
+/* ----------
+
+    image
+
+----------- */
+
+.item-parallax-media {
+  overflow: hidden;
+}
+.item-parallax-media img {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.section-intro:before {
+  content: "";
+  background-image: url("https://static.vecteezy.com/system/resources/previews/008/478/819/original/single-blank-cup-free-png.png");
+  background-position: center;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 49.5%;
+  width: 60%;
+  height: 80%;
+  transform: translateX(-50%) translateY(-50%) rotate(calc( (var(--y) * 0.5deg) ));
+  will-change: transform;
+  backface-visibility: visible;
+}
+
+
+.img-grid {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.img-gridItem {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.img-gridItem img {
+  display: block;
+  width: 50%;
+  height: 40vh;
+  object-fit: cover;
+  will-change: transform;
+  backface-visibility: visible;
+}
+.img-gridItem.type-left img {
+  margin-right: auto;
+}
+.img-gridItem.type-right img {
+  margin-left: auto;
+}
+
+.img-gridItem:nth-child(1) img {
+  transform: translateX(calc( var(--yBlock-4) * -0.03% ));
+}
+.img-gridItem:nth-child(2) img {
+  transform: translateX(calc( var(--yBlock-4) * 0.03% ));
+}
+
+.img-caption {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%);
+}
+.img-caption * {
+  text-align: left;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.type-left .img-caption {
+  right: 0;
+}
+.type-right .img-caption {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .section-intro:before{
+    width: 100%;
+  }
+}

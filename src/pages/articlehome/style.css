@@ -1,0 +1,14 @@
+:root{
+    --mainColor-white: #FEFCFC;
+--mainColor-blue: #162F3A;
+--subColor-blue: #2D5363;
+--subColor-lightBlue: #9BC9DD;
+--mainColor-green: #64C676;
+}
+
+
+.article-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,122 @@
+:root{
+--mainColor-white: #FEFCFC;
+--mainColor-blue: #162F3A;
+--subColor-blue: #2D5363;
+--subColor-lightBlue: #9BC9DD;
+--mainColor-green: #64C676;
+}
+
+body{
+  text-align: center;
+}
+
+.blogItem-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+  }
+
+
+  .blogItem-wrap:link{
+    text-decoration: none;
+  }
+  
+
+
+  .blogItem-wrap h3 {
+    margin: 0.5rem 0 1rem 0;
+    flex: 1;
+    color: var(--mainColor-blue);
+  }
+  
+
+  .blogItem-wrap:hover{
+    color: var(--mainColor-green);
+    transform: scale(1.03);
+    -webkit-transition:  .2s linear, border-radius 1s ease-in 1s;
+    transition:  .2s linear, border-radius 1s ease-in 1s;     
+  }
+
+
+.blogItem-cover-Box{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.blogItem-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0  2rem  0 2rem;
+  }
+
+  .blogItem-cover-Box img:hover{
+    transform: scale(1.3);
+    -webkit-transition:  1s linear, border-radius 1s ease-in 1s;
+    transition:  1s linear, border-radius 1s ease-in 1s;  
+  }
+
+
+  .blogItem-box{
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .blogItem-box{
+      margin-bottom: 3rem;
+      padding: 0;
+    }
+  }
+
+  .blogItem-desc {
+    position: relative;
+    max-height: 42px;
+    overflow: hidden;
+    padding-right: 0.6rem;
+    font-size: 0.8rem;
+    color: #a9a9a9;
+  }
+  
+  .blogItem-desc::before {
+    position: absolute;
+    content: '...';
+    bottom: 0;
+    right: 0;
+  }
+  
+  .blogItem-wrap footer {
+    display: flex;
+    align-items: center;
+    margin:2rem 0;
+    justify-content: space-between;
+    min-height:0;
+  }
+  
+  .blogItem-link {
+    text-decoration: none;
+    color: var(--mainColor-blue);
+  }
+  
+  .blogItem-author {
+    display: flex;
+    align-items: center;
+    color: var(--mainColor-blue);
+  }
+  
+  .blogItem-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+  }
+  
+  .blogItem-author p {
+    font-size: 0.6rem;
+    color: #a9a9a9;
+    font-weight: 600;
+  }

@@ -1,0 +1,43 @@
+
+/* Global style */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --mainColor-white: #FEFCFC;
+    --mainColor-blue: #162F3A;
+    --subColor-blue: #2D5363;
+    --subColor-lightBlue: #9BC9DD;
+    --mainColor-green: #64C676;
+}
+
+*,*::after,*::before{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button,
+input{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container{
+  max-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.chip{
+    font-size: .7rem;
+    color:var(--mainColor-white);
+    background-color: var(--mainColor-green);
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    width: fit-content;
+    text-transform: capitalize;
+}
+
