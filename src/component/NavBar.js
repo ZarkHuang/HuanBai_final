@@ -108,7 +108,7 @@ return(
         <div className="row">
         <div className="col-lg-3 navMenu_box">
             <div className="header_logo">
-                <img src={logoImg} />
+                <a href="/"><img src={logoImg} /></a>
             </div>
             {/* <!-- RWD漢堡選單 --> */}
 
@@ -120,7 +120,9 @@ return(
                 </div>
             </div>
             <nav className="rwd_navMenu_box">
+              <a href="/">
                 <img className="rwd_navMenu_logo" src="./img/index/footerLogo.svg" alt="" />
+                </a>
                 <ul className="rwd_navMenu">
 
                     <li className="rwd_navMenu_item">
