@@ -1,98 +1,112 @@
 export const blogList = [
-    {
+  {
       id: 1,
-      title: '循環杯新制2023年將上路 環署推認證標誌供民眾安心借用',
-      category: 'news',
-      subCategory: ['環保杯', '循環杯', '循環經濟', '減塑'],
+      title: "【投票結果】：你知道連鎖超商及速食店提供循環杯嗎？是否有使用意願？",
+      category: "article",
+      subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
       description1:
-      "2023年元旦起，將有5%連鎖便利商店、連鎖速食店須提供循環杯借用服務，環保署今天（22日）公布「外借杯良好服務標誌」，符合「循環（外借）杯良好服務指引」的店家可申請標誌，讓民眾可輕鬆辨識、安心借用，統一超商、摩斯漢堡、麥當勞及肯德基已搶先通過審核獲得標誌。",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
+       "為了確保循環杯服務系統的衛生及品質，環保署10月底公布「循環（外借）杯良好服務指引」規範六大面向，包括材質及標示。然而，使用循環杯需要人們改變自己的生活習慣，並可能需要更高的",
+      subtitle: "環保署推循環杯指引 民眾可透過標誌識別",
       description2:
+        "為了確保循環杯服務系統的衛生及品質，環保署10月底公布「循環（外借）杯良好服務指引」規範六大面向，包括材質及標示、借用及歸還、清洗、檢驗、環保理念溝通、良好服務標誌，要求業者提供3日歸還期限、多元支付押金、清洗符合準則等。符合指引的業者可以申請「外借杯良好服務標誌」，讓民眾安心借用循環杯，環保署今天也公布標誌設計網路票選結果，參與人次超過2萬人，2023年元旦起開始使用，成為開啟淨零綠生活的重要轉捩點。環保署表示，雖然法規明年才開始實施，但已有20個地方環保機關提前試辦循環杯的服務，業者也開始佈設常態型的循環杯租借點位，將近833家門市提前開跑，擴及全台16縣市。統一超商、摩斯漢堡、麥當勞及肯德基更在今年12月就通過審核獲得標誌。統一超商攜手星巴克等關係企業，預計年底會有500店導入循環杯服務，民眾打開OPEN POINT APP就能借用及歸還循環杯；摩斯漢堡目前已在20家門市開始循環杯租借服務，押金100元即可借用，開放甲借乙還；麥當勞、肯德基則與循環杯廠商好盒器合作，採用好盒器的借用歸還服務系統，借用後可於任何好盒器站點歸還。",
+      authorName: "Huanbai環杯!",
+      authorAvatar: "/assets/images/favicon.svg",
+      createdAt: "Mar 06, 2023",
+      cover: "/assets/images/vote.jpg",
+      cypher:"",
+    },
+    {
+    id: 2,
+    title: "循環杯新制2023年將上路 環署推認證標誌供民眾安心借用",
+    category: "news",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "2023年元旦起，將有5%連鎖便利商店、連鎖速食店須提供循環杯借用服務，環保署今天（22日）公布「外借杯良好服務標誌」，符合「循環（外借）杯良好服務指引」的店家可申請標誌，讓民眾可輕鬆辨識、安心借用，統一超商、摩斯漢堡、麥當勞及肯德基已搶先通過審核獲得標誌。",
+    subtitle: "環保署推循環杯指引 民眾可透過標誌識別",
+    description2:
       "為了確保循環杯服務系統的衛生及品質，環保署10月底公布「循環（外借）杯良好服務指引」規範六大面向，包括材質及標示、借用及歸還、清洗、檢驗、環保理念溝通、良好服務標誌，要求業者提供3日歸還期限、多元支付押金、清洗符合準則等。符合指引的業者可以申請「外借杯良好服務標誌」，讓民眾安心借用循環杯，環保署今天也公布標誌設計網路票選結果，參與人次超過2萬人，2023年元旦起開始使用，成為開啟淨零綠生活的重要轉捩點。環保署表示，雖然法規明年才開始實施，但已有20個地方環保機關提前試辦循環杯的服務，業者也開始佈設常態型的循環杯租借點位，將近833家門市提前開跑，擴及全台16縣市。統一超商、摩斯漢堡、麥當勞及肯德基更在今年12月就通過審核獲得標誌。統一超商攜手星巴克等關係企業，預計年底會有500店導入循環杯服務，民眾打開OPEN POINT APP就能借用及歸還循環杯；摩斯漢堡目前已在20家門市開始循環杯租借服務，押金100元即可借用，開放甲借乙還；麥當勞、肯德基則與循環杯廠商好盒器合作，採用好盒器的借用歸還服務系統，借用後可於任何好盒器站點歸還。",
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/useimformation.jpeg',
-    },
-
-    {
-      id: 2,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'travel',
-      subCategory: ['vacation', 'holidays', 'sight seeing'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/f67396fc3cfce63a28e07ebb35d974ac.jpg',
-    },
-    {
-      id: 3,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'x`',
-      subCategory: ['e-commerce store', 'clothing', 'shopping store'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/fQwuyKJ9qxjSbr6REcgtmW-1200-80.jpg',
-    },
-    {
-      id: 4,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'adventure',
-      subCategory: ['adrenaline', 'stay-fit', 'lifestyle'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/graphic-design-trends.png',
-    },
-    {
-      id: 5,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'cooking',
-      subCategory: ['bbq', 'food', 'lifestyle'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/make-it-personal.jpg',
-    },
-    {
-      id: 6,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'travel',
-      subCategory: ['beaches', 'sea', 'holidays'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover:
-        '/assets/images/Purple-Combination-colors-graphic-design-predictions-1024x576-1024x576.jpg',
-    },
-    {
-      id: 7,
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      category: 'art',
-      subCategory: ['skill', 'design', 'passion'],
-      description1:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      subtitle: '環保署推循環杯指引 民眾可透過標誌識別',
-      authorName: 'John Doe',
-      authorAvatar: '/assets/images/author.jpg',
-      createdAt: 'June 03, 2021',
-      cover: '/assets/images/Synthwave-Postmodern.jpg',
-    }
-  ];
-  
+    authorName: "環境資訊中心",
+    authorAvatar: "/assets/images/evncLogo.jpeg",
+    createdAt: "Dec 22, 2022",
+    cover: "/assets/images/useimformation.jpeg",
+    cypher:"",
+  },
+  {
+    id: 3,
+    title: "循環杯：一種綠色的解決方案，減少垃圾的產生，並減少能源消耗",
+    category: "article",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "在這個日益關注環保的社會中，人們開始關注自己的生活方式對環境的影響。其中一個方面是減少使用一次性產品，特別是一次性杯子，因為它們對環境造成的垃圾量非常大。為了應對這個問題，一種名為循環杯的產品應運而生。循環杯是一種可重複使用的杯子，可以用於裝咖啡、茶或任何其他飲料。這種杯子通常由高品質的塑料、玻璃或金屬製成，具有防漏和保溫的功能，因此非常方便攜帶和使用。",
+    subtitle: "循環杯是一種非常環保的解決方案",
+    description2:
+      "循環杯的使用對環境有很多好處。首先，循環杯可以幫助減少一次性杯子的使用，因此減少了塑料、紙張和其他材料的浪費，減少了垃圾的產生。其次，循環杯的製造過程通常比一次性杯子的製造過程更環保，因為它們可以多次使用，而不必每次使用都製造新的杯子。最後，使用循環杯也可以減少能源消耗，因為製造和處理一次性杯子需要大量的能源和資源。循環杯的使用也有一些挑戰。首先，循環杯需要清洗和維護，否則它們可能會變得不衛生或不可使用。此外，使用循環杯需要人們改變自己的生活習慣，因此需要時間和努力。最後，循環杯的成本可能比一次性杯子更高，因此有些人可能會選擇不使用它們。",
+      authorName: "Huanbai環杯!",
+      authorAvatar: "/assets/images/favicon.svg",
+    createdAt: "June 03, 2021",
+    cover: "/assets/images/circularCup.jpg",
+    cypher:"",
+  },
+  {
+    id: 4,
+    title: "全台年消耗40億個飲料杯 5元價差政策將上路 環署估一年可減5.8億個",
+    category: "news",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "國人喝「珍珠奶茶」的風氣盛行，手搖飲產業更是揚名國際，不過環保署最新統計，我國每年用掉的一次性飲料杯高達40億個，成為回收體系不可忽視的重擔。7月1日自備飲料杯5元價差優惠上路在即，環署預估，將可從目前1~3元價差政策的年減1.5億個飲料杯，提升至每年減少5.8億個杯子。環署數據也顯示，與飲料店不同，早餐店塑膠飲料杯用量在2019至2020年間明顯成長。對此環團提醒，早餐店和攤販使用塑膠杯同樣可觀，未來勢必要納入限用行列，呼籲政府勿因業者反彈、遊說而縮手。",
+    subtitle: "早餐店塑膠杯、紙杯用量不減反增 環團籲納管",
+    description2:
+      "令人意外的是，2020年飲料店塑膠飲料杯用量（13.95億個）還略低於2019年（14.73億個），反而早餐店的用量呈現明顯成長，從2019年僅0.48億個，飆升至2020年1.85億個，紙飲料杯的使用也是呈現成長。謝和霖就指出，環保署未來勢必也要納入飲料杯用量非常可觀的早餐店及攤販，共同列入管制對象，否則環保署「2030年全面禁用四大一次性塑膠用品」政策，就是「喊假的」。謝和霖說，過去環保署推動塑膠袋及免洗餐具限用政策，就曾擬定早餐店及攤販也要一併納管，後因業者反彈作罷。他呼籲執政黨不該因為民眾或業者抗議就取消政策，反而應該藉此機會推動產業及服務模式的轉型，也讓消費者養成減用一次性產品的習慣。全台2萬店家實施自帶杯5元價差優惠 環署：估計年減5.8億個杯子環保署在7月1日起開始實施「一次用飲料杯限制使用對象及實施方式」，全台約有500個飲料店、速食店、便利商店及超級市場連鎖品牌、共計2萬家門市，將必須提供消費者自備飲料杯5元價差優惠。2001年上路的舊制原本要求業者提供1~3元的優惠，但統計至今，只有約6％消費者自備飲料杯，每年減少1.5億個飲料杯使用量，成效不佳。環保署今（29）召開記者會表示，新法上路後，預計每年可減少5.8億個一次用飲料杯、相當於7000公噸垃圾的耗用，同時也減少3.3萬噸碳排放量。先前外界曾關注飲料杯價差提高後，是否會有業者趁機漲價，不過王嶽斌則說，現有規定本就要求業者提供3元優惠，消費者使用自帶杯也可免去業者飲料杯成本，因此新法是「合理的5塊價差」。不過，王嶽斌提醒，消費者必須有購買及消費行為店家才需提供5元優惠，其他如試喝、集點或買一送一第二杯等促銷活動，業者則可以不另外提供優惠。",
+      authorName: "環境資訊中心",
+      authorAvatar: "/assets/images/evncLogo.jpeg",
+    createdAt: "June 03, 2022",
+    cover: "/assets/images/news4.jpeg",
+    cypher:"",
+  },
+  {
+    id: 5,
+    title: "可觀的塑膠垃圾，於是共享杯成了可行的解決方案之一。國外共享杯如何變流行？",
+    category: "news",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "自2018年台灣宣布擴大限制一次性塑膠製品，至今已4年，隨著台北市將在今年12月全面禁用一次性飲料杯，已推行一段時間的「共享飲料杯」似乎就成了環保與方便並存的好選擇。然而事實上，因為消費者的習慣、對衛生的疑慮，與台灣手搖飲料種類乃至飲料杯的多元性，都替推行添增難度。那國外又是怎麼做的呢？",
+    subtitle: "運送、清洗一條龍 英Cupclub共享咖啡杯大成功",
+    description2:
+      "為了確保循環杯服務系統的衛生及品質，環保署10月底公布「循環（外借）杯良好服務指引」規範六大面向，包括材質及標示、借用及歸還、清洗、檢驗、環保理念溝通、良好服務標誌，要求業者提供3日歸還期限、多元支付押金、清洗符合準則等。符合指引的業者可以申請「外借杯良好服務標誌」，讓民眾安心借用循環杯，環保署今天也公布標誌設計網路票選結果，參與人次超過2萬人，2023年元旦起開始使用，成為開啟淨零綠生活的重要轉捩點。環保署表示，雖然法規明年才開始實施，但已有20個地方環保機關提前試辦循環杯的服務，業者也開始佈設常態型的循環杯租借點位，將近833家門市提前開跑，擴及全台16縣市。統一超商、摩斯漢堡、麥當勞及肯德基更在今年12月就通過審核獲得標誌。統一超商攜手星巴克等關係企業，預計年底會有500店導入循環杯服務，民眾打開OPEN POINT APP就能借用及歸還循環杯；摩斯漢堡目前已在20家門市開始循環杯租借服務，押金100元即可借用，開放甲借乙還；麥當勞、肯德基則與循環杯廠商好盒器合作，採用好盒器的借用歸還服務系統，借用後可於任何好盒器站點歸還。",
+      authorName: "環境資訊中心",
+      authorAvatar: "/assets/images/evncLogo.jpeg",
+    createdAt: "Oct 03, 2022",
+    cover: "/assets/images/cube.jpeg",
+    cypher:"https://e-info.org.tw/node/235196",
+  },
+  {
+    id: 6,
+    title: "可持續發展：將綠色理念帶入生活，提供五種方式讓你輕鬆減塑",
+    category: "article",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "在當今社會，可持續發展是一個非常熱門的話題。這是因為人們越來越關注環境問題，並希望尋找更環保和可持續的生活方式。在這篇文章中，我們將介紹可持續發展的概念，並探討如何將綠色理念帶入生活中。可持續發展是指滿足當前需要而不損害未來世代滿足自己需要的能力。換句話說，它強調了經濟、社會和環境三方面的平衡，以確保可持續性的發展。這種平衡需要人們采取各種行動，包括減少能源和資源的消耗，降低碳排放量，減少垃圾和污染物的產生，以及提高資源的回收和再利用率。",
+    subtitle: "如何將綠色理念帶入生活中呢？",
+    description2:
+      "購買可持續產品：選擇綠色產品和品牌，可以確保所購買的產品是經過環保認證和測試的，符合可持續發展的標準。二是節約能源和資源：減少用水量、電力和燃氣使用，關閉電器產品，降低室內溫度等，都是節約能源和資源的好方法。三養成綠色飲食習慣：減少肉類和乳製品的攝入量，增加蔬菜和水果的攝入量，可以減少碳排放和動物食品的消耗。四建立回收體系：建立一個良好的回收體系，將垃圾、廢物和回收物資進行分類，進而實現資源的再利用和回收。",
+      authorName: "Huanbai環杯!",
+      authorAvatar: "/assets/images/favicon.svg",
+    createdAt: "June 03, 2021",
+    cover: "/assets/images/place.jpg",
+  },
+  {
+    id: 7,
+    title: "循環杯新制2023年將上路 環署推認證標誌供民眾安心借用",
+    category: "article",
+    subCategory: ["環保杯", "循環杯", "循環經濟", "減塑"],
+    description1:
+      "2023年元旦起，將有5%連鎖便利商店、連鎖速食店須提供循環杯借用服務，環保署今天（22日）公布「外借杯良好服務標誌」，符合「循環（外借）杯良好服務指引」的店家可申請標誌，讓民眾可輕鬆辨識、安心借用，統一超商、摩斯漢堡、麥當勞及肯德基已搶先通過審核獲得標誌。",
+    subtitle: "環保署推循環杯指引 民眾可透過標誌識別",
+    description2:
+      "為了確保循環杯服務系統的衛生及品質，環保署10月底公布「循環（外借）杯良好服務指引」規範六大面向，包括材質及標示、借用及歸還、清洗、檢驗、環保理念溝通、良好服務標誌，要求業者提供3日歸還期限、多元支付押金、清洗符合準則等。符合指引的業者可以申請「外借杯良好服務標誌」，讓民眾安心借用循環杯，環保署今天也公布標誌設計網路票選結果，參與人次超過2萬人，2023年元旦起開始使用，成為開啟淨零綠生活的重要轉捩點。環保署表示，雖然法規明年才開始實施，但已有20個地方環保機關提前試辦循環杯的服務，業者也開始佈設常態型的循環杯租借點位，將近833家門市提前開跑，擴及全台16縣市。統一超商、摩斯漢堡、麥當勞及肯德基更在今年12月就通過審核獲得標誌。統一超商攜手星巴克等關係企業，預計年底會有500店導入循環杯服務，民眾打開OPEN POINT APP就能借用及歸還循環杯；摩斯漢堡目前已在20家門市開始循環杯租借服務，押金100元即可借用，開放甲借乙還；麥當勞、肯德基則與循環杯廠商好盒器合作，採用好盒器的借用歸還服務系統，借用後可於任何好盒器站點歸還。",
+      authorName: "Huanbai環杯!",
+      authorAvatar: "/assets/images/favicon.svg",
+    createdAt: "June 03, 2021",
+    cover: "/assets/images/img-news3.jpg",
+  },
+];
