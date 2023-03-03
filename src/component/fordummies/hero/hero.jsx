@@ -72,7 +72,7 @@ return () => {
 }, []);
 
 return (
-<div className="warp" id="warp">
+<div className="hero-warp" id="warp">
 <div id="body-cover">
 <button className="cover-button">
 <span className="cover-container"></span>

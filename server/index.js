@@ -95,9 +95,9 @@ app.post("/member/signupcheckemail", function (req, res) {
 
 
 
-/* 註冊頁面 將前端資料送往資料庫 */
-app.post("/member/signup", function (req, res) {
-    bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
+/* 註冊頁面modal版本 將前端資料送往資料庫 */
+app.post("/member/signup",function(req,res){
+    bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
         conn.query("insert into userInfo (account,password,userEmail) values (?,?,?)",
             [req.body.account, hash, req.body.userEmail], function (err, rows) {
                 console.log("收到" + req.body);
@@ -111,6 +111,24 @@ app.post("/member/signup", function (req, res) {
             })
     })
 
+})
+
+/* 註冊頁面 仔細版本 */
+app.post("/member/goSignUp",function(req,res){
+    bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
+        conn.query("insert into userInfo (account,password,userEmail,userAddress,userName,userGender,userTelephone,userBirth) values (?,?,?,?,?,?,?,?)",
+        [req.body.account, hash, req.body.userEmail,req.body.userAddress,req.body.userName,req.body.userGender,req.body.userTelephone,req.body.userBirth],function(err,rows){
+        console.log("收到"+req.body);
+        if(err){
+            console.log(err);
+        }else{
+            console.log("sussceeeeeee")
+        }
+        console.log(req.body)
+        res.send(JSON.stringify(req.body))
+    })
+    })
+   
 })
 
 

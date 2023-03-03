@@ -242,7 +242,7 @@ class MemberList extends Component {
         var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
         console.log(responseAuth)
         if(responseAuth.data==="尚未登入"){
-            window.location="/"
+            window.location="/gologin"
         }
     }
 }
