@@ -296,19 +296,15 @@ app.post('/updateOption1', (req, res) => {
     const option1 = req.body.option;
     const voteId = req.body.voteId;
 
+    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ?',
+        [voteId], (err, data) => {
 
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1'
-    [voteId], (err, data) => {
-        console.log("AAAAAA")
-        if (req.session.user === undefined) {
-            res.send("no")
-        } else {
-            res.send("aa")
-        }
+            if (err) return res.json(err); // 失敗回傳什麼
+            return res.json(data);            // 成功回傳交換回來的資料
+        });
 
-
-    });
 });
+
 
 
 
@@ -318,7 +314,7 @@ app.post('/updateOption2', (req, res) => {
     const option2 = req.body.option;
     const voteId = req.body.voteId;
 
-    conn.query('UPDATE votes SET numberOfOption2 = numberOfOption2 + 1 WHERE voteId = ? and option2 =  option2',
+    conn.query('UPDATE votes SET numberOfOption2 = numberOfOption2 + 1 WHERE voteId = ? ',
         [voteId], (err, data) => {
             if (err) return res.json(err); // 失敗回傳什麼
             return res.json(data);            // 成功回傳交換回來的資料
@@ -329,7 +325,7 @@ app.post('/updateOption3', (req, res) => {
     const option3 = req.body.option;
     const voteId = req.body.voteId;
 
-    conn.query('UPDATE votes SET numberOfOption3 = numberOfOption3 + 1 WHERE voteId = ? and option3 =  option3',
+    conn.query('UPDATE votes SET numberOfOption3 = numberOfOption3 + 1 WHERE voteId = ? ',
         [voteId], (err, data) => {
             if (err) return res.json(err); // 失敗回傳什麼
             return res.json(data);            // 成功回傳交換回來的資料
@@ -340,7 +336,7 @@ app.post('/updateOption4', (req, res) => {
     const option4 = req.body.option;
     const voteId = req.body.voteId;
 
-    conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1 WHERE voteId = ? and option4 =  option4',
+    conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1 WHERE voteId = ? ',
         [voteId], (err, data) => {
             if (err) return res.json(err); // 失敗回傳什麼
             console.log("data:", data)

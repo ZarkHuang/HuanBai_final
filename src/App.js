@@ -21,6 +21,9 @@ import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
+
+import GoLogIn from "../src/pages/memberpage/GoLogin"
+import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
@@ -56,7 +59,8 @@ function App(){
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
-            <Route path="/goLog" element={<GoLog/>} />
+            <Route path="/gologin" element={<GoLogIn/>} />
+            <Route path="/gosignup" element={<GoSignUp/>} />
 
 
            </Routes>

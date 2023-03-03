@@ -37,25 +37,11 @@ const Votecm = () => {
         })
     }, []);
 
-    // 改顏色邊框顏色的，要用的話下面的code記得改
-    // function handleOptionClick(event) {
-    //     document.querySelectorAll('.voteAnswer').forEach((answer) => {
-    //       answer.classList.remove('highlight');
-    //     });
-    //     event.target.classList.add('highlight');
-    //   }
 
     // 把資料給後端
     const handleVoteSubmit1 =
         async (option) => {
             try {
-                const res = await axios.post(`http://localhost:3344/updateOption1`, {
-                    option,
-                    voteId,
-                });
-                setVoteResult(res.data);
-                console.log("handleVoteSubmit", option);
-
                 // 確認你有沒有登入
                 var responseAuth = await axios.get('http://localhost:3344/checkAuth',
                     { withCredentials: true });
@@ -67,6 +53,21 @@ const Votecm = () => {
                     window.location = `/Vote/answer/${voteId} `;
                 }
 
+                const res = await axios.post(`http://localhost:3344/updateOption1`, {
+                    option,
+                    voteId,
+                });
+                if (res.data === "noooo") {
+                    alert("投票沒登入，不行呦")
+                    window.location = "/golog"
+                }
+                if (res.data === "aaa") {
+                    setVoteResult(res.data);
+                    console.log("handleVoteSubmit1", handleVoteSubmit1, "option", option)
+                }
+                // setVoteResult(res.data);
+                // console.log("handleVoteSubmit", option);
+                // window.location = `/Vote/answer/${voteId} `;
             } catch (err) {
                 console.log(err);
             }
@@ -76,15 +77,24 @@ const Votecm = () => {
     const handleVoteSubmit2 =
         async (option) => {
             try {
+                // 確認你有沒有登入
+                var responseAuth = await axios.get('http://localhost:3344/checkAuth',
+                    { withCredentials: true });
+                console.log("responseAuth", responseAuth)
+                if (responseAuth.data === "尚未登入") {
+                    alert("會員專屬功能，請先登入。即將跳轉登入頁面")
+                    window.location = "/goLog"
+                } else {
+                    window.location = `/Vote/answer/${voteId} `;
+                }
+
                 const res = await axios.post(`http://localhost:3344/updateOption2`, {
                     option,
                     voteId,
                 });
-
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-
-                window.location = `/Vote/answer/${voteId} `;
+                
             } catch (err) {
                 console.log(err);
             }
@@ -94,13 +104,24 @@ const Votecm = () => {
     const handleVoteSubmit3 =
         async (option) => {
             try {
+                // 確認你有沒有登入
+                var responseAuth = await axios.get('http://localhost:3344/checkAuth',
+                    { withCredentials: true });
+                console.log("responseAuth", responseAuth)
+                if (responseAuth.data === "尚未登入") {
+                    alert("會員專屬功能，請先登入。即將跳轉登入頁面")
+                    window.location = "/goLog"
+                } else {
+                    window.location = `/Vote/answer/${voteId} `;
+                }
+
                 const res = await axios.post(`http://localhost:3344/updateOption3`, {
                     option,
                     voteId,
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-                window.location = `/Vote/answer/${voteId} `;
+                
             } catch (err) {
                 console.log(err);
             }
@@ -110,13 +131,24 @@ const Votecm = () => {
     const handleVoteSubmit4 =
         async (option) => {
             try {
+                // 確認你有沒有登入
+                var responseAuth = await axios.get('http://localhost:3344/checkAuth',
+                    { withCredentials: true });
+                console.log("responseAuth", responseAuth)
+                if (responseAuth.data === "尚未登入") {
+                    alert("會員專屬功能，請先登入。即將跳轉登入頁面")
+                    window.location = "/goLog"
+                } else {
+                    window.location = `/Vote/answer/${voteId} `;
+                }
+
                 const res = await axios.post(`http://localhost:3344/updateOption4`, {
                     option,
                     voteId,
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-                window.location = `/Vote/answer/${voteId} `;
+                
             } catch (err) {
                 console.log(err);
             }
