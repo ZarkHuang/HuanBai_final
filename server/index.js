@@ -371,6 +371,7 @@ app.get("/vote/answer/:voteId", (req, res) => {
         });
 })
 
+// 
 app.get("/voteData", (req, res) => {
     const q = "SELECT * FROM `userVote`"
     conn.query(q, (err, data) => {
@@ -378,13 +379,24 @@ app.get("/voteData", (req, res) => {
         return res.json(data)           // 成功回傳交換回來的資料
 
     })
-    q = 'SELECT voteTopic, userName FROM votes v JOIN options o ON v.voteId = o.voteId WHERE v.voteId = ?'
-    conn.query(q, [voteId], (err, results) => {
-        if (err) throw err;
-        console.log(results);
-        // 在這裡處理查詢結果
-    });
+
 })
+
+// 投票資料post進去資料庫
+app.post("/voteDataData", loginApi, (req, res) => {
+    conn.query("INSERT INTO userVote (uid, voteId, userName) VALUES (?, ?, ?)",
+        [req.session.user.uid, req.body.voteId, req.session.user.userName],
+        
+        function (err, rows) {
+            console.log("req.session.user.uid", req.session.user.uid)
+            console.log("req.body.voteId", req.body.voteId)
+            if (err) throw err;
+            res.send(JSON.stringify(rows));
+        });
+});
+
+
+
 
 
 

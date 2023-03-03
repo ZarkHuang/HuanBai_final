@@ -30,7 +30,7 @@ const Votecm = () => {
     // 紀錄有沒有session
     useEffect(() => {
         axios.get('http://localhost:3344/checkAuth', { withCredentials: true }).then((responseAuth) => {
-            console.log(responseAuth)
+            console.log("responseAuth", responseAuth)
             if (responseAuth.data === "尚未登入") {
                 console.log('not login yet')
             }
@@ -41,11 +41,13 @@ const Votecm = () => {
     // 把資料給後端
     const handleVoteSubmit1 =
         async (option) => {
+
             try {
+                // console.log("this.state.memberdata2", this.state.memberdata);
                 // 確認你有沒有登入
                 var responseAuth = await axios.get('http://localhost:3344/checkAuth',
                     { withCredentials: true });
-                console.log("responseAuth", responseAuth)
+                console.log("responseAuth3", responseAuth)
                 if (responseAuth.data === "尚未登入") {
                     alert("會員專屬功能，請先登入。即將跳轉登入頁面")
                     window.location = "/goLog"
@@ -53,12 +55,24 @@ const Votecm = () => {
                     window.location = `/Vote/answer/${voteId} `;
                 }
 
+                // 投票資料post到後端 
                 const res = await axios.post(`http://localhost:3344/updateOption1`, {
                     option,
                     voteId,
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
+
+
+                console.log("this.state.memberdata2", this.state.memberdata);
+
+                // 會員session，post到後端
+                const postSession = await axios.post(`http://localhost:3344/voteDataData`,
+                    // this.state.memberdata,
+                    // { withCredentials: true },
+                    // console.log('this.state.memberdata',this.state.memberdata)
+                );
+
 
             } catch (err) {
                 console.log(err);
@@ -86,7 +100,7 @@ const Votecm = () => {
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-                
+
             } catch (err) {
                 console.log(err);
             }
@@ -113,7 +127,8 @@ const Votecm = () => {
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-                
+                console.log("res", res);
+
             } catch (err) {
                 console.log(err);
             }
@@ -140,7 +155,7 @@ const Votecm = () => {
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
-                
+
             } catch (err) {
                 console.log(err);
             }
