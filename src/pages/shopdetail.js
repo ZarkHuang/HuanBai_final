@@ -29,7 +29,7 @@ function Shopdetail() {
 
                 <div className="background-button">
                     <span>
-                        <Link to={`/shopdetail`} className="linkToShop">
+                        <Link to={`/cart`} className="linkToShop">
                             <FontAwesomeIcon icon={faCartArrowDown} />
                         </Link>
                     </span>
@@ -106,7 +106,7 @@ function Shopdetail() {
 
 
                 <div className="single-pro-details">
-                    <h6><b><Link to={`/shop`} ><span>自購杯</span>/</Link></b>客製</h6>
+                    <h6><b><Link to={`/shop`} ><span>線上商店</span>/</Link></b>客製</h6>
                     <h4>客製隨行杯350ml</h4>
                     <h2>售價 : NTD 150元</h2>
                     <select>
