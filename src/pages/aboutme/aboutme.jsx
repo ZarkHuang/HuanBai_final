@@ -6,6 +6,7 @@ import TeaminBox from "../../component/aboutme-components/inbox/teaminbox";
 import Communicate from "../../component/aboutme-components/communicate/communicate";
 import Circular from '../../img/aboutme_image/circularCup2.jpg'
 import Circular2 from '../../img/aboutme_image/circularCup.jpg'
+import Openning from "../../component/aboutme-components/openning/openning";
 
 const Brand = () => {
   useEffect(() => {
@@ -47,15 +48,8 @@ const Brand = () => {
 
   return (
     <>
+    <Openning/>
     <main className="cup-content js-content">
-      <section className="block section-intro">
-        <div className="item-parallax-content flex-container">
-        <div className="about__head">
-          <h2 className="opportunities__title">關於我們</h2>
-          <p className="opportunities__description">About us</p>
-        </div>
-        </div>
-      </section>
 
       <section className="block ad">
         <div className="item-parallax-content flex-container img-grid">
