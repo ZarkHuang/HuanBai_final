@@ -1,14 +1,4 @@
 
-
-  :root{
-    --mainColo-cup: white;
-    --mainColor-shadow: #bfbfbf;
-  }
-
-  .hero-warp{
-    margin-top: 5rem;
-  }
-
   button {
     position: relative;
     display: inline-block;
@@ -40,6 +30,7 @@
     justify-content: center;
     margin-bottom: 2px;
     border-radius: 10px;
+    margin-top: 10rem;
     
   }
   
