@@ -296,50 +296,18 @@ app.post('/updateOption1', (req, res) => {
     const option1 = req.body.option;
     const voteId = req.body.voteId;
 
-=======
-<<<<<<< HEAD
-    const userId = req.session.user.uid;
 
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1;把uid加進去的sql語法'
-        [voteId,userId], (err, data) => {
-            console.log("AAAAAA")
-            if(req.session.user===undefined){
-                res.send("no")
-            }else{
-                res.send("aa")
-            }
-            /* console.log("voteErr:", err)
-            if (err) return res.json(err); // 失敗回傳什麼
-            console.log("votedata", data)
-            return res.json(data); */            // 成功回傳交換回來的資料
-=======
-    const name = req.session.user.userName;
-    console.log("name", name)
->>>>>>> a6e312988b568833d2ffca961a2eaf208ba3e292
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1',
-        [voteId], (err, data) => {
-            console.log(req.session.user)
-            console.log("voteErr:", err)
-            if (req.session.user === undefined) {
-                res.send("noooo")
-            } else {
-                res.send("aaa")
-                console.log("aaa", aaa)
-            }
-=======
-           if (req.session.user === undefined){
-            res.send("noooo")
-            console.log("req.session.user", req.session.user)
-           }else{
-            res.send("aaa")
-            console.log("aaa", aaa)
-           }           
-            // if (err) return res.json(err); // 失敗回傳什麼
-            // console.log("votedata", data)
-            // return res.json(data);            // 成功回傳交換回來的資料
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
->>>>>>> a6e312988b568833d2ffca961a2eaf208ba3e292
-        });
+    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1'
+    [voteId], (err, data) => {
+        console.log("AAAAAA")
+        if (req.session.user === undefined) {
+            res.send("no")
+        } else {
+            res.send("aa")
+        }
+
+
+    });
 });
 
 
@@ -375,7 +343,7 @@ app.post('/updateOption4', (req, res) => {
     conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1 WHERE voteId = ? and option4 =  option4',
         [voteId], (err, data) => {
             if (err) return res.json(err); // 失敗回傳什麼
-            console.log("data:",data)
+            console.log("data:", data)
             return res.json(data);            // 成功回傳交換回來的資料
 
         });
@@ -419,7 +387,7 @@ app.get("/voteData", (req, res) => {
         if (err) throw err;
         console.log(results);
         // 在這裡處理查詢結果
-      });
+    });
 })
 
 
