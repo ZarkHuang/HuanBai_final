@@ -14,11 +14,6 @@ html {
   height: 100%;
 }
 
-body {
-  background-color: var(--mainColor-white);
-  color: #2B292D;
-}
-
 img {
   width: 100%;
   max-width: 100%;

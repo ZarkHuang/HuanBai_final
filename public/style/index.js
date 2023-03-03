@@ -66,6 +66,8 @@ $(document).ready(function () {
 		clearInterval(timer);
 	});
 
+
+
 	//註冊
 	$("#signupbtn").on("click", function () {
 		$("#signinbtn").css("background-color", "");

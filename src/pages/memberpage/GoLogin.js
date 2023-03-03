@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 
-function GoLog(){
+function GoLogIn(){
   /* 登入頁面假資料宣告 */
   const [loginData,setLoginData]=useState({
     account:"",
@@ -33,13 +33,13 @@ function GoLog(){
     }
     
   //* 註冊頁面假資料宣告 */
-  const [registerData,setRegisterData]=useState({
+  /* 以下開始是註冊頁面使用的function */
+/*   const [registerData,setRegisterData]=useState({
       account:"your account",
       password:"",
       passwordCheck:"",
       userEmail:"write email"
   });
-  /* 以下開始是註冊頁面使用的function */
   const accountRegisterChange =(e)=>{
     setRegisterData({...registerData,account:e.target.value});
   };
@@ -90,7 +90,7 @@ function GoLog(){
     }else{
       alert("兩次密碼不符合");
     }
-  }; 
+  };  */
         return (
             <React.Fragment>
 
@@ -105,7 +105,7 @@ function GoLog(){
 
 
       {/* <!-- 登入表單 --> */}
-      <div className="modal-body mx-5" id="oop">
+      <div className="modal-body mx-5">
         <form method='post'>
           <div className="mb-3">
             <label className="form-label">帳號</label>
@@ -123,38 +123,9 @@ function GoLog(){
         </form>
       </div>
 
-
-     {/* <!--  註冊表單 --> */}
-      <div className="modal-body mx-5" id="ooa">
-       <form method="post">
-          <div className="mb-3">
-
-            <label className="form-label">帳號</label>
-            <input type="text" name="account" value={registerData.account} onChange={accountRegisterChange} onBlur={accountRegisterCheck} className="form-control" />
-
-          </div>
-          <div className="mb-3">
-            <label  className="form-label" >信箱</label>
-            <input type="email" className="form-control" name="userEmail" value={registerData.userEmail} onChange={userEmailRegisterChange} onBlur={userEmailRegisterCheck} />
-          </div>
-          <div className="mb-3">
-            <label  className="form-label">密碼</label>
-            <input type="password" className="form-control" name="password" value={registerData.password}  onChange={passwordRegisterChange} onBlur={passwordRegisterCheck}/>
-          </div>
-          <div className="mb-3">
-            <label  className="form-label">密碼確認</label>
-            <input type="password" className="form-control" name="passwordCheck" value={registerData.passwordCheck} onChange={passwordCheckRegisterChange}/>
-          </div>
-          <div className="row">
-            <button  type="button" className="btn btnSubmit col-12 col-sm-9 col-md-5  mx-auto" onClick={sendRegisterDataClick}>送</button>
-
-          </div>
-
-        </form>
-      </div>
             </React.Fragment>
       );
     }
 
  
-export default GoLog;
+export default GoLogIn;

@@ -54,7 +54,7 @@ function App(){
             <Route path="/Vote/:voteId" element={< Vote />} />
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
-            <Route path="/member" element={<Member/>} />
+            <Route path="/member/*" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
             <Route path="/goLog" element={<GoLog/>} />
 

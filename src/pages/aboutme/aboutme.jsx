@@ -50,14 +50,14 @@ const Brand = () => {
     <main className="cup-content js-content">
       <section className="block section-intro">
         <div className="item-parallax-content flex-container">
-          <div className="centered-content">
-            <h4 className="copy copy-white">Brand</h4>
-            <h2 className="head-small head-centered">關於我們</h2>
-          </div>
+        <div className="about__head">
+          <h2 className="opportunities__title">關於我們</h2>
+          <p className="opportunities__description">About us</p>
+        </div>
         </div>
       </section>
 
-      <section className="block">
+      <section className="block ad">
         <div className="item-parallax-content flex-container img-grid">
           <figure className="img-gridItem type-right">
             <img
