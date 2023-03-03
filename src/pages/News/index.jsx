@@ -50,7 +50,7 @@ const News = () => {
           <div className='detail'>
           <p className='blog-cc'>詳細（PR TIMES）</p>
           <div class="form-group">
-              <button type="submit" class="btn btn__farm--invest" value="Send"><a className='sendmessage' target="_blank" href="https://e-info.org.tw/node/235747">Send a Message</a></button>
+              <a  href={blog.cypher} target="_blank" type="submit" class="form-btn btn__farm--invest" value="Send">Learn more</a>
           </div>
           </div>
           

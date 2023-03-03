@@ -17,7 +17,8 @@ const BlogItem = ({
         createdAt,
         cover,
         subtitle,
-        contentCover
+        contentCover,
+        cypher
         },
         }) => {
   return (

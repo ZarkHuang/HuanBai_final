@@ -37,7 +37,7 @@ const  RoutePage =() => {
     setToggle(id);
     const allBlogs = blogList;
     const filteredBlogs = allBlogs.filter((blog) =>
-    blog.category.toLowerCase().includes("cooking")
+    blog.category.toLowerCase().includes("article")
     );
     setBlogs(filteredBlogs);
   }
