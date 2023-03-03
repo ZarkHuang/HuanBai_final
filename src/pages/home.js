@@ -47,7 +47,7 @@ function Home(){
                     <span className="decDot decDot1 animate__animated animate__zoomIn"><img src={decDot1}/></span>
                         <div className="visualBox" data-aos="fade-up" data-aos-duration="1000">
                             <div className="visualBox_slogan">環唄！循環杯<br />建立友善生活圈 </div>
-                            <div className="visualBox_text">Search Bar Information for friendly life</div>
+                            <div className="visualBox_text">Search Bar Information <br />for friendly life</div>
                         </div>
                         <div className="bannerImg">
                             <img className="decImg" src={bannerImg}/>
@@ -119,9 +119,11 @@ function Home(){
                         </div>
                         <div className="mapBox_intro">
                             <div className="mapBox_intro_text">
-                                循環杯究竟是怎麼樣的存在，始終是個謎題。潘恩在不經意間這樣說過，名氣，是世上所有男人跟女人對我的評價;
-                                品格是上帝跟天使對我們的認識與了解。這讓我的思緒清晰了。我們不妨可以這樣來想:
-                                蘭格倫說過一句很有意思的話，幽雅是上帝的禮物，而智慧則是天賜的機遇。這句話把我們帶到了一個新的維度去思考這個問題。
+                            歡迎使用Huanbai循環杯搜尋地圖！我們提供全台各地循環杯據點，方便您隨時隨地找到附近的環保杯可使用。
+
+您可以快速查找您所在縣市及地區的循環杯據點，並輕鬆前往使用，讓您的環保行動更加便利。
+<br/>
+使用循環杯是一個小小的行動，但可以帶來重大的環保效益。現在就加入我們，一起用行動改變環境！
                             </div>
                         </div>
                     </div>
@@ -158,8 +160,16 @@ function Home(){
                             <div className="col-lg-5" data-aos="fade-up" data-aos-duration="1200">
 
                                 <div className="aboutUs_content">
-                                    循環杯可以說是有著成為常識的趨勢。<br />都能了解環保
-                                    循環杯的重要性。荷馬在不經意間這樣說過，惟仁德才能永遠屹立不搖。<br />希望大家實際感受一下這段話。<br />儘管如此，別人往往卻不這麼想。比才說<br />富有哲理的話，如果你要知道一個人的價值，就得計算他裡面有什麼，而不在於他身上有什麼。
+                                Huanbai致力於推廣循環杯，減少一次性塑膠垃圾的使用<br />
+                                鼓勵我們每個人建立在日常的一個生活小習慣<br />
+                                我們相信透過一個小小的行動，每個人都能夠發揮自己的力量<br/>
+                                讓我們從自己做起，一起建立更環保<br />
+                                更可持續的社會，為地球的環境盡一份心力。<br />
+
+                                一個舉動，就能有效保護海洋生物和永續環境！
+
+
+                           
                                 </div>
 
                                 <a href="#" className="rwd_linkBtn">
@@ -186,9 +196,8 @@ function Home(){
                                 </div>
                             <div data-aos="fade-up" data-aos-duration="1200">
                                 <div className="service_content" >
-                                    循環杯究竟是怎麼樣的存在，始終是個謎題。潘恩在不經意間這樣說過，名氣，是世上所有男人跟女人對我的評價;
-                                    品格是上帝跟天使對我們的認識與了解。這讓我的思緒清晰了。我們不妨可以這樣來想:
-                                    蘭格倫說過一句很有意思的話，幽雅是上帝的禮物，而智慧則是天賜的機遇。這句話把我們帶到了一個新的維度去思考這個問題。
+                                我們也提供循環懶人包，整理多家循環杯租借服務的資訊，方便使用者進行比較，快速找到符合自己需求的循環杯租借方案。
+                                <br/>透過懶人包查看各家循環杯租借的品牌、租賃方式等詳細資。讓租借循環杯更加方便。
                                 </div>
                                 <a href="#" className="rwd_linkBtn">
                                     <div className="btn-service">

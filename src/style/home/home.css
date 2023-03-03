@@ -182,17 +182,15 @@ html a, body a {
   text-align: center;
 }
 .aboutUs_EN {
-  font-size: 35px;
+  font-size: 26px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  line-height: 54px;
   color: #9BC9DD;
 }
 .aboutUs_title {
-  font-size: 62px;
+  font-size: 50px;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
-  line-height: 101px;
   color: #64C676;
 }
 .aboutUs_content {
@@ -270,17 +268,15 @@ html a, body a {
   text-align: left;
 }
 .service_EN {
-  font-size: 35px;
+  font-size: 26px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  line-height: 54px;
   color: #FEFCFC;
 }
 .service_title {
-  font-size: 62px;
+  font-size: 50px;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
-  line-height: 101px;
   color: #FEFCFC;
 }
 .service_content {
@@ -385,17 +381,15 @@ html a, body a {
   text-align: left;
 }
 .news_EN {
-  font-size: 35px;
+  font-size: 26px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  line-height: 54px;
   color: #9BC9DD;
 }
 .news_title {
-  font-size: 62px;
+  font-size: 50px;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
-  line-height: 101px;
   color: #64C676;
 }
 .news_item {
@@ -531,17 +525,15 @@ html a, body a {
   text-align: center;
 }
 .contactUs_EN {
-  font-size: 35px;
+  font-size: 26px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  line-height: 54px;
   color: #9BC9DD;
 }
 .contactUs_title {
-  font-size: 62px;
+  font-size: 50px;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
-  line-height: 101px;
   color: #64C676;
 }
 .contactUs_Box {

@@ -50,7 +50,7 @@
   display: inline-block;
   position: absolute;
   left: 3%;
-  top: 600px;
+  top: 400px;
 }
 .headerWrap .scrollBox {
   display: flex;
@@ -156,13 +156,13 @@
   z-index: 2;
 }
 .headerWrap_banner .visualBox_slogan {
-  font-size: 62px;
+  font-size: 50px;
   font-family: "Noto Sans TC", sans-serif;
   color: #162F3A;
   font-weight: 700;
 }
 .headerWrap_banner .visualBox_text {
-  font-size: 35px;
+  font-size: 26px;
   font-family: "Noto Sans", sans-serif;
   color: #2D5363;
   font-weight: 700;
@@ -170,12 +170,13 @@
 }
 .headerWrap_banner .bannerImg {
   position: absolute;
-  right: 20%;
+  right: 25%;
   top: -9px;
 }
 .headerWrap_banner .bannerImg .decImg {
+  max-width: 273px;
   position: relative;
-  right: 15px;
+  right: 38px;
   animation: decImg-rotate 1s linear reverse both;
 }
 .headerWrap_banner .decBox {
@@ -203,18 +204,26 @@
 .headerWrap_banner .decBox .decDot6 {
   left: 415px;
   top: 184px;
+  width: 30px;
+  height: 19px;
 }
 .headerWrap_banner .decBox .decDot7 {
   top: 430px;
   left: 352px;
+  width: 35px;
+  height: 24px;
 }
 .headerWrap_banner .decBox .decDot8 {
   left: 577px;
   top: 130px;
+  width: 46px;
+  height: 28px;
 }
 .headerWrap_banner .decBox .decDot9 {
   left: 520px;
   top: 334px;
+  width: 35px;
+  height: 23px;
 }
 
 @keyframes decImg-rotate {

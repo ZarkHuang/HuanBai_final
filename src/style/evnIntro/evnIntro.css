@@ -33,6 +33,11 @@
   background-color: #50A960;
 }
 
+@media (max-width: 576px) {
+  .scrollWrap {
+    display: none;
+  }
+}
 .evnIntroBox {
   margin-top: 80px;
 }
@@ -387,6 +392,16 @@
   padding: 6px;
   margin: 0 25px;
   position: relative;
+  transition: 0.5s;
+  top: 0;
+}
+.benefitsBox .benefits_item:hover {
+  box-shadow: 6px 8px 3px #9bcae0;
+  top: -40px;
+  transition: 0.5s;
+}
+.benefitsBox .benefits_item:hover .ico-benefits {
+  animation: icoAnimation 3s linear infinite;
 }
 .benefitsBox .benefits_item_bg {
   height: 202px;
@@ -429,6 +444,14 @@
   bottom: 18px;
 }
 
+@keyframes icoAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .policyBox {
   margin-top: 260px;
   margin-bottom: 240px;
@@ -490,4 +513,49 @@
 }
 .policy_item:nth-of-type(4) img {
   width: 102px;
+}
+
+@media (max-width: 768px) {
+  .startBox .startStep_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 1500px;
+  }
+
+  .benefitsBox .benefits_item {
+    margin-bottom: 50px;
+  }
+
+  .policy_list {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .policy_item {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .evnIntroBox .evnIntro_imgBox .img-evnCupIll {
+    left: 37%;
+    top: 33%;
+    max-width: 100px;
+  }
+
+  .needBox_introWrap .whitePot1, .needBox_introWrap .whitePot2, .needBox_introWrap .whitePot3 {
+    display: none;
+  }
+
+  .needBox_content {
+    padding: 34px 40px;
+  }
+
+  .benefitsBox .benefits_list {
+    margin: -290px 0 0 0px;
+  }
+
+  .evnIntroBox .evnIntro_l-left {
+    margin-bottom: 30px;
+  }
 }

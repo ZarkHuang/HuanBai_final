@@ -298,6 +298,14 @@
             padding: 6px
             margin: 0 25px
             position: relative
+            transition: 0.5s
+            top: 0       
+            &:hover
+                box-shadow: 6px 8px 3px rgb(155 202 224)
+                top: -40px 
+                transition: 0.5s
+                .ico-benefits
+                    animation: icoAnimation 3s linear infinite
             &_bg               
                 height: 202px
                 border-radius: 30px 30px 0px 0px
@@ -325,6 +333,14 @@
         position: absolute
         right: 24px
         bottom: 18px
+//經濟效益icon小動畫
+@keyframes icoAnimation
+    0%
+        transform: rotate(0deg) 
+    100%
+        transform: rotate(360deg)
+
+
 //政策支持
 .policyBox
     margin-top: 260px
@@ -360,5 +376,39 @@
         &:nth-of-type(4) img
             width: 102px
 
-               
-        
+
+    
+//RWD
+  
+@media (max-width:768px)
+    .startBox
+        .startStep_list
+            display: flex
+            flex-direction: column
+            align-items: center
+            min-height: 1500px
+    .benefitsBox 
+        .benefits_item
+            margin-bottom: 50px
+    .policy_list
+        flex-wrap: wrap
+        margin-top: 40px
+    .policy_item
+        margin-bottom: 20px
+
+@media (max-width:500px)
+    .evnIntroBox .evnIntro_imgBox .img-evnCupIll
+        left: 37%
+        top: 33%
+        max-width: 100px
+    .needBox_introWrap 
+        .whitePot
+            &1,&2,&3
+                display: none
+    .needBox_content
+        padding: 34px 40px
+    
+    .benefitsBox .benefits_list
+        margin: -290px 0 0 0px
+    .evnIntroBox .evnIntro_l-left
+        margin-bottom: 30px
