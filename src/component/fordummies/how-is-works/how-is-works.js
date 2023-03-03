@@ -57,7 +57,7 @@ const HowIsWork = () => {
             註冊
             </h3>
             <p className="works__step_description">
-            加入好盒器LINE好友驗證手機號碼
+            至品牌官網、專屬App登記租借或直接向店員租借
             </p>
           </div>
           <div className="works__step__content">

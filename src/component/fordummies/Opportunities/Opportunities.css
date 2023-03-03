@@ -7,23 +7,10 @@
   --subColor-lightBlue: #9BC9DD;
   --mainColor-green: #64C676;
 }
-
-body {
-  font-family: "Chivo", sans-serif;
-  font-size: 1.6rem;
-  color: #000000;
-  background-color: var(--mainColor-white);
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
   color: var(--mainColor-blue);
-}
-
-.btn {
-  border-radius: 0.5rem;
-  padding: 1.2rem;
 }
 
 /*End Hero */
@@ -56,6 +43,7 @@ a {
   text-align: center;
   max-width: 70rem;
   margin: 0 auto 10rem;
+  padding: 50px;
 }
 
 .opportunities__title {
@@ -84,6 +72,7 @@ a {
   filter: drop-shadow(0 0 0.75rem rgba(27, 31, 35, 0.15));
   padding: 5rem 2.5rem 2.5rem;
   transition: all 0.3s ease-out;
+  margin: 0 auto;
 }
 .opportunity.active {
   background-color: #66BB6A;

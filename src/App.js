@@ -27,7 +27,6 @@ import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
-
 // import './style/'
 
 

@@ -22,13 +22,15 @@ const BlogItem = ({
         }) => {
   return (
     <div className='blogItem-box'>
-    <Link className='blogItem-wrap'>
+    <Link className='blogItem-wrap' to={`/news/${id}`}>
       <div className='blogItem-cover-Box'>
       <img className='blogItem-cover' src={cover} alt='cover' />
       </div>
       <Chip label={category} />
       <h3>{title}</h3>
       <p className='blogItem-desc'>{description1}</p>
+
+      
       <footer className='article-footer'>
         <div className='blogItem-author'>
           <img src={authorAvatar} alt='avatar' />
@@ -37,6 +39,8 @@ const BlogItem = ({
             <p>{createdAt}</p>
           </div>
         </div>
+
+
         <Link className='blogItem-link' to={`/news/${id}`}>
           ➝
         </Link>
