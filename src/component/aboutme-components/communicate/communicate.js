@@ -1,7 +1,7 @@
 import React from "react";
 import './communicate.css'
 import Handsphone from '../../../img/aboutme_image/communicate.png'
-import './home.css'
+import './colection.css'
 
 const Communicate = () => {
   return (
