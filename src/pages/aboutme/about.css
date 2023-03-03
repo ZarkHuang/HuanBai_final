@@ -1,22 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-  --mainColor-white: #FEFCFC;
-  --mainColor-blue: #162F3A;
-  --subColor-blue: #2D5363;
-  --subColor-lightBlue: #9BC9DD;
-  --mainColor-green: #64C676;
-}
-
-html {
-  font-size: 10px;
-  height: 100%;
-}
-
-body {
-  background-color: var(--mainColor-white);
-  color: #2B292D;
-}
 
 img {
   width: 100%;
@@ -63,14 +46,19 @@ Hero樣式（杯子旋轉）
 .cup-content {
   height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   clip-path: border-box;
   transform: translateZ(0);
+
 }
 
 .block {
   position: relative;
   height: 100vh;
+}
+
+.ad{
+  margin-bottom: 20rem;
 }
 
 [class*=item-parallax] {
@@ -132,6 +120,7 @@ Hero樣式（杯子旋轉）
   transform: translateY(calc( var(--yBlock-5) * 0.1px ));
 }
 
+
 html {
   background-color: #64C676;
 }
@@ -162,48 +151,9 @@ html {
 
 ----------- */
 
-.head-small {
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
-  line-height: 1.2em;
-  font-weight: 600;
-  font-family: 'Noto Sans TC', sans-serif;
-  color: var(--mainColor-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.head-centered {
-  text-align: center;
-}
-
-.copy {
-  display: block;
-  max-width: 500px;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: lightgray;
-  line-height: 1.8em;
-  text-align: center;
-}
-
-.copy-white {
-  color: gray;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .content-small{
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.2em;
   font-family: 'Noto Sans TC', sans-serif;
   color: var(--mainColor-blue);
@@ -218,13 +168,13 @@ html {
   max-width: 500px;
   margin-right: auto;
   margin-bottom: 1.5rem;
-  margin-left: auto;
+  /* margin-left: auto; */
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   font-family: 'Noto Sans TC', sans-serif;
-  font-size:1.2rem;
+  font-size:1.5rem;
   line-height: 1.8em;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -240,10 +190,11 @@ html {
 .item-parallax-media img {
   position: absolute;
   top: -10%;
-  left: -10%;
+  left: 0%;
   width: 120%;
   height: 120%;
   object-fit: cover;
+  border-radius: 20%;
 }
 
 .section-intro:before {
@@ -251,7 +202,6 @@ html {
   background-image: url("https://static.vecteezy.com/system/resources/previews/008/478/819/original/single-blank-cup-free-png.png");
   background-position: center;
   background-size: cover;
-  content: "";
   position: absolute;
   top: 50%;
   left: 49.5%;
@@ -271,7 +221,7 @@ html {
 .img-gridItem {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -291,10 +241,11 @@ html {
 }
 
 .img-gridItem:nth-child(1) img {
-  transform: translateX(calc( var(--yBlock-4) * -0.03% ));
+  transform: translateX(var(--yBlock-4) * -0.05%);
 }
+
 .img-gridItem:nth-child(2) img {
-  transform: translateX(calc( var(--yBlock-4) * 0.03% ));
+  transform: translateX(var(--yBlock-4) * 0.05%);
 }
 
 .img-caption {
@@ -319,4 +270,9 @@ html {
   .section-intro:before{
     width: 100%;
   }
+}
+
+.about__head{
+  text-align: center;
+  margin: auto;
 }

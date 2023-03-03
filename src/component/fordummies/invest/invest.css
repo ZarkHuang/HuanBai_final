@@ -43,10 +43,10 @@
     padding: 2.5rem;
   }
   .invest__item:nth-child(1) {
-    background: url("../../../img/fordummeis_img/img-news3.jpg") no-repeat center/cover;
+    background: url("../../../img/fordummeis_img/circularCup.jpg") no-repeat center/cover;
   }
   .invest__item:nth-child(2) {
-    background: url("../../../img/fordummeis_img/img-news3.jpg") no-repeat center/cover;
+    background: url("../../../img/fordummeis_img/circularCup2.jpg") no-repeat center/cover;
   }
   
   .invest__item__subtitle {
@@ -79,6 +79,14 @@
     font-size: 1.6rem;
     color: #ffffff;
     max-width: 30rem;
+  }
+  
+
+  a.invest-btn {
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    color: #64C676; 
+    font-weight: 600;
   }
   
   .btn__invest {

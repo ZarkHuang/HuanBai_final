@@ -5,6 +5,9 @@
     --mainColor-shadow: #bfbfbf;
   }
 
+  .hero-warp{
+    margin-top: 5rem;
+  }
 
   button {
     position: relative;
