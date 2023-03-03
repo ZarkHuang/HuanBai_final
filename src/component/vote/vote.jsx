@@ -3,7 +3,7 @@ import axios from 'axios'; //
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import "./vote.css"
-import GoLog from '../../pages/memberpage/GoLogin';
+
 
 
 
@@ -27,6 +27,7 @@ const Votecm = () => {
         fecthAllVotecm();
     }, [voteIdNumber]);
 
+    // 紀錄有沒有session
     useEffect(() => {
         axios.get('http://localhost:3344/checkAuth', { withCredentials: true }).then((responseAuth) => {
             console.log(responseAuth)
@@ -52,17 +53,20 @@ const Votecm = () => {
                     option,
                     voteId,
                 });
-                if (res.data === "noooo") {
-                    alert("投票沒登入，不行呦")
-                    window.location = "/golog"
+                setVoteResult(res.data);
+                console.log("handleVoteSubmit", option);
+
+                // 確認你有沒有登入
+                var responseAuth = await axios.get('http://localhost:3344/checkAuth',
+                    { withCredentials: true });
+                console.log("responseAuth", responseAuth)
+                if (responseAuth.data === "尚未登入") {
+                    alert("會員專屬功能，請先登入。即將跳轉登入頁面")
+                    window.location = "/goLog"
+                } else {
+                    window.location = `/Vote/answer/${voteId} `;
                 }
-                if (res.data === "aaa") {
-                    setVoteResult(res.data);
-                    console.log("handleVoteSubmit1", handleVoteSubmit1, "option", option)
-                }
-                // setVoteResult(res.data);
-                // console.log("handleVoteSubmit", option);
-                // window.location = `/Vote/answer/${voteId} `;
+
             } catch (err) {
                 console.log(err);
             }
@@ -76,8 +80,10 @@ const Votecm = () => {
                     option,
                     voteId,
                 });
+
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
+
                 window.location = `/Vote/answer/${voteId} `;
             } catch (err) {
                 console.log(err);
