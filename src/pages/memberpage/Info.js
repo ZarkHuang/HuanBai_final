@@ -242,8 +242,8 @@ class MemberInfo extends Component {
         var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
         console.log(responseAuth)
         if(responseAuth.data==="尚未登入"){
-            alert("你還沒登入！即將連線到")
-            window.location="/golog"
+            alert("你還沒登入！即將轉移到登錄頁面")
+            window.location="/gologin"
         }
     }
 }

@@ -95,11 +95,29 @@ app.post("/member/signupcheckemail",function(req,res){
 
 
 
-/* 註冊頁面 將前端資料送往資料庫 */
+/* 註冊頁面modal版本 將前端資料送往資料庫 */
 app.post("/member/signup",function(req,res){
     bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
         conn.query("insert into userInfo (account,password,userEmail) values (?,?,?)",
         [req.body.account, hash, req.body.userEmail],function(err,rows){
+        console.log("收到"+req.body);
+        if(err){
+            console.log(err);
+        }else{
+            console.log("sussceeeeeee")
+        }
+        console.log(req.body)
+        res.send(JSON.stringify(req.body))
+    })
+    })
+   
+})
+
+/* 註冊頁面 仔細版本 */
+app.post("/member/goSignUp",function(req,res){
+    bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
+        conn.query("insert into userInfo (account,password,userEmail,userAddress,userName,userGender,userTelephone,userBirth) values (?,?,?,?,?,?,?,?)",
+        [req.body.account, hash, req.body.userEmail,req.body.userAddress,req.body.userName,req.body.userGender,req.body.userTelephone,req.body.userBirth],function(err,rows){
         console.log("收到"+req.body);
         if(err){
             console.log(err);
@@ -291,24 +309,8 @@ app.get("/vote/:voteId", (req, res) => {
 app.post('/updateOption1', (req, res) => {
     const option1 = req.body.option;
     const voteId = req.body.voteId;
-<<<<<<< HEAD
-    const userId = req.session.user.uid;
-
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1;把uid加進去的sql語法'
-        [voteId,userId], (err, data) => {
-            console.log("AAAAAA")
-            if(req.session.user===undefined){
-                res.send("no")
-            }else{
-                res.send("aa")
-            }
-            /* console.log("voteErr:", err)
-            if (err) return res.json(err); // 失敗回傳什麼
-            console.log("votedata", data)
-            return res.json(data); */            // 成功回傳交換回來的資料
-=======
-    const name = req.session.user.userName;
-    console.log("name", name)
+    //const name = req.session.user.uid;
+    //console.log("name", name)
     conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ? and option1 =  option1',
         [voteId], (err, data) => {
             console.log("voteErr:", err)
@@ -322,7 +324,6 @@ app.post('/updateOption1', (req, res) => {
             // if (err) return res.json(err); // 失敗回傳什麼
             // console.log("votedata", data)
             // return res.json(data);            // 成功回傳交換回來的資料
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
         });
 });
 

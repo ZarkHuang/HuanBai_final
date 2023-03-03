@@ -21,16 +21,13 @@ import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-<<<<<<< HEAD
 import GoLogIn from "../src/pages/memberpage/GoLogIn"
 import GoSignUp from "./pages/memberpage/GoSignUp";
-=======
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
-import GoLog from "./pages/memberpage/GoLogin";
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
+
 // import './style/'
 
 
@@ -61,12 +58,8 @@ function App(){
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
             <Route path="/order" element={<Order/>} />
-<<<<<<< HEAD
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
-=======
-            <Route path="/goLog" element={<GoLog/>} />
->>>>>>> b03ea265ee24886b434dd630dd9c2c0eb6f9788c
 
 
            </Routes>

@@ -1,0 +1,63 @@
+#EdisonGoSignUpContainer :root {
+  --mainColor-white: #fefcfc;
+  --mainColor-blue: #162f3a;
+  --subColor-blue: #2d5363;
+  --mainColor-seBlue: #70a0b4;
+  --subColor-lightBlue: #9bc9dd;
+  --mainColor-greenDark: #50a960;
+  --mainColor-green: #64c676;
+  --hoverColor-green: #91ffa5;
+  --mainColor-lightGreen: #b2ffc0;
+  --lightColor-light: #f4fff6;
+  --mainColor-gray: #666666;
+  --mainColor-black: #000000;
+  --fontSize-H1: 50px;
+  --fontSize-H2: 38px;
+  --fontSize-H3: 28px;
+  --fontSize-H4: 21px;
+  --fontSize-H5: 18px;
+  --fontSize-H6: 16px;
+  --fontSize-P: 14px;
+  --fontSize-SMALL: 12px;
+  --shadow-100: 0px 0px 2px rgba(0 0 0 / 0.1);
+  --shadow-200: 0px 4px 8px rgba(0 0 0 / 0.2);
+  --shadow-300: 0px 4px 8px rgba(0 0 0 / 0.3);
+  --shadow-400: 0px 6px 16px rgba(0 0 0 / 0.3);
+  --borderRadius-10: 10px;
+  --borderRadius-100: 100%;
+}
+
+#EdisonGoSignUpContainer .btn {
+  
+}
+
+/* 這是標題 */
+#EdisonGoSignUpContainer p {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+#EdisonGoSignUpContainer label {
+  font-size: 16px;
+}
+#EdisonGoSignUpContainer input{
+  font-size: 14px;
+}
+#EdisonGoSignUpContainer select{
+    font-size: 14px;
+}
+#EdisonGoSignUpContainer #GoSignUpBackBTN {
+  background-color: var(--mainColor-greenDark);
+  color: var(--lightColor-light);
+  border-radius: var(--borderRadius-10);
+  
+
+  
+}
+#EdisonGoSignUpContainer #GoSignUpSubmitBTN{
+    background-color: #847e7ee3;
+    border-radius: var(--borderRadius-10);
+}
+#EdisonGoSignUpContainer a{
+  color:var(--subColor-blue)
+}
