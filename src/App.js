@@ -11,6 +11,7 @@ import EvnIntro from "./pages/evnIntro";
 import ShopIntro from "./pages/shop";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
+import Shopdetail from "./pages/shopdetail";
 import Article from "./pages/article";
 import Psych from "./pages/psych";
 import PsychologicalTestPage from "./pages/psychologicalTest";
@@ -21,7 +22,7 @@ import VoteRecord from "./pages/voteRecord";
 import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-import GoLogIn from "../src/pages/memberpage/GoLogIn"
+import GoLogIn from "../src/pages/memberpage/GoLogin"
 import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
@@ -45,6 +46,7 @@ function App(){
             <Route path="/fordummies" element={<Fordummies/>} />
             <Route path="/map" element={<Map/>} />
             <Route path="/shop" element={<Shop/>} />
+            <Route path="/shopdetail" element={<Shopdetail />} />
             <Route path='/news' element={<Article/>} />
             <Route path='/news/:id' element={<News/>}/>
             <Route path='/page1' element={<EmptyList />}/>
