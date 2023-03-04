@@ -3,6 +3,7 @@ import Header from '../../component/articleComponents/Home/Header/header'
 import { blogList } from '../../component/articleComponents/config/data'
 import './style.css'
 import RoutePage from '../../component/articleComponents/Home/RoutePage/RoutePage'
+import ToTop from '../../component/ToTop'
 
 
 
@@ -35,6 +36,7 @@ const ArticleHome = () => {
 
   return (
     <div className='container'>
+      <ToTop/>
       {/* Header */}
     <Header />
     <div>

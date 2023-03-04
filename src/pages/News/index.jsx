@@ -7,6 +7,7 @@ import EmptyList from '../../component/articleComponents/common/EmptyList/Emptyl
 import './style.css'
 import { Link } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop.js';
+import ToTop from '../../component/ToTop';
 
 const News = () => {
   const {id} = useParams()
@@ -23,6 +24,7 @@ const News = () => {
 
   return (
     <>
+    <ToTop/>
       <ScrollToTop />
       <Link to="/news" className='blog-goBack' >
         <span> &#8592; </span> <span>Go Back</span>

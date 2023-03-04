@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import '../style/contactus/contact.css'
+import ToTop from "../component/ToTop";
 
 const Contactus = () => {
   const form = useRef();
@@ -29,6 +30,7 @@ const Contactus = () => {
 
   return (  
   <section class="contact pt-15">
+    <ToTop/>
           <div class="section-content flex-column">
           <div className="opportunities__head">
           <h2 className="opportunities__title">聯絡我們</h2>
