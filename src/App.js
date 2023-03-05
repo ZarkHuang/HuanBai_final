@@ -22,7 +22,6 @@ import Votes from "./pages/votes";
 import Vote from "./pages/vote";
 import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
-import Order from "./pages/order";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
 import GoLogIn from "../src/pages/memberpage/GoLogin"
@@ -64,11 +63,8 @@ function App(){
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
-            <Route path="/order" element={<Order/>} />
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
-
-
            </Routes>
             </div>
            <Footer/>

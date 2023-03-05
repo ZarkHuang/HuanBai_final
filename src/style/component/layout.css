@@ -454,6 +454,9 @@ footer .termsBox_item a {
   padding: 0 15px;
   transition: 0.3s;
 }
+.rwd_navMenu_item_a:visited {
+  color: #FEFCFC;
+}
 .rwd_navMenu_item_a:hover {
   background-color: #31362f2b;
   border-radius: 6px;
