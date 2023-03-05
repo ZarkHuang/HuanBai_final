@@ -64,6 +64,8 @@ body {
 .small-img-group {
     display: flex;
     justify-content: space-between;
+    padding-top: 5%;
+    
 }
 
 .small-img-col {

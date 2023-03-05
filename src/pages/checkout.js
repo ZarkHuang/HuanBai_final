@@ -8,8 +8,10 @@ function Cart() {
 
     return (
         <div className="container">
+
             <section id="cart" class="section-p1">
             <table width="100%">
+
                 <thead>
 
                     <tr>
@@ -18,7 +20,6 @@ function Cart() {
                         <td>顏色</td>
                         <td>金額</td>
                         <td>數量</td>
-                        <td>移除</td>
                     </tr>
 
                 </thead>
@@ -29,8 +30,7 @@ function Cart() {
                         <td>客製隨行杯350ml</td>
                         <td>米色</td>
                         <td>NTD 150元</td>
-                        <td><input type="number" value="1"></input></td>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>1</td>
                     </tr>
 
                     <tr>
@@ -38,8 +38,7 @@ function Cart() {
                         <td>環保吸管組</td>
                         <td>五入款</td>
                         <td>NTD 100元</td>
-                        <td><input type="number" value="1"></input></td>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>1</td>
                     </tr>
 
                     <tr>
@@ -47,8 +46,7 @@ function Cart() {
                         <td>客製飲料背袋</td>
                         <td>米色</td>
                         <td>NTD 100元</td>
-                        <td><input type="number" value="1"></input></td>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>1</td>
                     </tr>
 
                 </tbody>
@@ -67,13 +65,39 @@ function Cart() {
                         <td>運費 : 60元 </td>
                     </tr>
                     <tr>
-                        <td>總額 : 350元</td>
+                        <td>總額 : 410元</td>
                     </tr>
                 </table>
-                <button class="checkout"><span><Link to={`/checkout`} className="next" >下一步</Link></span></button>
+            </div>
+
+            <div class="form">
+
+                <h1 className='heading'>收件人資訊</h1>
+                {/* <p className='text'>訂購資訊</p> */}
+
+                <input type="text" id="name" placeholder='收件人姓名 : '></input>
+                <input type="text" id="phone" placeholder='收件人電話 : '></input>
+                <input type="text" id="email" placeholder='收件人信箱 : '></input>
+                <input type="text" id="address" placeholder='收件地址 : '></input>
+
+                <select>
+                        <option>發票選擇</option>
+                        <option>電子發票</option>
+                        <option>紙本發票</option>
+                        <option>載具</option>
+                        <option>發票捐贈</option>
+                </select>
+
             </div>
 
             </section>
+
+            <hr></hr>
+            <div className='next-pay'>
+            
+            <button class="checkout"><span><Link to={`/pay`} className="next" >確認付款</Link></span></button>
+
+            </div>
 
         </div>
     );
