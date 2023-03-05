@@ -141,7 +141,7 @@ body {
     position: fixed;
     font-size: 30px;
     right: 10%;
-    bottom: 8%;
+    top: 30%;
     z-index: 88;
 }
 
@@ -167,7 +167,7 @@ body {
     text-align: center;
     line-height: 40px;
     position: absolute;
-    top: 43%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

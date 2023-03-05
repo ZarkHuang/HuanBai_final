@@ -12,6 +12,7 @@ import ShopIntro from "./pages/shop";
 import Map from "./pages/map";
 import Shop from "./pages/shop";
 import Shopdetail from "./pages/shopdetail";
+import Cart from "./pages/cart";
 import Article from "./pages/article";
 import Psych from "./pages/psych";
 import PsychologicalTestPage from "./pages/psychologicalTest";
@@ -46,6 +47,7 @@ function App(){
             <Route path="/map" element={<Map/>} />
             <Route path="/shop" element={<Shop/>} />
             <Route path="/shopdetail" element={<Shopdetail />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path='/news' element={<Article/>} />
             <Route path='/news/:id' element={<News/>}/>
             <Route path='/page1' element={<EmptyList />}/>
