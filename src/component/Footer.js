@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import footerLogo from "../img/index/footerLogo.svg"
 function Footer(){
     return(
@@ -27,22 +28,25 @@ function Footer(){
                 <div className="col-lg-8 col-md-12 footerRwd_wrap-2">
                     <ul className="footerNav">
                         <li className="footerNav_item">
-                            <a href="#">關於我們</a>
+                            <Link to="/brand">關於我們</Link>
                         </li>
                         <li className="footerNav_item">
-                            <a href="#">循環地圖</a>
+                        <Link to="/map">循環地圖</Link>
+                            
                         </li>
                         <li className="footerNav_item">
-                            <a href="#">什麼是循環杯</a>
+                        <Link to="/evnIntro">關於循環杯</Link>
+                           
                         </li>
                         <li className="footerNav_item">
-                            <a href="#">循環懶人包</a>
+                        <Link to="/shop">線上商店</Link>
+                            
                         </li>
                         <li className="footerNav_item">
-                            <a href="#">相關消息</a>
+                        <Link to="/votes">投票專區</Link>
                         </li>
                         <li className="footerNav_item">
-                            <a href="#">登入 | 註冊</a>
+                        <Link to="/gologin">會員專區</Link>
                         </li>
                     </ul>
                     <div className="termsBox">
