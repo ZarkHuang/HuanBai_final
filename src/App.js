@@ -66,7 +66,10 @@ function App(){
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
-            <Route path="/member/list" element={<MemberList/>} />
+            <Route path="/member/voteAnswer/:voteId" element={<VoteAnswer/>} />
+            {/* 會員專區底下的分頁因為是牽套路由？所以不用宣告 */}
+           {/*  <Route path="/member/pay" element={<Pay/>} /> */}
+           {/*  <Route path="/member/vote" element={<MemberVote/>} /> */}
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
            </Routes>

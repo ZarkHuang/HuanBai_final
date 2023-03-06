@@ -141,8 +141,10 @@
   .invest__title,
   .works__title,
   .testimonials__title,
-  .farm-invest__title {
+  .farm-invest__title,
+  .invest__description {
       font-size: 3rem;
+      padding: 0 20px;
     }
   
     .invest__description,
@@ -154,6 +156,7 @@
     /*Invest Section*/
     .invest__body {
       grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+      padding: 0 20px;
     }
   
     .invest__item__title {

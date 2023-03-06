@@ -36,7 +36,7 @@ class MemberInfo extends Component {
                     <div className="row my-4 ">
                       <div className='col-5 mx-auto'>
                             <label>帳號</label>
-                            <input type="text" name="account"  className="form-control form-control-lg "  value={this.state.memberdata.account} onChange={this.accountRegisterChange} onBlur={this.accountRegisterCheck}  required placeholder='輸入帳號'/>
+                            <input type="text" name="account"  className="form-control form-control-lg Ediinput"  value={this.state.memberdata.account} onChange={this.accountRegisterChange} onBlur={this.accountRegisterCheck}  required placeholder='輸入帳號'/>
                             <span id="accountCheckRes"></span>
                           
                         </div></div> 
@@ -44,14 +44,14 @@ class MemberInfo extends Component {
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
                             <label>密碼</label>
-                            <input type="password" name="password"  className="form-control form-control-lg" value={this.state.memberdata.password} onChange={this.passwordRegisterChange} placeholder='輸入密碼'/>
+                            <input type="password" name="password"  className="form-control form-control-lg Ediinput" value={this.state.memberdata.password} onChange={this.passwordRegisterChange} placeholder='輸入密碼'/>
                             <span id="passwordCheckRes"></span>
                         </div></div>
 
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
                             <label>密碼確認</label>
-                            <input type="password" name="passwordCheck"  className="form-control form-control-lg" value={this.state.memberdata.passwordCheck} onChange={this.passwordCheckRegisterChange} placeholder='確認密碼'/>
+                            <input type="password" name="passwordCheck"  className="form-control form-control-lg Ediinput" value={this.state.memberdata.passwordCheck} onChange={this.passwordCheckRegisterChange} placeholder='確認密碼'/>
                             <span id=""></span>
                         </div></div>
 
@@ -61,7 +61,7 @@ class MemberInfo extends Component {
                             <div className='row '>
                               <div className='col-auto me-auto'>
                             <label>姓名</label>
-                            <input type="text" name="userName"  className="form-control form-control-lg" value={this.state.memberdata.userName} onChange={this.userNameDataChange} required placeholder='你的名字'/>
+                            <input type="text" name="userName"  className="form-control form-control-lg Ediinput" value={this.state.memberdata.userName} onChange={this.userNameDataChange} required placeholder='你的名字'/>
                             <span id="userNameCheckRes"></span>
 
                               </div>
@@ -90,7 +90,7 @@ class MemberInfo extends Component {
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
                             <label>聯絡號碼</label>
-                            <input type="text" name="userTelephone"  className="form-control form-control-lg" value={this.state.memberdata.userTelephone} onChange={this.userTelephoneChange}required placeholder='輸入手機/市話'/>
+                            <input type="text" name="userTelephone"  className="form-control form-control-lg Ediinput" value={this.state.memberdata.userTelephone} onChange={this.userTelephoneChange}required placeholder='輸入手機/市話'/>
                             <span id="userTelephoneCheckRes"></span>
                         </div></div>
 
@@ -98,7 +98,7 @@ class MemberInfo extends Component {
                         <div className='row my-4'>
                             <div className='col-5 mx-auto'> 
                                 <label>電子信箱</label>
-                                <input type='email' name="userEmail" className='form-control form-control-lg' value={this.state.memberdata.userEmail} onChange={this.userEmailRegisterChange} onBlur={this.userEmailRegisterCheck} placeholder='輸入您的電子信箱' required/>
+                                <input type='email' name="userEmail" className='form-control form-control-lg Ediinput' value={this.state.memberdata.userEmail} onChange={this.userEmailRegisterChange} onBlur={this.userEmailRegisterCheck} placeholder='輸入您的電子信箱' required/>
                                 <span id="userEmailCheckRes"></span>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ class MemberInfo extends Component {
 
                         <div className="row mb-4"><div className='col-5 mx-auto'>
                             <label>通訊地址</label>
-                            <input type="text" name="userAddress"  className="form-control form-control-lg" value={this.state.memberdata.userAddress} onChange={this.userAddressChange} required placeholder='輸入完整地址'/>
+                            <input type="text" name="userAddress"  className="form-control form-control-lg Ediinput" value={this.state.memberdata.userAddress} onChange={this.userAddressChange} required placeholder='輸入完整地址'/>
                             <span id="userAddressCheckRes"></span>
                         </div></div>
 

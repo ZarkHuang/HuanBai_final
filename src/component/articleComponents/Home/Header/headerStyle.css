@@ -48,7 +48,7 @@ input{
 /* titel text */
 .home-header{
   text-align: center;
-  margin:10rem 0;
+  margin:8rem 0 5rem 0;
 }
 
 
@@ -75,4 +75,9 @@ input{
 .opportunities__title {
     font-size: 3rem;
   }
+
+  .home-header{
+    margin:5rem 0;
+  }
+  
 }

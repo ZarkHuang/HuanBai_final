@@ -40,8 +40,9 @@
 #EdisonGoSignUpContainer label {
   font-size: 16px;
 }
-#EdisonGoSignUpContainer input{
+#EdisonGoSignUpContainer .Ediinput{
   font-size: 14px;
+  width: 100%;
 }
 #EdisonGoSignUpContainer select{
     font-size: 14px;
