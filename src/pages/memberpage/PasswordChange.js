@@ -16,7 +16,7 @@ class MemberChangePassword extends Component {
         <div id="changePasswordPageEdi"> 
 
        
-        <div className="row mt-5">
+        <div className="row mt-3">
           <div className="col-12 text-center"><p>改變密碼</p></div>
         </div>
 

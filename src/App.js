@@ -24,17 +24,14 @@ import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-// import GoLogIn from "../src/pages/memberpage/GoLogIn"
-import GoLogIn from "./pages/memberpage/GoLogin"
+import GoLogIn from "./pages/memberpage/GoLogIn"
 import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
-import MemberList from "./pages/memberpage/ListData";
-import MemberVote from "./pages/memberpage/VoteData";
 
-// import './style/'
+
 
 
 function App(){
@@ -67,8 +64,9 @@ function App(){
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
-            <Route path="/member/list" element={<MemberList/>} />
-            <Route path="/member/vote" element={<MemberVote/>} />
+            {/* 會員專區底下的分頁因為是牽套路由？所以不用宣告 */}
+           {/*  <Route path="/member/pay" element={<Pay/>} /> */}
+           {/*  <Route path="/member/vote" element={<MemberVote/>} /> */}
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
            </Routes>
