@@ -110,6 +110,12 @@ class MemberChangePassword extends Component {
     }
   };
   componentDidMount = async () => {
+    var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
+        console.log(responseAuth)
+        if(responseAuth.data==="尚未登入"){
+            alert("你還沒登入！即將轉移到登錄頁面")
+            window.location="/gologin"
+        }
     var serverData = await axios.get(
       "http://localhost:3344/member/changepassword",
       { withCredentials: true }
@@ -117,6 +123,7 @@ class MemberChangePassword extends Component {
     var newState = { ...this.state };
     newState.memberdata = serverData.data;
     this.setState(newState);
+    
   };
 }
 

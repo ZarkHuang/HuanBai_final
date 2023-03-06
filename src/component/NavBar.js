@@ -352,7 +352,7 @@ function NavBar() {
                         <Link to="/member/vote">投票紀錄</Link>
                       </li>
                       <li className="drop-menu_item">
-                        <Link to="/member/pay">訂單記錄</Link>
+                        <Link to="/member/payment">訂單記錄</Link>
                       </li>
                       {checkIsItLoged() ? (
                         <li className="drop-menu_item">

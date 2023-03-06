@@ -110,7 +110,7 @@ app.post('/member/forgotPassword',function(req,res){
         
         
             })
-            res.send("成功更改密碼")
+            
             transporter.sendMail(mailOptionsForgetPassword,function(err,info){
                 if(err){
                     console.log(err);
@@ -119,6 +119,8 @@ app.post('/member/forgotPassword',function(req,res){
                     console.log('sent ' +info.response);
                 }
             })
+            res.send("成功更改密碼")
+            
         }
     })
 })
