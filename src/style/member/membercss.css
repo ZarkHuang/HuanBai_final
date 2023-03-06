@@ -28,13 +28,21 @@
     --borderRadius-100:100%;
 }
 .tabEdi a{
-     background-color: rgb(177, 177, 177); 
+    background-color:#57B565; 
     border-radius: var(--borderRadius-10);
     font-size: 18px;
-    margin: 22px 0px;
+    margin: 20px 0px;
 }
-.Eactive{
-    background-color: #50A960;
+.tabEdi a:hover{
+    background-color:rgb(149, 147, 147);
+    border-radius: var(--borderRadius-10);
+    font-size: 18px;
+    margin: 20px 0px;
+}
+.Ediactive{
+    background-color: #13194f;
+    border-bottom: #000000 3px;
+    color: #50A960;
 }
 
 
@@ -42,3 +50,19 @@
     padding: 10px 0px;
 }
     
+#memberpageLogOutBTN{
+    background-color: var(--mainColor-seBlue);
+    border-radius: var(--borderRadius-10);
+    font-size: 18px;
+    margin: 22px 0px;
+}
+#memberpageLogOutBTN:hover{
+    background-color: var(--subColor-blue); 
+    border-radius: var(--borderRadius-10);
+    font-size: 18px;
+    margin: 22px 0px;
+}
+
+#firstTab{
+    margin-top: 80px;
+}

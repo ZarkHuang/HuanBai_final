@@ -6,8 +6,8 @@ class MemberInfo extends Component {
     state = { 
             memberdata:{
                 uid:"a",
-                userName:"吳冠哲",
-                account:"假資料人",
+                userName:"",
+                account:"",
                 password:"",
                 passwordCheck:"",
                 userEmail:"",
@@ -15,7 +15,8 @@ class MemberInfo extends Component {
                 userAddress:"",
                 userGender:'',
                 /* 假如沒有填寫日期，預設為今日日期 */
-                userBirth:this.todayDate()
+                userBirth:this.todayDate(),
+                subscripUsWithEmail:false
             }
      } 
     render() { 
@@ -35,7 +36,7 @@ class MemberInfo extends Component {
                     <div className="row my-4 ">
                       <div className='col-5 mx-auto'>
                             <label>帳號</label>
-                            <input type="text" name="account"  className="form-control form-control-lg "  value={this.state.memberdata.account} onChange={this.accountRegisterChange} onBlur={this.accountRegisterCheck}  required/>
+                            <input type="text" name="account"  className="form-control form-control-lg "  value={this.state.memberdata.account} onChange={this.accountRegisterChange} onBlur={this.accountRegisterCheck}  required placeholder='輸入帳號'/>
                             <span id="accountCheckRes"></span>
                           
                         </div></div> 
@@ -43,14 +44,14 @@ class MemberInfo extends Component {
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
                             <label>密碼</label>
-                            <input type="password" name="password"  className="form-control form-control-lg" value={this.state.memberdata.password} onChange={this.passwordRegisterChange}/>
+                            <input type="password" name="password"  className="form-control form-control-lg" value={this.state.memberdata.password} onChange={this.passwordRegisterChange} placeholder='輸入密碼'/>
                             <span id="passwordCheckRes"></span>
                         </div></div>
 
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
                             <label>密碼確認</label>
-                            <input type="password" name="passwordCheck"  className="form-control form-control-lg" value={this.state.memberdata.passwordCheck} onChange={this.passwordCheckRegisterChange}/>
+                            <input type="password" name="passwordCheck"  className="form-control form-control-lg" value={this.state.memberdata.passwordCheck} onChange={this.passwordCheckRegisterChange} placeholder='確認密碼'/>
                             <span id=""></span>
                         </div></div>
 
@@ -60,7 +61,7 @@ class MemberInfo extends Component {
                             <div className='row '>
                               <div className='col-auto me-auto'>
                             <label>姓名</label>
-                            <input type="text" name="userName"  className="form-control form-control-lg" value={this.state.memberdata.userName} onChange={this.userNameDataChange} required/>
+                            <input type="text" name="userName"  className="form-control form-control-lg" value={this.state.memberdata.userName} onChange={this.userNameDataChange} required placeholder='你的名字'/>
                             <span id="userNameCheckRes"></span>
 
                               </div>
@@ -88,8 +89,8 @@ class MemberInfo extends Component {
 
 
                         <div className="row my-4"><div className='col-5 mx-auto'>
-                            <label>手機號碼</label>
-                            <input type="text" name="userTelephone"  className="form-control form-control-lg" value={this.state.memberdata.userTelephone} onChange={this.userTelephoneChange}required/>
+                            <label>聯絡號碼</label>
+                            <input type="text" name="userTelephone"  className="form-control form-control-lg" value={this.state.memberdata.userTelephone} onChange={this.userTelephoneChange}required placeholder='輸入手機/市話'/>
                             <span id="userTelephoneCheckRes"></span>
                         </div></div>
 
@@ -97,24 +98,35 @@ class MemberInfo extends Component {
                         <div className='row my-4'>
                             <div className='col-5 mx-auto'> 
                                 <label>電子信箱</label>
-                                <input type='text' name="userEmail" className='form-control form-control-lg' value={this.state.memberdata.userEmail} onChange={this.userEmailRegisterChange} onBlur={this.userEmailRegisterCheck} required/>
+                                <input type='email' name="userEmail" className='form-control form-control-lg' value={this.state.memberdata.userEmail} onChange={this.userEmailRegisterChange} onBlur={this.userEmailRegisterCheck} placeholder='輸入您的電子信箱' required/>
                                 <span id="userEmailCheckRes"></span>
                             </div>
                         </div>
 
 
-                        <div className="row mb-5"><div className='col-5 mx-auto'>
+                        <div className="row mb-4"><div className='col-5 mx-auto'>
                             <label>通訊地址</label>
-                            <input type="text" name="userAddress"  className="form-control form-control-lg" value={this.state.memberdata.userAddress} onChange={this.userAddressChange} required/>
+                            <input type="text" name="userAddress"  className="form-control form-control-lg" value={this.state.memberdata.userAddress} onChange={this.userAddressChange} required placeholder='輸入完整地址'/>
                             <span id="userAddressCheckRes"></span>
                         </div></div>
 
-                        <div className='row mb-5'>
+                        <div className='row mb-2'>
                           <div className='col-5 mx-auto'>
                             <input className="form-check-input" type="checkbox" id="rawcheck" />
-                            <label className="form-check-label" for="rawcheck">我已閱讀並同意<a href='https://law.moj.gov.tw/Service/Privacy.aspx'>《隱私權保護政策》</a>及<a href='https://www.ey.gov.tw/Page/37D1D3EDDE2438F8'>《定型化契約條款》</a></label>
+                            <label className="form-check-label" htmlFor="rawcheck">我已閱讀並同意<a href='https://law.moj.gov.tw/Service/Privacy.aspx'>《隱私權保護政策》</a>及<a href='https://www.ey.gov.tw/Page/37D1D3EDDE2438F8'>《定型化契約條款》。</a></label>
                           </div>
                         </div>
+                        <div className='row mb-5'>
+                          <div className='col-5 mx-auto'>
+                            <input className="form-check-input" type="checkbox" id="eleport" name='subscripUsWithEmail' value='1' checked={this.state.memberdata.subscripUsWithEmail} onChange={this.ifSubOrNot}/>
+                            <label className="form-check-label"  htmlFor="eleport">訂閱電子報！我同意使用上述電子信箱來接收來自環唄的最新消息。</label>
+                            
+                          </div>
+                        </div>
+                        <div className='row'><div className='col-5 mx-auto'>
+                          <span id='warningTextBar'></span>
+                        </div>
+                          </div>
 
 
                         <div className='row mb-5'>
@@ -180,6 +192,11 @@ class MemberInfo extends Component {
           /*   alert("現在點到"+e.target.value)
             alert("現在點到"+newState.memberdata.userGender) */
     }
+    ifSubOrNot=(e)=>{
+      let newState={...this.state};
+      newState.memberdata.subscripUsWithEmail=e.target.checked;
+      this.setState(newState);
+    }
     userBirthChange=(e)=>{
         let newState = {...this.state};
         newState.memberdata.userBirth=e.target.value;
@@ -223,7 +240,7 @@ class MemberInfo extends Component {
      accountRegisterCheck=async()=>{
       let setDataAccount = await axios.post("http://localhost:3344/member/signupcheckname",this.state.memberdata,{withCredentials:true,});
       if(setDataAccount.data === "gowrong"){
-        document.getElementById("accountCheckRes").innerText ="帳號重複";
+        document.getElementById("accountCheckRes").innerText ="*帳號重複";
       }else if(setDataAccount.data === "success"){
         document.getElementById("accountCheckRes").innerText ="";
       }else{
@@ -233,7 +250,7 @@ class MemberInfo extends Component {
      userEmailRegisterCheck=async()=>{
       let setDataUserEmail = await axios.post("http://localhost:3344/member/signupcheckemail",this.state.memberdata,{withCredentials:true,})
       if(setDataUserEmail.data==="gowrong"){
-        document.getElementById("userEmailCheckRes").innerText ="信箱已經被註冊過了";
+        document.getElementById("userEmailCheckRes").innerText ="*信箱已經被註冊過了";
    
       }else if(setDataUserEmail.data ==="success"){
         document.getElementById("userEmailCheckRes").innerText ="";
@@ -255,21 +272,35 @@ class MemberInfo extends Component {
     
      sendRegisterDataClick = async()=>{
       if(this.state.memberdata.password === this.state.memberdata.passwordCheck){
+        if(this.state.memberdata.account===""){
+          document.getElementById("accountCheckRes").innerText="*不得為空";
+          document.getElementById('warningTextBar').innerText="上述欄位有＊號處 需要修正";
+
+        }
         if(this.state.memberdata.userName===""){
-          document.getElementById("userNameCheckRes").innerText ="還沒填寫";
+          document.getElementById("userNameCheckRes").innerText ="*不得為空";
+          document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
+
         }
         if(this.state.memberdata.userGender===""){
-          document.getElementById("userGenderCheckRes").innerText ="還沒填寫";
+          document.getElementById("userGenderCheckRes").innerText ="*不得為空";
+          document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
+
 
         }
         if(this.state.memberdata.userBirth===this.todayDate()){
-          document.getElementById("userBirthCheckRes").innerText ="日期是今天 你要確定欸";
+          document.getElementById("userBirthCheckRes").innerText ="*日期是今天 你要確定欸";
+          document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
+
         }
         if(this.state.memberdata.userTelephone===""){
-          document.getElementById("userTelephoneCheckRes").innerText ="還沒填寫";
+          document.getElementById("userTelephoneCheckRes").innerText ="*不得為空";
+          document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
+
         }
         if(this.state.memberdata.userAddress===""){
-          document.getElementById("userAddressCheckRes").innerText ="還沒填寫";
+          document.getElementById("userAddressCheckRes").innerText ="*不得為空";
+          document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
 
         }
         if(this.state.memberdata.userName!==""&&this.state.memberdata.userGender!==""&&this.state.memberdata.userBirth!==this.todayDate()&&this.state.memberdata.userTelephone!==""&&this.state.memberdata.userAddress!=="")
@@ -279,7 +310,9 @@ class MemberInfo extends Component {
         }
 
       }else{
-        document.getElementById("passwordCheckRes").innerText ="兩次密碼不符合";
+        document.getElementById("passwordCheckRes").innerText ="*兩次密碼不符合";
+        document.getElementById("warningTextBar").innerText ="上述欄位有＊號處 需要修正";
+
        
        
       }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import '../../style/member/changeCss.css'
 class MemberChangePassword extends Component {
   state = {
     memberdata: {
@@ -12,44 +13,56 @@ class MemberChangePassword extends Component {
   render() {
     return (
       <React.Fragment>
+        <div id="changePasswordPageEdi"> 
+
+       
         <div className="row mt-5">
-          <div className="col-12 text-center"><h1>改變密碼</h1></div>
+          <div className="col-12 text-center"><p>改變密碼</p></div>
         </div>
 
-        <div className="my-auto">
-          <form className="m-auto">
-            <div className="row mb-4 mb-sm-4 ">
-              <div className="col-sm-12">
+        <div className="my-5">
+          <form className="m-auto" >
+            <div className="row mb-5 mb-sm-4 ">
+              <div className="col-8 mx-auto">
                 <label>原始密碼</label>
-                <input type="text" readOnly className=" form-control-plaintext" value={this.state.memberdata.password}/>
+                <input type="password" readOnly className=" form-control-plaintext" id='myoriginpaw'value={this.state.memberdata.password}/>
+                <div onClick={this.WathMyPassword}>確認</div>
               </div>
             </div>
 
-            <div className="row mb-4 mb-sm-4">
-              <div className="col-sm-12">
+            <div className="row mb-5 ">
+              <div className="col-8 mx-auto">
                 <label>新密碼</label>
                 <input type="text" className="form-control" name="firstpassword" onChange={this.firstpasswordChange}/>
               </div>
             </div>
 
-            <div className="row mb-4 mb-sm-4">
-              <div className="col-sm-12">
+            <div className="row mb-5 ">
+              <div className="col-8 mx-auto">
                 <label>確認新密碼</label>
                 <input type="text" className="form-control" name="secondpassword" onChange={this.secondpasswordChange} />
               </div>
             </div>
 
             <div className="row ">
-              <div className="col-sm-12 col-md-3 col-12">
-                <button className="btn btn-warning" type="button"  onClick={this.okclick}>
+              <div className="col-8 mx-auto align-center">
+                <button className="btn btn-warning col-3" type="button"  onClick={this.okclick}>
                   送出
                 </button>
               </div>
             </div>
           </form>
         </div>
+        </div>
       </React.Fragment>
     );
+  }
+  WathMyPassword=()=>{
+    if(document.getElementById('myoriginpaw').getAttribute("type")==="password"){
+      document.getElementById('myoriginpaw').setAttribute("type","text")
+    }else{
+      document.getElementById('myoriginpaw').setAttribute("type","password")
+    }
   }
   paswdChange = (e) => {
     let newState = { ...this.state };
@@ -90,6 +103,7 @@ class MemberChangePassword extends Component {
         this.state.memberdata,
         { withCredentials: true }
       );
+      
       window.location = "/";
     } else {
       alert("密碼設置不同 請重新設置");

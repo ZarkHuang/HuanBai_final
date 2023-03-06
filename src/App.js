@@ -24,12 +24,14 @@ import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-import GoLogIn from "../src/pages/memberpage/GoLogin"
+import GoLogIn from "../src/pages/memberpage/GoLogIn"
 import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
+import MemberList from "./pages/memberpage/ListData";
+import MemberVote from "./pages/memberpage/VoteData";
 // import './style/'
 
 
@@ -63,6 +65,10 @@ function App(){
             <Route path="/Vote/answer/:voteId" element={< Answer />} />
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
+            <Route path="/member/list" element={<MemberList/>} />
+            <Route path="/member/vote" element={<MemberVote/>} />
+
+            <Route path="/order" element={<Order/>} />
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
            </Routes>

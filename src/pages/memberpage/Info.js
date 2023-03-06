@@ -5,9 +5,9 @@ class MemberInfo extends Component {
     state = { 
             memberdata:{
                 uid:"a",
-                userName:"吳冠哲",
-                account:"假資料人",
-                userEmail:"fake@email.cpm",
+                userName:"",
+                account:"",
+                userEmail:"",
                 userTelephone:"",
                 userAddress:"",
                 userGender:'',
@@ -34,7 +34,7 @@ class MemberInfo extends Component {
                                 <label className='col-form-label'>名字:</label>
                             </div>
                             <div className='col-auto'>
-                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userName" value={this.state.memberdata.userName} />
+                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userName" value={this.state.memberdata.userName} placeholder="尚未填寫" />
                             </div>
                             {/* <div className="col-3 col-md-auto ms-5 ms-sm-5 ms-md-0 d-none d-lg-block">
                                 <label className='col-form-label'>性別:</label>
@@ -92,7 +92,7 @@ class MemberInfo extends Component {
                                 <label className='col-form-label'>電子信箱:</label>
                             </div>
                             <div className="col-auto" /* d-block d-lg-none" */>
-                                <input type="text" readOnly className="form-control-plaintext inputWord"  name="useremail" value={this.state.memberdata.userEmail} />
+                                <input type="text" readOnly className="form-control-plaintext inputWord"  name="useremail" value={this.state.memberdata.userEmail} placeholder="尚未填寫"/>
                             </div>
                         </div>
                                 {/* lg開始隱藏 lg以下可視 */}

@@ -93,11 +93,45 @@ function NavBar(){
       alert("兩次密碼不符合");
     }
   }; 
-  /* useEffect(()=>{
+
+  const checkIsItLoged = function(){
+    if(document.cookie.length>15){
+      return true
+    }else{
+      console.log("nNONONONONONO")
+      return false
+    }
+  };
+ const sendlogoutClick=async()=>{
+    let logoutRes = await axios.get("http://localhost:3344/logout",{withCredentials:true});
+    console.log(logoutRes.data);
+    if(logoutRes.data==="登出成功"){
+        alert("即將登出");
+        window.location="/"
+    } 
+    }
+
+/*   const checkIfLog = function(){
     axios.get('http://localhost:3344/checkAuth',{withCredentials:true}).then((responseAuth)=>{
       console.log(responseAuth)
       if(responseAuth.data==="尚未登入"){
         console.log('not login yet')
+        return "not"
+        
+      }
+      if(responseAuth.data==="登入中"){
+        console.log("logining");
+        return "yes"
+      }});
+  } */
+ /*  useEffect(()=>{
+    axios.get('http://localhost:3344/checkAuth',{withCredentials:true}).then((responseAuth)=>{
+      console.log(responseAuth)
+      if(responseAuth.data==="尚未登入"){
+        console.log('not login yet')
+      }
+      if(responseAuth.data==="登入中"){
+        console.log('logining')
       }
     })
   },[]); */
@@ -169,11 +203,19 @@ return(
                    
                     </li>
                     <li className="rwd_navMenu_item">
-                    <Link to="/gologin" className="rwd_navMenu_item_a">會員專區</Link>
+                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><Link to="/member/*" className="rwd_navMenu_item_a">會員資訊</Link></li>
-                            <li className="rwd_navMenu_sub_item"><Link to="/member/vote" className="rwd_navMenu_item_a">投票紀錄</Link></li>
-                            <li className="rwd_navMenu_sub_item"><Link to="/member/list" className="rwd_navMenu_item_a">訂單記錄</Link></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">會員資訊</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">投票紀錄</a></li>
+                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">訂單記錄</a></li>
+                            {
+                              checkIsItLoged() ? 
+                              
+                              <li className="rwd_navMenu_sub_item">
+                                <a /* href="/" 不知道為什麼一定要加上href才可以正常登出 */ className="rwd_navMenu_item_a" onClick={sendlogoutClick}>登出</a></li>:<></>
+
+
+                            }
                         </ul>
                    
                     </li>
@@ -241,18 +283,22 @@ return(
                     </li>
                 
                     <li className="navBar_item">
-                    <Link to="/gologin">
-                    會員專區</Link>             
+                        <a href="/" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item">
-                              <Link to="/member/*">會員資訊</Link>
-                              </li>
-                            <li className="drop-menu_item">
-                            <Link to="/member/vote">投票紀錄</Link>
-                              </li>
-                            <li className="drop-menu_item">
-                            <Link to="/member/list">訂單記錄</Link>
-                              </li>
+                            {/* <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li> */}
+                          
+                          {  checkIsItLoged() ? (<>
+                            <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li>
+                            <li className="drop-menu_item"><a href="/order" onClick={sendlogoutClick}>登出</a></li>
+                            </>):(
+                            <><li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li></> 
+                            )}
                         </ul>
                     </li>
                     {/* <li className="navBar_item"><a href="#"  data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a></li> */}
