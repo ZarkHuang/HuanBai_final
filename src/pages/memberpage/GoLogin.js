@@ -3,10 +3,15 @@ import axios from 'axios';
 import "../../style/member/goLogInCss.css"
 
 class GoLogIn extends Component {
-  state = { loginData:{
+  state = { 
+    loginData:{
     account:"",
     password:""
-  } } 
+  },
+    forgetData:{
+      account:"",
+      userEmail:""
+    } } 
   render() { 
     return (
       <React.Fragment>
@@ -46,7 +51,7 @@ class GoLogIn extends Component {
             <label className="form-check-label ms-3" for="showPassword">顯示密碼</label> 
             </div>
 
-            <div>忘記密碼?</div>
+            <div><button type='button' data-bs-toggle="modal" data-bs-target="#thisIsForForgetPassword">忘記密碼?</button></div>
 
           </div>
         
@@ -60,7 +65,29 @@ class GoLogIn extends Component {
         </div>
       </form>
     </div>
+
+
+    <div class="modal fade" id="thisIsForForgetPassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
     
+      <div class="modal-body">
+        <div className='row '>
+          <div className='col-11'>填寫資料來獲取新密碼</div>
+          <div className='col-1'><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div className='row mt-5'>
+            <form method='post'>
+               <div className='row'><label className='col-form-label col-3'>會員帳號</label><div className='col-8'><input type='text'  className='form-control' name="account" value={this.state.forgetData.account} onChange={this.forgetAccountChange} required/></div></div>
+               <div className='row '><label className='col-form-label col-3'>電子信箱</label><div className='col-8'><input type='email'  className='form-control' name='userEmail' value={this.state.forgetData.userEmail}  onChange={this.forgetusrEmailChange} required/></div></div>
+               <div className='row'><button type='button' className=' col-6 mx-auto btn getpasswordBTN' onClick={this.sendForgetPasswordData}>獲得密碼</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
           </React.Fragment>
     );
   }
@@ -82,6 +109,31 @@ class GoLogIn extends Component {
     newState.loginData.password=e.target.value;
     this.setState(newState);
  
+  };
+
+  forgetAccountChange=(e)=>{
+    let newState={...this.state};
+    newState.forgetData.account=e.target.value;
+    this.setState(newState);
+
+  };
+  forgetusrEmailChange=(e)=>{
+    let newState={...this.state};
+    newState.forgetData.userEmail=e.target.value;
+    this.setState(newState);
+  };
+
+  sendForgetPasswordData=async()=>{
+    let forgetRes = await axios.post("http://localhost:3344/member/forgotPassword",this.state.forgetData,{withCredentials:true});
+    console.log(forgetRes.data)
+    if(forgetRes.data==="沒有這個帳號"){
+      alert("帳號或信箱不存在");
+    }
+    if(forgetRes.data==="成功更改密碼"){
+      alert("密碼已寄送至您的信箱");
+      window.location="/";
+    }
+
   };
    
    sendLoginDataClick=async()=>{

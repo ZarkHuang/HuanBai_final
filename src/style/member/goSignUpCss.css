@@ -61,3 +61,7 @@
 #EdisonGoSignUpContainer a{
   color:var(--subColor-blue)
 }
+#EdisonGoSignUpContainer span{
+  color: rgb(191, 36, 36);
+  font-size: var(--fontSize-SMALL);
+}

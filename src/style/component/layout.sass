@@ -52,7 +52,7 @@
         display: inline-block
         position: absolute
         left: 3%
-        top: 600px
+        top: 400px
     .scrollBox
         display: flex
         flex-direction: column
@@ -151,18 +151,19 @@
            
 
             &_slogan
-                +fz-TC(62px)
+                +fz-TC(50px)
               
             &_text
-                +fz-EN(35px,$subColor-blue)
+                +fz-EN(26px,$subColor-blue)
                 margin-top: 15px
         .bannerImg
             position: absolute
-            right: 20%
+            right: 25%
             top: -9px
             .decImg
+                max-width: 273px
                 position: relative
-                right: 15px
+                right: 38px
                 animation: decImg-rotate 1s linear reverse both
 	            
     
@@ -188,15 +189,23 @@
                 &6
                     left: 415px
                     top: 184px
+                    width: 30px
+                    height: 19px
                 &7
                     top: 430px
                     left: 352px
+                    width: 35px
+                    height: 24px
                 &8
                     left: 577px
                     top: 130px
+                    width: 46px
+                    height: 28px
                 &9
                     left: 520px
                     top: 334px
+                    width: 35px
+                    height: 23px
 
 //bannerLogo動畫
 @keyframes decImg-rotate
@@ -401,7 +410,8 @@ footer
             width: 100%
             padding: 0 15px
             transition: 0.3s
-
+            &:visited
+                color: $mainColor-white
             &:hover
                 // background-color: #ffffff59
                 background-color: #31362f2b

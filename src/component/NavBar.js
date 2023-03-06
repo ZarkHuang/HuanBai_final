@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logoImg from "../img/index/headerLogo.svg";
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
@@ -92,11 +93,45 @@ function NavBar(){
       alert("兩次密碼不符合");
     }
   }; 
-  /* useEffect(()=>{
+
+  const checkIsItLoged = function(){
+    if(document.cookie.length>15){
+      return true
+    }else{
+      console.log("nNONONONONONO")
+      return false
+    }
+  };
+ const sendlogoutClick=async()=>{
+    let logoutRes = await axios.get("http://localhost:3344/logout",{withCredentials:true});
+    console.log(logoutRes.data);
+    if(logoutRes.data==="登出成功"){
+        alert("即將登出");
+        window.location="/"
+    } 
+    }
+
+/*   const checkIfLog = function(){
     axios.get('http://localhost:3344/checkAuth',{withCredentials:true}).then((responseAuth)=>{
       console.log(responseAuth)
       if(responseAuth.data==="尚未登入"){
         console.log('not login yet')
+        return "not"
+        
+      }
+      if(responseAuth.data==="登入中"){
+        console.log("logining");
+        return "yes"
+      }});
+  } */
+ /*  useEffect(()=>{
+    axios.get('http://localhost:3344/checkAuth',{withCredentials:true}).then((responseAuth)=>{
+      console.log(responseAuth)
+      if(responseAuth.data==="尚未登入"){
+        console.log('not login yet')
+      }
+      if(responseAuth.data==="登入中"){
+        console.log('logining')
       }
     })
   },[]); */
@@ -108,7 +143,9 @@ return(
         <div className="row">
         <div className="col-lg-3 navMenu_box">
             <div className="header_logo">
-                <a href="/"><img src={logoImg} /></a>
+              <Link to="/">  
+                  <img src={logoImg} />
+              </Link>
             </div>
             {/* <!-- RWD漢堡選單 --> */}
 
@@ -120,47 +157,65 @@ return(
                 </div>
             </div>
             <nav className="rwd_navMenu_box">
-              <a href="/">
-                <img className="rwd_navMenu_logo" src="./img/index/footerLogo.svg" alt="" />
-                </a>
+             
+                <Link to="/">
+                <img className="rwd_navMenu_logo" src="./img/index/footerLogo.svg" alt="" /></Link>
+               
                 <ul className="rwd_navMenu">
 
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_sub_item rwd_navMenu_item_a">關於我們</a>
+                      <Link to="/" className="rwd_navMenu_sub_item rwd_navMenu_item_a">關於我們</Link>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">品牌簡介</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">與我們聯絡</a></li>
+                            <li className="rwd_navMenu_sub_item">
+                              <Link to="/brand" className="rwd_navMenu_item_a">品牌簡介</Link>
+                        
+                              </li>
+                            <li className="rwd_navMenu_sub_item">
+                            <Link to="/contactUs" className="rwd_navMenu_item_a">與我們聯絡</Link>
+                              
+                              </li>
                             
                         </ul>
                     </li>
                     
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">循環地圖</a>
+                    <Link to="/map" className="rwd_navMenu_item_a">循環地圖</Link>
+        
 
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">關於循環杯</a>
+                    <Link to="/" className="rwd_navMenu_item_a">關於循環杯</Link>
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">什麼是循環杯</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">循環懶人包</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">相關消息</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">心理測驗</a></li>
+                        <li className="rwd_navMenu_sub_item"><Link to="/evnIntro" className="rwd_navMenu_item_a">什麼是循環杯</Link></li>
+                         <li className="rwd_navMenu_sub_item"><Link to="/fordummies" className="rwd_navMenu_item_a">循環懶人包</Link></li>
+                         <li className="rwd_navMenu_sub_item"><Link to="/news" className="rwd_navMenu_item_a">相關消息</Link></li>
+                         <li className="rwd_navMenu_sub_item"><Link to="/psych" className="rwd_navMenu_item_a">心理測驗</Link></li>
                         </ul>
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">線上商店</a>
+                    <Link to="/shop" className="rwd_navMenu_item_a">線上商店</Link>
+                        
 
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a">投票專區</a>
+                    <Link to="/votes" className="rwd_navMenu_item_a">投票專區</Link>
+                     
                    
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>會員專區</a>
+                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
                         <ul className="rwd_navMenu_sub">
                             <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">會員資訊</a></li>
                             <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">投票紀錄</a></li>
                             <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">訂單記錄</a></li>
+                            {
+                              checkIsItLoged() ? 
+                              
+                              <li className="rwd_navMenu_sub_item">
+                                <a /* href="/" 不知道為什麼一定要加上href才可以正常登出 */ className="rwd_navMenu_item_a" onClick={sendlogoutClick}>登出</a></li>:<></>
+
+
+                            }
                         </ul>
                    
                     </li>
@@ -176,39 +231,74 @@ return(
                 <ul className="navBar">
 
                     <li className="navBar_item">
-                        <a href="#">關於我們</a>
+                      <Link to="/">
+                        關於我們</Link>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="/brand">品牌簡介</a></li>
-                            <li className="drop-menu_item"><a href="/contactUs">與我們聯絡</a></li>                  
+                            <li className="drop-menu_item">
+                            <Link to="/brand">
+                              品牌簡介
+                              </Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/contactUs">
+                              與我們聯絡</Link>
+                              </li>                  
                         </ul>
                     </li>
                     <li className="navBar_item">
-                        <a href="/map">循環地圖</a>
+                      <Link to="/map">
+                          循環地圖
+                          </Link>
                     </li>
                     <li className="navBar_item">
-                        <a href="#">關於循環杯</a>
+                    <Link to="/">關於循環杯</Link>
                         <ul className="drop-menu">
-                            <li className="drop-menu_item"><a href="/evnIntro">什麼是循環杯</a></li>
-                            <li className="drop-menu_item"><a href="/fordummies">循環懶人包</a></li>
-                            <li className="drop-menu_item"><a href="/news">相關消息</a></li>
-                            <li className="drop-menu_item"><a href="/psych">心理測驗</a></li>
+                            <li className="drop-menu_item">
+                            <Link to="/evnIntro">
+                             什麼是循環杯</Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/fordummies">
+                              循環懶人包</Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/news">
+                              相關消息</Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/psych">
+                             心理測驗</Link>
+                              </li>
                         </ul>
                     </li>
                     <li className="navBar_item">
-                      <a href="/shop">線上商店</a>
+                    <Link to="/shop">
+                     線上商店</Link>
           
                     </li>
                     <li className="navBar_item">
-                      <a href="/votes">投票專區</a>
+                    <Link to="/votes">
+                      投票專區</Link>
           
                     </li>
                 
                     <li className="navBar_item">
-                        <a href="/" data-bs-toggle='modal' data-bs-target='#edison'>會員專區</a>
+                        <a href="/" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
                         <ul className="drop-menu">
+                            {/* <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li> */}
+                          
+                          {  checkIsItLoged() ? (<>
                             <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
                             <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
                             <li className="drop-menu_item"><a href="/order">訂單記錄</a></li>
+                            <li className="drop-menu_item"><a href="/order" onClick={sendlogoutClick}>登出</a></li>
+                            </>):(
+                            <><li className="drop-menu_item"><a href="/member">會員資訊</a></li>
+                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
+                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li></> 
+                            )}
                         </ul>
                     </li>
                     {/* <li className="navBar_item"><a href="#"  data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a></li> */}

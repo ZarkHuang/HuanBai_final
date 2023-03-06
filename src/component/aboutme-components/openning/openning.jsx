@@ -24,7 +24,7 @@ const Openning = () => {
     <div className='open-body'>
       <p className="opentext ">
         <span className="text__first">
-          <span className="text__word">Hello! </span>
+          <span className="text__word">Welcome! </span>
           <span className="text__first-bg"></span>
         </span>
         <br />

@@ -7,6 +7,7 @@ import Communicate from "../../component/aboutme-components/communicate/communic
 import Circular from '../../img/aboutme_image/circularCup2.jpg'
 import Circular2 from '../../img/aboutme_image/circularCup.jpg'
 import Openning from "../../component/aboutme-components/openning/openning";
+import ToTop from "../../component/ToTop";
 
 const Brand = () => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const Brand = () => {
   return (
     <>
     <Openning/>
+    <ToTop/>
     <main className="cup-content js-content">
 
       <section className="block ad">

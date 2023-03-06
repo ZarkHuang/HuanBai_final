@@ -7,6 +7,7 @@ import EmptyList from '../../component/articleComponents/common/EmptyList/Emptyl
 import './style.css'
 import { Link } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop.js';
+import ToTop from '../../component/ToTop';
 
 const News = () => {
   const {id} = useParams()
@@ -23,6 +24,7 @@ const News = () => {
 
   return (
     <>
+    <ToTop/>
       <ScrollToTop />
       <Link to="/news" className='blog-goBack' >
         <span> &#8592; </span> <span>Go Back</span>
@@ -50,7 +52,7 @@ const News = () => {
           <div className='detail'>
           <p className='blog-cc'>詳細（PR TIMES）</p>
           <div class="form-group">
-              <button type="submit" class="btn btn__farm--invest" value="Send"><a className='sendmessage' target="_blank" href="https://e-info.org.tw/node/235747">Send a Message</a></button>
+              <a  href={blog.cypher} target="_blank" type="submit" class="form-btn btn__farm--invest" value="Send">Learn more</a>
           </div>
           </div>
           

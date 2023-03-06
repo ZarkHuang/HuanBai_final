@@ -1,7 +1,5 @@
-
-
 #shop-hero {
-    background-image: url("./b1.png");
+    background-image: url("../shop/b1.png");
     height: 40vh;
     /* width: 100%; */
     background-size: cover;
@@ -16,9 +14,8 @@
 
 
 #shop-hero span {
-    color: #000000;
-    font-weight: bold;
-    font-size: 32px;
+    color: #57B565;
+    font-size: 3.6rem;
     padding: 20px;
     text-align: center;
 
@@ -29,7 +26,7 @@
     font-size: 20px;
 }
 
-#pagination {
+/* #pagination {
     text-align: center;
 }
 
@@ -46,7 +43,7 @@
 #pagination a i {
     font-size: 16px;
     font-weight: 600;
-}
+} */
 
 /* shop Product Start*/
 #product1 {
@@ -66,15 +63,18 @@
     padding: 10px 12px;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    background-color: #ffffff;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0.06, 0.04);
     margin: 40px;
     transition: 0.2s ease;
     position: relative;
+    border: 1px #a8a8a8;
+    text-align: center;
 }
 
 #product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid #dbdbdb;
+    border: 1px solid #cfcece;
 
 }
 
@@ -105,23 +105,24 @@
 
 #pagination {
     text-align: center;
-  }
-  
-  #pagination a {
+    color: #ffffff;
+}
+
+#pagination span {
     text-decoration: none;
     background-color: #7eafc5;
     padding: 10px 15px;
     border-radius: 4px;
-    color: #ffffff;
     font-weight: 600;
     margin: 2px;
-    
-  }
-  
-  
-  #pagination a i {
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
-  /* 分頁按鈕 end */
+
+}
+
+
+#pagination span .linkToShop {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* 分頁按鈕 end */

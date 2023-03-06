@@ -4,6 +4,7 @@ import MemberInfo from './memberpage/Info';
 import MemberList from './memberpage/ListData';
 import MemberVote from './memberpage/VoteData';
 import MemberChangePassword from './memberpage/PasswordChange';
+import axios from 'axios';
 import "../style/member/membercss.css";
 
 
@@ -23,11 +24,12 @@ class Member extends Component {
 
                 <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center ">
                     <div className="row tabEdi justify-content-center">
-                        <div className="d-none d-md-block col-md-8  mt-5">預留</div>
-                        <NavLink index='true' to="" className="col-3  col-md-8 col-xl-11 nav-link">會員資料</NavLink>
-                        <NavLink to="change" className="col-3  col-md-8 col-xl-11"> 修改密碼</NavLink>
-                        <NavLink to="list" className="col-3  col-md-8 col-xl-11">訂單記錄</NavLink>
-                        <NavLink to="vote" className="col-3  col-md-8 col-xl-11">投票紀錄</NavLink>
+{/*                         <div className="d-none d-md-block col-md-8  mt-5" ><button type='button' onClick={this.sendlogoutClick}>預留</button></div> */}
+                        <NavLink index='true' to="" className="col-3  col-md-8 col-xl-11  memtabEdi" id="firstTab">會員資料</NavLink>
+                        <NavLink to="change" className="col-3  col-md-8 col-xl-11 memtabEdi" > 修改密碼</NavLink>
+                        <NavLink to="list" className="col-3  col-md-8 col-xl-11 memtabEdi">訂單記錄</NavLink>
+                        <NavLink to="vote" className="col-3  col-md-8 col-xl-11 memtabEdi">投票紀錄</NavLink>
+                        <div type='button' className='d-none d-md-block col-3 col-md-8 col-xl-11' id='memberpageLogOutBTN'onClick={this.sendlogoutClick}>登出</div>
                     </div>
     
                 </div>
@@ -48,27 +50,30 @@ class Member extends Component {
 
 </React.Fragment>
         );
+        
     }
-    
-    /* 嘗試做一個tab來用 失敗 */
-     /* clickChangeTabEdi=(e)=>{
-        var tabList = document.querySelectorAll(".tabEdi a");
-        for(var i= 0; i<tabList.length;i++){
-            tabList[i].index=i;
-            tabList[i].onclick=function(){
-                console.log("1")
-                var indexaa = this.index;
-                for (var k = 0; k < tabList.length; k++) {
-                    tabList[k].classList.remove('Eactive')
-                }
-                tabList[indexaa].classList.add('Eacitve')
-                alert("AA")
-                console.log("got something")
-                
-            }
+    sendlogoutClick=async(e)=>{
+        let logoutRes = await axios.get("http://localhost:3344/logout",{withCredentials:true});
+        console.log(logoutRes.data);
+        if(logoutRes.data==="登出成功"){
 
+            alert("即將登出");
+            window.location="/"
+        } 
         }
-     } */
+    /* 嘗試做一個tab來用 失敗 */
+     EdisonActiveTab=()=>{
+        let tabs = document.querySelectorAll(".memtabEdi");
+        tabs.forEach(item=>{
+            item.addEventListener('click',function(){
+                tabs.forEach(item=>{
+                    item.classList.remove('Ediactive')
+                });
+                this.classList.addClass('Ediactive')
+            })
+        })
+
+    }
 }
  
 export default Member;

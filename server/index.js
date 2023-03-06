@@ -4,8 +4,41 @@ const app = express();
 const session = require('express-session');
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+const nodemailer = require('nodemailer');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// Create the transporter with the required configuration for Outlook
+// change the user and pass !
+var transporter = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com", // hostname
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    tls: {
+       ciphers:'SSLv3'
+    }, auth: {
+        user: 'huanbai@huan-bai.com', pass: '2023mfee32'
+    }
+});
+/* 寄信內容ㄧ */
+const mailOptionsOne = {
+    from: 'huanbai@huan-bai.com',
+    to:'qwertyuk77@gmail.com', // list of receipients
+    subject: '歡迎使用環唄！',
+    text:'歡迎您使用環唄網站！地圖據點探索，綠色商品，心理測驗，更多功能等你來探索！'
+}
+/*  寄信模板
+transporter.sendMail(mailOptionsOne,function(err,info){
+    if(err){
+        console.log(err);
+        return
+    }
+    console.log('sent ' +info.response);
+}) */
+
+
+
 
 /* 跨域存取是否開放 */
 const cors = require('cors');
@@ -18,7 +51,7 @@ app.use(cors({
 ));
 /* 使用session以及其限制 */
 app.use(session({
-    name: "EdiosnHi",
+    name: "EdisonHi",
     secret: "thisisediosnwumade",
     resave: false,
     saveUninitialized: false,
@@ -56,6 +89,39 @@ conn.connect(function (err) {
     console.log(err)
 })
 
+
+/* 忘記密碼api */
+app.post('/member/forgotPassword',function(req,res){
+    conn.query('select * from userInfo where account = ? and userEmail =?',[req.body.account,req.body.userEmail],function(err,rows){
+        if(rows==""){
+            res.send("沒有這個帳號")
+        }else{
+            let newPasswordSet = req.body.userEmail.slice(0,4);
+            let mailOptionsForgetPassword = {
+                from: 'huanbai@huan-bai.com',
+                to:req.body.userEmail, // 註冊的人的信箱
+                subject: `環唄已將您的密碼更改`,
+                text:`帳號（${req.body.account}）會員您好，我們已將您的密碼重新設定為${newPasswordSet}，請您使用這組密碼來登入`
+            }
+            bcrypt.hash(newPasswordSet, saltRounds, (err, hash) => {
+                conn.query("update userInfo set password = ? where account = ?", [hash, req.body.account], function (err, rows) {
+                    res.send(JSON.stringify(req.body));
+                })
+        
+        
+            })
+            res.send("成功更改密碼")
+            transporter.sendMail(mailOptionsForgetPassword,function(err,info){
+                if(err){
+                    console.log(err);
+                    return
+                }else{
+                    console.log('sent ' +info.response);
+                }
+            })
+        }
+    })
+})
 
 
 /* 創造會員確認帳號有無使用過 */
@@ -116,16 +182,47 @@ app.post("/member/signup", function (req, res) {
 app.post("/member/goSignUp", function (req, res) {
     bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
         conn.query("insert into userInfo (account,password,userEmail,userAddress,userName,userGender,userTelephone,userBirth) values (?,?,?,?,?,?,?,?)",
-            [req.body.account, hash, req.body.userEmail, req.body.userAddress, req.body.userName, req.body.userGender, req.body.userTelephone, req.body.userBirth], function (err, rows) {
-                console.log("收到" + req.body);
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log("sussceeeeeee")
+        [req.body.account, hash, req.body.userEmail,req.body.userAddress,req.body.userName,req.body.userGender,req.body.userTelephone,req.body.userBirth],function(err,rows){
+        console.log("收到"+JSON.stringify(req.body));
+        console.log("收到"+req.body.subscripUsWithEmail);
+        if(err){
+            console.log(err);
+        }else{
+            let mailOptionssignup = {
+                from: 'huanbai@huan-bai.com',
+                to:req.body.userEmail, // 註冊的人的信箱
+                subject:req.body.userName+',歡迎使用環唄！',
+                text:req.body.userName+',感謝您註冊我們環唄網站的會員！我們還有許多功能如：地圖據點探索，綠色商品，心理測驗，更多功能等你來探索！'
+            }
+            transporter.sendMail(mailOptionssignup,function(err,info){
+                if(err){
+                    console.log(err)
+                    return
+                }else{
+                    console.log('sent ' +info.response);
                 }
-                console.log(req.body)
-                res.send(JSON.stringify(req.body))
             })
+            console.log("sussceeeeeee")
+        }
+        if(req.body.subscripUsWithEmail){
+            let mailOptionsSubscription = {
+                from: 'huanbai@huan-bai.com',
+                to:req.body.userEmail, // 註冊的人的信箱
+                subject:`會員${req.body.userName}先生/小姐 您已經成功訂閱 環唄`,
+                text:`會員${req.body.userName}您好，感謝您訂閱 環唄的電子報，任何循環杯相關消息，本網站的最新優惠，將第一時間通知您`
+            }
+            transporter.sendMail(mailOptionsSubscription,function(err,info){
+                if(err){
+                    console.log(err)
+                    return
+                }else{
+                    console.log('sent ' +info.response);
+                }
+            })
+        }
+        console.log(req.body)
+        res.send(JSON.stringify(req.body))
+    })
     })
 
 })
@@ -138,7 +235,7 @@ app.post("/member/gologin", function (req, res) {
 
             console.log(0, "這是你輸入的帳號", req.body.account)
             console.log(1, "查詢是否有相符結果", rows)
-
+           
 
             if (rows[1][0] !== undefined) {
 
@@ -176,8 +273,7 @@ app.post("/member/gologin", function (req, res) {
 /* 確認你有沒有登入 */
 app.get("/checkAuth", function (req, res) {
     if (req.session.user) {
-        res.send("登入中 user:" + JSON.stringify(req.session.user))
-        // res.send("登入中 user:" + JSON.parse(req.session.user))
+        res.send("登入中" /* + JSON.stringify(req.session.user) */)
     } else {
         res.send("尚未登入")
     }
@@ -185,12 +281,12 @@ app.get("/checkAuth", function (req, res) {
 
 
 
-
-
-
-
-
-
+/* 登出 清除client端的cookie */
+app.get("/logout",function(req,res){
+    res.clearCookie('EdisonHi')
+    console.log(req.session)
+    res.send("登出成功")
+})
 
 
 
@@ -243,6 +339,7 @@ app.put('/member/memberData', loginApi, function (req, res) {
 app.put("/member/changepassword", loginApi, function (req, res) {
     bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
         conn.query("update userInfo set password = ? where uid = ?", [hash, req.session.user.uid], function (err, rows) {
+            res.clearCookie('EdisonHi')
             res.send(JSON.stringify(req.body));
         })
 

@@ -1,0 +1,10 @@
+#changePasswordPageEdi p{
+    font-size: var(--fontSize-H2);
+    margin-bottom: 40px;
+}
+#changePasswordPageEdi label{
+    font-size: var(--fontSize-H5);
+}
+#changePasswordPageEdi input{
+    font-size: var(--fontSize-H6);
+}

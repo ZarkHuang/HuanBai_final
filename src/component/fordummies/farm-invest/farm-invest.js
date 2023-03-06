@@ -1,5 +1,6 @@
 import React from 'react'
 import './farm.css'
+import { Link } from 'react-router-dom'
 
 const Farm = () => {
   return (
@@ -7,7 +8,7 @@ const Farm = () => {
     <h2 class="farm-invest__title">
       哪裡使用 <span>循環杯</span>？
     </h2>
-    <a href="#" class="farm-btn btn__farm--invest">Learn More</a>
+    <Link to="/news/2" class="farm-btn btn__farm--invest">Learn More</Link>
   </section>
 
   )

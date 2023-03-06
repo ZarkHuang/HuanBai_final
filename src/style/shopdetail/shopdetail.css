@@ -1,0 +1,217 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#prodetails {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#MainImg {
+    width: 100%;
+    margin-right: 50px;
+    position: relative;
+    /* 增加相對定位 */
+}
+
+.single-pro-image {
+    position: relative;
+    width: 25%;
+}
+
+.carousel-controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.qqqq {
+    position: relative;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev {
+    border-radius: 3px 0 0 3px;
+    left: 0;
+    padding: 50px;
+}
+
+.carousel-control-next {
+    border-radius: 0 3px 3px 0;
+    right: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 auto;
+    /* 水平置中 */
+}
+
+
+#prodetails .single-pro-image {
+    width: 25%;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+
+/* 商品文字 */
+
+#prodetails .single-pro-details {
+    width: 30%;
+    padding-top: 30px;
+}
+
+
+#prodetails .single-pro-details span {
+    color: #57B565;
+    text-decoration-line: none;
+}
+
+#prodetails .single-pro-details h6 {
+    font-size: 16px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+
+#prodetails .single-pro-details button {
+    width: 110px;
+    text-decoration: none;
+    background-color: #57B565;
+    /*padding: 10px 15px;*/
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    border: 2px #57B565 dashed
+}
+
+#prodetails .single-pro-details ul {
+    line-height: 25px;
+}
+
+/* 商品文字結束 */
+
+
+/* 購物車入口 */
+#toCart {
+    position: fixed;
+    font-size: 30px;
+    right: 10%;
+    top: 30%;
+    z-index: 88;
+}
+
+#toCart .background-button {
+
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FEFCFC;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 4px 5px 4px rgba(167, 184, 169, 40%);
+
+}
+
+#toCart span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7eafc5;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#toCart span svg {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#toCart .linkToShop {
+    color: #ffffff;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+/* 購物車入口結束 */
+
+
+@media (max-width: 477px) {
+
+
+    .section-p1 {
+        padding: 20px 20px;
+    }
+
+    /* singp start*/
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+    }
+
+}
