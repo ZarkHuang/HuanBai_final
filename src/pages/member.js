@@ -43,7 +43,7 @@ class Member extends Component {
                     <Route path='/change' element={<MemberChangePassword/>} />
                     <Route path='/vote' element={<MemberVote/>} />
                     <Route path='/VoteAnswer/:voteId' element={<VoteAnswer/>} />
-                    <Route path='/pay' element={<Pay/>} />
+                    <Route path='/payment' element={<PayMent/>} />
                     </Routes>
                 </div>
                {/*  <div className='d-none d-md-block col-md-1 col-xl-2'></div> */}
