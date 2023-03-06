@@ -4,6 +4,7 @@ import MemberInfo from './memberpage/Info';
 import MemberList from './memberpage/ListData';
 import MemberVote from './memberpage/VoteData';
 import MemberChangePassword from './memberpage/PasswordChange';
+import VoteAnswer from './memberpage/voteAnswer';
 import axios from 'axios';
 import "../style/member/membercss.css";
 import Pay from './pay';
@@ -42,6 +43,7 @@ class Member extends Component {
                     <Route path='/change' element={<MemberChangePassword/>} />
                     <Route path='/list' element={<MemberList/>} />
                     <Route path='/vote' element={<MemberVote/>} />
+                    <Route path='/VoteAnswer/:voteId' element={<VoteAnswer/>} />
                     <Route path='/pay' element={<Pay/>} />
                     </Routes>
                 </div>

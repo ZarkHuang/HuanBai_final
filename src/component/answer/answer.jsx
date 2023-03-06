@@ -94,7 +94,7 @@ const Answercm = () => {
             </div>
             <div class="row justify-content-center">
                 <Link to={"/votes"} id="moreVote" className=" moreVote col-4 mx-auto btn  m-5">
-                    看更多投票
+                    看其他投票
                 </Link>
             </div>
         </React.Fragment>

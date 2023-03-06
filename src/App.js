@@ -24,7 +24,6 @@ import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-import GoLogIn from "../src/pages/memberpage/GoLogIn"
 import GoLogIn from "./pages/memberpage/GoLogin"
 import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
@@ -68,8 +67,6 @@ function App(){
             <Route path="/voteRecord" element={<VoteRecord/>} />
             <Route path="/member/*" element={<Member/>} />
             <Route path="/member/list" element={<MemberList/>} />
-            <Route path="/member/vote" element={<MemberVote/>} />
-            <Route path="/member/VoteAnswer/:voteId" element={< VoteAnswer />} />
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
            </Routes>
