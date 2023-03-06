@@ -1,7 +1,7 @@
 const data = [
     {
       question: "炎熱的夏天裡，你最想來上什麼消消暑?",
-      answer1: "汽水369",
+      answer1: "汽水",
       answer2: "白開水",
       answer3: "蘋果",
       answer4: "冰淇淋",

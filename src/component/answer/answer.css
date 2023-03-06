@@ -35,10 +35,11 @@
     line-height: 40px;
     margin-left: 5%;
     margin-bottom: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
-    background-color: var(--mainColor-white);;
+    background-color: var(--mainColor-white);
+    ;
     margin: 20px;
     font-size: 18px;
     font-weight: bold;
@@ -56,6 +57,33 @@
     overflow: visible;
     height: 20px;
 }
+
+.progress-bar {
+    height: 18px;
+    background-color: rgb(161, 195, 223);
+    border-radius: 4px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 1%;
+        background-color: rgb(204, 224, 240);
+    }
+
+    10% {
+        width: 5%;
+        background-color: rgb(161, 195, 223);
+    }
+}
+
+
+.progress-bar {
+    animation: progressAnimation 2s ease-out;
+}
+
 
 .voteAnswerWords {
     color: black;
@@ -76,6 +104,13 @@
 
 .answerBackColorWord {
     visibility: hidden
+}
+
+#moreVote {
+    border: 3px solid black;
+    border-radius: 25px;
+    margin-top: 20%;
+
 }
 
 

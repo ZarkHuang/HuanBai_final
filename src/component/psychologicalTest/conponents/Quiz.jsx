@@ -9,12 +9,13 @@ import animalPanda from "../img/1pexels-laura-the-explaura-3608263.jpg"
 import animalLion from "../img/pexels-gareth-davies-1598377.jpg"
 import animalWhale from "../img/pexels-pixabay-302271.jpg"
 
-
-
 const Quiz = () => {
     // 把quiz裡的狀態引進來。State會更新，dispatch觸發action
     const [quizState, dispatch] = useContext(QuizContext);
     console.log("quizState", quizState)
+
+    const appUrl = 'http://localhost:3000/psych';
+
     // return有兩種結果，顯示結果true or false。
     return (
         <div className='psychologicalTest'>
@@ -22,7 +23,7 @@ const Quiz = () => {
             {/* 第一個結果，熊貓 */}
             {quizState.showResults && 8 >= quizState.correctAnswersCount && (
                 <div>
-                    <div className="container">
+                    <div className="container" id='panda'>
                         <div className="row rowContainer">
                             <div id="testImgPlace" className="col-md-12 col-lg-6 col-12 p-5 ">
                                 <img src={animalPanda} alt="" className='answerImg' />
@@ -47,6 +48,7 @@ const Quiz = () => {
                             </div>
                         </div>
                     </div>
+
 
                     < TestAnswerRowSave />
 
