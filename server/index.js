@@ -161,8 +161,8 @@ app.post("/member/signupcheckemail", function (req, res) {
 
 
 /* 註冊頁面modal版本 將前端資料送往資料庫 */
-app.post("/member/signup",function(req,res){
-    bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
+app.post("/member/signup", function (req, res) {
+    bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
         conn.query("insert into userInfo (account,password,userEmail) values (?,?,?)",
             [req.body.account, hash, req.body.userEmail], function (err, rows) {
                 console.log("收到" + req.body);
@@ -179,8 +179,8 @@ app.post("/member/signup",function(req,res){
 })
 
 /* 註冊頁面 仔細版本 */
-app.post("/member/goSignUp",function(req,res){
-    bcrypt.hash(req.body.password,saltRounds,(err,hash)=>{
+app.post("/member/goSignUp", function (req, res) {
+    bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
         conn.query("insert into userInfo (account,password,userEmail,userAddress,userName,userGender,userTelephone,userBirth) values (?,?,?,?,?,?,?,?)",
         [req.body.account, hash, req.body.userEmail,req.body.userAddress,req.body.userName,req.body.userGender,req.body.userTelephone,req.body.userBirth],function(err,rows){
         console.log("收到"+JSON.stringify(req.body));
@@ -224,7 +224,7 @@ app.post("/member/goSignUp",function(req,res){
         res.send(JSON.stringify(req.body))
     })
     })
-   
+
 })
 
 
@@ -404,60 +404,87 @@ app.get("/vote/:voteId", (req, res) => {
         });
 })
 
-// 更改投票票數的 origin
-// INSERT INTO userVote (uid, voteId, userName) VALUES (1, 1, '蘋果哥哥');
-// 增加資料到userVote
-app.post('/updateOption1', (req, res) => {
+// 投票紀錄核對 挑戰中...
+app.put('/DADA', (req, res) => {
+    const voteId = req.body.voteId;
+    const Uid = req.body.responseAuth.data.split('\"uid\"')[1].replace(/:/g, "").split(',')[0];
+    console.log("voteId", voteId);
+    console.log("Uid", Uid);
+
+    conn.query("SELECT * FROM userVote WHERE voteId = ? AND uid = ?", [voteIdDADA, UidDADA], function (err, rows) {
+        if (err) {
+            console.log(err);
+            res.status(500).send('Server error');
+            return;
+        }
+
+        if (rows.length > 0) {
+            console.log("rows", rows);
+            res.send("gowrong");
+        } else {
+            console.log("rows", rows);
+            res.send("success");
+        }
+    })
+});
+
+
+// 更改投票票數的 
+// 增加uid, voteId到userVote
+app.put('/updateOption1', (req, res) => {
     const option1 = req.body.option;
     const voteId = req.body.voteId;
+    const sessionUid2 = req.body.responseAuth.data.split('\"uid\"')[1].replace(/:/g, "").split(',')[0];
+    const sessionUid = req.body.responseAuth;
+    console.log('sessionUid2', sessionUid2)
+    console.log('sessionUid', sessionUid)
 
-    conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1 WHERE voteId = ?',
-        [voteId], (err, data) => {
-
-            if (err) return res.json(err); // 失敗回傳什麼
-            return res.json(data);            // 成功回傳交換回來的資料
-        });
+    // conn.query('UPDATE votes SET numberOfOption1 = numberOfOption1 + 1, voteUsername = CONCAT(voteUsername, ?) WHERE voteId = ?; INSERT INTO userVote SET uid = ?, voteId = ?',
+    //     [sessionUid2, voteId, sessionUid2, voteId], (err, data) => {
+    //         if (err) return res.json(err);
+    //         return res.json(data);
+    //     });
 
 });
 
 
 
-
-
-
-app.post('/updateOption2', (req, res) => {
+app.put('/updateOption2', (req, res) => {
     const option2 = req.body.option;
     const voteId = req.body.voteId;
+    const sessionUid2 = req.body.responseAuth.data.split('\"uid\"')[1].replace(/:/g, "").split(',')[0];
+    console.log(option2)
 
-    conn.query('UPDATE votes SET numberOfOption2 = numberOfOption2 + 1 WHERE voteId = ? ',
-        [voteId], (err, data) => {
-            if (err) return res.json(err); // 失敗回傳什麼
-            return res.json(data);            // 成功回傳交換回來的資料
-        });
+    // conn.query('UPDATE votes SET numberOfOption2 = numberOfOption2 + 1, voteUsername = CONCAT(voteUsername, ?) WHERE voteId = ?; INSERT INTO userVote SET uid = ?, voteId = ?',
+    //     [sessionUid2, voteId, sessionUid2, voteId], (err, data) => {
+    //         if (err) return res.json(err);
+    //         return res.json(data);
+    //     });
+
 });
 
 app.post('/updateOption3', (req, res) => {
     const option3 = req.body.option;
     const voteId = req.body.voteId;
+    const sessionUid2 = req.body.responseAuth.data.split('\"uid\"')[1].replace(/:/g, "").split(',')[0];
 
-    conn.query('UPDATE votes SET numberOfOption3 = numberOfOption3 + 1 WHERE voteId = ? ',
-        [voteId], (err, data) => {
-            if (err) return res.json(err); // 失敗回傳什麼
-            return res.json(data);            // 成功回傳交換回來的資料
-        });
+    // conn.query('UPDATE votes SET numberOfOption3 = numberOfOption3 + 1, voteUsername = CONCAT(voteUsername, ?) WHERE voteId = ?; INSERT INTO userVote SET uid = ?, voteId = ?',
+    //     [sessionUid2, voteId, sessionUid2, voteId], (err, data) => {
+    //         if (err) return res.json(err);
+    //         return res.json(data);
+    //     });
 });
 
 app.post('/updateOption4', (req, res) => {
     const option4 = req.body.option;
     const voteId = req.body.voteId;
+    const sessionUid2 = req.body.responseAuth.data.split('\"uid\"')[1].replace(/:/g, "").split(',')[0];
 
-    conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1 WHERE voteId = ? ',
-        [voteId], (err, data) => {
-            if (err) return res.json(err); // 失敗回傳什麼
-            console.log("data:", data)
-            return res.json(data);            // 成功回傳交換回來的資料
-
-        });
+    // conn.query('UPDATE votes SET numberOfOption4 = numberOfOption4 + 1, voteUsername = CONCAT(voteUsername, ?) WHERE voteId = ?; INSERT INTO userVote SET uid = ?, voteId = ?',
+    //     [sessionUid2, voteId, sessionUid2, voteId], (err, data) => {
+    //         if (err) return res.json(err);
+    //         return res.json(data);
+    //     });
 });
 
 
@@ -486,38 +513,18 @@ app.get("/vote/answer/:voteId", (req, res) => {
         });
 })
 
-// 
-app.get("/voteData", (req, res) => {
-    const q = "SELECT * FROM `userVote`"
-    conn.query(q, (err, data) => {
-        if (err) return res.json(err) // 失敗回傳什麼
-        return res.json(data)           // 成功回傳交換回來的資料
 
-    })
+// 會員投票紀錄
+app.get("/userVoteData", loginApi, (req, res) => {
 
-})
-
-// 投票資料post進去資料庫
-app.post("/voteDataData", loginApi, (req, res) => {
-    conn.query("INSERT INTO userVote (uid, voteId, userName) VALUES (?, ?, ?)",
-        [req.session.user.uid, req.body.voteId, req.session.user.userName],
-        
-        function (err, rows) {
-            console.log("req.session.user.uid", req.session.user.uid)
-            console.log("req.body.voteId", req.body.voteId)
-            if (err) throw err;
-            res.send(JSON.stringify(rows));
+    const q = "SELECT userVote.voteId, votes.* FROM userVote JOIN votes ON userVote.voteId = votes.voteId WHERE userVote.uid = 94;"
+    conn.query(q,
+        // [req.session.user.uid],
+        (err, data) => {
+            if (err) return res.json(err);
+            return res.json(data);
         });
-});
-
-
-
-
-
-
-
-
-
+})
 
 
 

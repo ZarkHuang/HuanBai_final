@@ -1,7 +1,10 @@
-function VoteRecord(){
+import MemberVote from "./memberpage/VoteData";
 
-    return(
-        <div>test</div>
+function VoteRecord() {
+
+    return (
+        // <div>test</div>
+        <MemberVote />
     );
 };
 

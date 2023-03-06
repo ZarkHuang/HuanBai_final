@@ -3,7 +3,7 @@ import axios from 'axios'; //
 // import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import "./answer.css"
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,6 +13,8 @@ const Answercm = () => {
     console.log("voteId", voteId);
     const voteIdNumber = parseInt(voteId, 10);
     const [votecm, setVotecm] = useState(null);
+
+
 
     useEffect(() => {
         const fetchAllVotecm = async () => {
@@ -47,59 +49,53 @@ const Answercm = () => {
                             <div className='voteAnswerWords'>
                                 {votecm.option1}  {percentage1}%
                             </div>
-                            <div className='answerBackColor'
-                                style={{ width: `${percentage1}%` }}
-                            >
+                            <div className='answerBackColor progress-bar '
+                                style={{ width: `${percentage1}%` }}>
                                 <p className='answerBackColorWord'>1000000000</p>
-
                             </div>
                         </p>
                     </div>
 
                     <p className="voteAnswer" >
-                    <div className='voteAnswerWords'>
-                                {votecm.option2}{percentage2}%
-                            </div>
-                        <div className='answerBackColor'
-                        style={{ width: `${percentage2}%` }}
+                        <div className='voteAnswerWords'>
+                            {votecm.option2}{percentage2}%
+                        </div>
+                        <div className='answerBackColor progress-bar'
+                            style={{ width: `${percentage2}%` }}>
+                            <p className='answerBackColorWord'>1000000000</p>
+                        </div>
+                    </p>
+                    <p className="voteAnswer">
+                        <div className='voteAnswerWords'>
+                            {votecm.option3}{percentage3}%
+                        </div>
+                        <div className='answerBackColor progress-bar '
+                            style={{ width: `${percentage3}%` }}
                         >
-                             <p className='answerBackColorWord'>1000000000</p>
+                            <p className='answerBackColorWord'>1000000000</p>
 
 
                         </div>
                     </p>
                     <p className="voteAnswer">
-                    <div className='voteAnswerWords'>
-                                {votecm.option3}{percentage3}%
-                            </div>
-                        <div className='answerBackColor'
-                        style={{ width: `${percentage3}%` }}
-                        >
-                             <p className='answerBackColorWord'>1000000000</p>
-
-
+                        <div className='voteAnswerWords'>
+                            {votecm.option4}    {percentage4}%
                         </div>
-                    </p>
-                    <p className="voteAnswer">
-                    <div className='voteAnswerWords'>
-                                {votecm.option4}    {percentage4}%
-                            </div>
-                        <div className='answerBackColor'
-                        style={{ width: `${percentage4}%` }}
+                        <div className='answerBackColor progress-bar '
+                            style={{ width: `${percentage4}%` }}
                         >
-                             <p className='answerBackColorWord'>1000000000</p>
+                            <p className='answerBackColorWord'>1000000000</p>
 
 
                         </div>
                     </p>
 
-
-                    {/* <p>voteName: {votecm.voteName}</p>
-                <p>numberOfClicks: {votecm.numberOfClicks}</p>
-                <p>numberOfOption1: {votecm.numberOfOption1}</p>
-                <p>option1: {votecm.option1}</p>
-                <p>percentage4: {percentage1}%</p> */}
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <Link to={"/votes"} id="moreVote" className=" moreVote col-4 mx-auto btn  m-5">
+                    看更多投票
+                </Link>
             </div>
         </React.Fragment>
     );

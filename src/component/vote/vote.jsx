@@ -14,6 +14,8 @@ const Votecm = () => {
     const [votecm, setVotecm] = useState([]);
     // const [selectedOption, setSelectedOption] = useState(null);
     const [voteResult, setVoteResult] = useState(null);
+    const [checkVoteUser, setCheckVoteUser] = useState(null);
+
 
     useEffect(() => {
         const fecthAllVotecm = async () => {
@@ -30,7 +32,7 @@ const Votecm = () => {
     // 紀錄有沒有session
     useEffect(() => {
         axios.get('http://localhost:3344/checkAuth', { withCredentials: true }).then((responseAuth) => {
-            console.log("responseAuth", responseAuth)
+            console.log("responseAuth123", responseAuth)
             if (responseAuth.data === "尚未登入") {
                 console.log('not login yet')
             }
@@ -50,28 +52,25 @@ const Votecm = () => {
                 console.log("responseAuth3", responseAuth)
                 if (responseAuth.data === "尚未登入") {
                     alert("會員專屬功能，請先登入。即將跳轉登入頁面")
-                    window.location = "/goLog"
+                    window.location = "/GoLogIn"
                 } else {
                     window.location = `/Vote/answer/${voteId} `;
                 }
 
                 // 投票資料post到後端 
-                const res = await axios.post(`http://localhost:3344/updateOption1`, {
+                const res = await axios.put(`http://localhost:3344/updateOption1`, {
                     option,
                     voteId,
+                    responseAuth,
                 });
                 setVoteResult(res.data);
-                console.log("handleVoteSubmit", option);
 
-
-                console.log("this.state.memberdata2", this.state.memberdata);
-
-                // 會員session，post到後端
-                const postSession = await axios.post(`http://localhost:3344/voteDataData`,
-                    // this.state.memberdata,
-                    // { withCredentials: true },
-                    // console.log('this.state.memberdata',this.state.memberdata)
-                );
+                // 確認投票資料是否已經存在
+                // const checkVoteUser = await axios.put(`http://localhost:3344/DADA`, {
+                //     voteId,
+                //     responseAuth,
+                // });
+                // setCheckVoteUser(checkVoteUser.data);
 
 
             } catch (err) {
@@ -89,17 +88,18 @@ const Votecm = () => {
                 console.log("responseAuth", responseAuth)
                 if (responseAuth.data === "尚未登入") {
                     alert("會員專屬功能，請先登入。即將跳轉登入頁面")
-                    window.location = "/goLog"
+                    window.location = "/GoLogIn"
                 } else {
                     window.location = `/Vote/answer/${voteId} `;
                 }
 
-                const res = await axios.post(`http://localhost:3344/updateOption2`, {
+                const res = await axios.put(`http://localhost:3344/updateOption2`, {
                     option,
                     voteId,
+                    responseAuth,
                 });
                 setVoteResult(res.data);
-                console.log("handleVoteSubmit", option);
+
 
             } catch (err) {
                 console.log(err);
@@ -116,7 +116,7 @@ const Votecm = () => {
                 console.log("responseAuth", responseAuth)
                 if (responseAuth.data === "尚未登入") {
                     alert("會員專屬功能，請先登入。即將跳轉登入頁面")
-                    window.location = "/goLog"
+                    window.location = "/GoLogIn"
                 } else {
                     window.location = `/Vote/answer/${voteId} `;
                 }
@@ -124,6 +124,7 @@ const Votecm = () => {
                 const res = await axios.post(`http://localhost:3344/updateOption3`, {
                     option,
                     voteId,
+                    responseAuth,
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
@@ -144,7 +145,7 @@ const Votecm = () => {
                 console.log("responseAuth", responseAuth)
                 if (responseAuth.data === "尚未登入") {
                     alert("會員專屬功能，請先登入。即將跳轉登入頁面")
-                    window.location = "/goLog"
+                    window.location = "/GoLogIn"
                 } else {
                     window.location = `/Vote/answer/${voteId} `;
                 }
@@ -152,6 +153,7 @@ const Votecm = () => {
                 const res = await axios.post(`http://localhost:3344/updateOption4`, {
                     option,
                     voteId,
+                    responseAuth,
                 });
                 setVoteResult(res.data);
                 console.log("handleVoteSubmit", option);
