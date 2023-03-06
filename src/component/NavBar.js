@@ -186,10 +186,7 @@ function NavBar() {
 
                 <ul className="rwd_navMenu">
                   <li className="rwd_navMenu_item">
-                    <Link
-                      to="/"
-                      className="rwd_navMenu_sub_item rwd_navMenu_item_a"
-                    >
+                  <Link to="/" className="rwd_navMenu_item_a">
                       關於我們
                     </Link>
                     <ul className="rwd_navMenu_sub">
