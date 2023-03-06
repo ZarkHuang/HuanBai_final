@@ -21,7 +21,7 @@ class MemberVote extends Component {
                     <ul>
                         {this.state.memberdata.map((vote) => (
                             <li key={vote.voteId}>
-                                <Link to={`/Vote/answer/${vote.voteId}`} className="linkToVote col-md-12 col-lg-6 col-12">
+                                <Link to={`/member/voteAnswer/${vote.voteId}`} className="linkToVote col-md-12 col-lg-6 col-12">
                                     {/* <div className='voteDataVoteId'>{vote.voteId}</div> */}
                                     <div className='voteDataTopic'>主題:    {vote.voteName}</div>
                                 </Link>

@@ -30,8 +30,10 @@ import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
 import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
-
-
+import MemberList from "./pages/memberpage/ListData";
+import MemberVote from "./pages/memberpage/VoteData";
+import VoteAnswer from "./pages/memberpage/voteAnswer"
+// import './style/'
 
 
 function App(){
