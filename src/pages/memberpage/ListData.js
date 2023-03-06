@@ -3,10 +3,15 @@ import straw2 from "../../img/shop/straw2.png";
 import cupcozy3 from "../../img/shop/cupcozy3.jpg";
 import '../../style/member/edisonPaymentCss.css';
 import axios from "axios";
+import { useEffect } from "react";
 
 
 
 function PayMent() {
+
+    useEffect=()=>{
+        
+    }
 
     var responseAuth = axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
         console.log(responseAuth)

@@ -24,7 +24,7 @@ import Member from "./pages/member";
 import VoteRecord from "./pages/voteRecord";
 import Fordummies from "./pages/fordummies";
 import Answer from "./pages/answer"
-import GoLogIn from "./pages/memberpage/GoLogin"
+import GoLogIn from "./pages/memberpage/GoLogIn"
 import GoSignUp from "./pages/memberpage/GoSignUp";
 import News from "./pages/News";
 import EmptyList from "./component/articleComponents/common/EmptyList/Emptylist";
