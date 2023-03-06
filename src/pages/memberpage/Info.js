@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from "axios";
 import "../../style/member/listcss.css"
 class MemberInfo extends Component {
-    state = { 
+    constructor(props) {
+        super(props);
+    this.state = { 
             memberdata:{
                 uid:"a",
                 userName:"",
@@ -15,6 +17,13 @@ class MemberInfo extends Component {
                 userBirth:this.todayDate()
             }
      } 
+
+    this.cantChangeRef = React.createRef();
+    this.canChangeRef = React.createRef();
+    this.handleEdiChangeInfoClick = this.handleEdiChangeInfoClick.bind(this);
+    this.handleEdiChangeInfoBackClick = this.handleEdiChangeInfoBackClick.bind(this);
+  }
+
     render() { 
         return (
             <React.Fragment>
@@ -27,7 +36,7 @@ class MemberInfo extends Component {
         {/* 單純閱讀版本 */}
 
         {/* lg開始可視 lg以下隱藏 */}
-                    <form id="infoCantChange">
+                    <form id="infoCantChange"ref={this.cantChangeRef} style={{ display: this.state.canChange ? "none" : "block" }}>
                         <div className="row mb-4  mb-md-5">
                             <div className='col-3'></div>
                             <div className="col-3 col-md-2">
@@ -117,7 +126,7 @@ class MemberInfo extends Component {
                         </div>
             {/*  */}                   
                         <div className="row pb-3 justify-content-center">
-                                <button  id="EdiChangeInfo" type='button' className="btn btn-danger col-10 col-sm-6 col-md-3">編輯</button>        
+                                <button  id="EdiChangeInfo" type='button' className="btn btn-danger col-7 col-sm-6 col-md-3 rounded-3" onClick={this.handleEdiChangeInfoClick}>編輯</button>        
                         </div>
             
                     </form>
@@ -125,7 +134,9 @@ class MemberInfo extends Component {
 
 
                     {/* 可以更動版本 */}
-                    <form id="InfoCanChange" style={{display:'none'}}>
+                    <form id="InfoCanChange" ref={this.canChangeRef} style={{ display: this.state.canChange ? "block" : "none" }}>
+                        <div className='row'><div className='col-8 mx-auto'>
+                           
                         <div className="row mb-4 mb-md-3"><div>
                             <label>姓名</label>
                             <input type="text" name="userName"  className="form-control form-control-lg" value={this.state.memberdata.userName} onChange={this.userNameDataChange}/>
@@ -158,14 +169,31 @@ class MemberInfo extends Component {
                             <input type="text" name="userAddress"  className="form-control" value={this.state.memberdata.userAddress} onChange={this.userAddressChange}/>
                         </div></div>
                         <div className='row'>
-                        <button id='EdiChangeInfoBack'type="button" className='btn btn-danger col-3'>返回</button><button type="button" className='btn btn-info col-3' onClick={this.sendUserDataClick}>送出</button>
+                        <button id='EdiChangeInfoBack'type="button" className='btn btn-danger col-3 mx-auto rounded-3'onClick={this.handleEdiChangeInfoBackClick}>返回</button>
+                        <button type="button" className='btn btn-success col-3 mx-auto rounded-3' onClick={this.sendUserDataClick}>送出</button>
 
-                        </div>
+                        </div> </div></div>
                     </form>
     
         </React.Fragment>
         );
     }
+    handleEdiChangeInfoClick() {
+        this.cantChangeRef.current.style.display = "none";
+        this.canChangeRef.current.style.display = "block";
+        this.setState({ canChange: true });
+      }
+    
+      handleEdiChangeInfoBackClick() {
+        this.canChangeRef.current.style.display = "none";
+        this.cantChangeRef.current.style.display = "block";
+        this.setState({ canChange: false });
+      }
+    
+
+
+
+
     checkGender(){
         if(this.state.memberdata.userGender==='1'){
             return "男生"
@@ -235,16 +263,16 @@ class MemberInfo extends Component {
         window.location="/";
     }
     componentDidMount=async()=>{
+        var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
+        console.log(responseAuth)
+        if(responseAuth.data==="尚未登入"){
+            alert("尚未登入！即將轉移到登錄頁面")
+            window.location="/gologin"
+        }
         var serverData = await axios.get('http://localhost:3344/member/memberData',{withCredentials:true});
         var newState = {...this.state};
         newState.memberdata = serverData.data;
         this.setState(newState);
-        var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
-        console.log(responseAuth)
-        if(responseAuth.data==="尚未登入"){
-            alert("你還沒登入！即將轉移到登錄頁面")
-            window.location="/gologin"
-        }
     }
 }
  

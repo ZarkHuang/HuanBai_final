@@ -51,7 +51,7 @@ class GoLogIn extends Component {
             <label className="form-check-label ms-3" for="showPassword">顯示密碼</label> 
             </div>
 
-            <div><button type='button' data-bs-toggle="modal" data-bs-target="#thisIsForForgetPassword">忘記密碼?</button></div>
+            <div><button type='button' id='myforgetBtnEdi' data-bs-toggle="modal" data-bs-target="#thisIsForForgetPassword">忘記密碼?</button></div>
 
           </div>
         
@@ -73,13 +73,13 @@ class GoLogIn extends Component {
     
       <div class="modal-body">
         <div className='row '>
-          <div className='col-11'>填寫資料來獲取新密碼</div>
+          <div className='col-11' id='modalForForgetTopic'>獲取新密碼</div>
           <div className='col-1'><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
           <div className='row mt-5'>
             <form method='post'>
-               <div className='row'><label className='col-form-label col-3'>會員帳號</label><div className='col-8'><input type='text'  className='form-control' name="account" value={this.state.forgetData.account} onChange={this.forgetAccountChange} required/></div></div>
-               <div className='row '><label className='col-form-label col-3'>電子信箱</label><div className='col-8'><input type='email'  className='form-control' name='userEmail' value={this.state.forgetData.userEmail}  onChange={this.forgetusrEmailChange} required/></div></div>
-               <div className='row'><button type='button' className=' col-6 mx-auto btn getpasswordBTN' onClick={this.sendForgetPasswordData}>獲得密碼</button></div>
+               <div className='row'><label className='col-form-label col-3' htmlFor='modalacEdiforget'>會員帳號</label><div className='col-8'><input type='text' id='modalacEdiforget' className='form-control' name="account" value={this.state.forgetData.account} onChange={this.forgetAccountChange} required/></div></div>
+               <div className='row '><label className='col-form-label col-3' htmlFor='modalemEdiforget'>電子信箱</label><div className='col-8'><input type='email' id='modalemEdiforget' className='form-control' name='userEmail' value={this.state.forgetData.userEmail}  onChange={this.forgetusrEmailChange} required/></div></div>
+               <div className='row'><button type='button' className=' col-4 mx-auto btn getpasswordBTN rounded-3' onClick={this.sendForgetPasswordData}>獲得密碼</button></div>
             </form>
           </div>
         </div>
@@ -147,7 +147,7 @@ class GoLogIn extends Component {
 
         alert("密碼與帳號組合錯誤")
     }else if(chch.data==="ya"){
-        alert("登入成功 帥小伙")
+        alert("登入成功")
         window.location.href="/"
     }
     }

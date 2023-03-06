@@ -67,3 +67,24 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#myforgetBtnEdi{
+    background-color:var(--mainColor-white);
+}
+#modalForForgetTopic{
+    font-weight: 450;
+    font-size: 22px;
+    text-align: center;
+    color: #162f3a;
+}
+
+.getpasswordBTN{
+    background-color: var(--mainColor-seBlue);
+    color: #f4fff6;
+    font-weight: 300;
+}
+.getpasswordBTN:hover{
+    background-color: var(--subColor-blue);
+    color: #f4fff6;
+    font-weight: 400;
+}

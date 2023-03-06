@@ -50,30 +50,24 @@
 }
 
 #EdisonCart table td:nth-child(1) {
-    
     text-align: center;
 }
 
 #EdisonCart table td:nth-child(2) {
-   
     text-align: center;
 }
 
 #EdisonCart table td:nth-child(3) {
- 
     text-align: center;
 }
 
 #EdisonCart table td:nth-child(4),
 #EdisonCart table td:nth-child(5),
 #EdisonCart table td:nth-child(6) {
-   
     text-align: center;
 }
 
-#EdisonCart table td:nth-child(5) input {
-  
-}
+
 
 #EdisonCart table thead {
     border: 1px solid #fefcfc;
@@ -86,7 +80,7 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
-    padding: 18px 0;
+    padding: 5px 0;
 }
 
 #EdisonCart table tbody tr td {
@@ -117,8 +111,8 @@
 #subtotal table {
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 #subtotal table {
@@ -163,18 +157,16 @@
 input[type="text"] {
     display: block;
     margin-bottom: 10px; /*可根據需要調整元素之間的距離*/
-    width: 95%;
+    width: 100%;
 }
 
 /* 確認付款按鈕 */
 
-.next-pay {
-    text-align: center;
-    margin: 20px;
-}
-
 .next-pay .next {
     color: #ffffff;
+}
+#listTopic{
+    font-size: 34px;
 }
 
 
@@ -206,9 +198,11 @@ input[type="text"] {
   }
   
 
-  #EdisonCart {
+#EdisonCart {
     border: 1px solid rgb(127, 127, 127);
+    padding: 0px 0px;
 }
+
 
 .count {
     text-align: center;

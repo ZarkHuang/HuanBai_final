@@ -46,7 +46,7 @@ class MemberChangePassword extends Component {
 
             <div className="row ">
               <div className="col-8 mx-auto align-center">
-                <button className="btn btn-warning col-3" type="button"  onClick={this.okclick}>
+                <button id='changePEdiBtn'className="btn col-3 rounded-3" type="button"  onClick={this.okclick}>
                   送出
                 </button>
               </div>
@@ -113,7 +113,7 @@ class MemberChangePassword extends Component {
     var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
         console.log(responseAuth)
         if(responseAuth.data==="尚未登入"){
-            alert("你還沒登入！即將轉移到登錄頁面")
+            //alert("你還沒登入！即將轉移到登錄頁面")
             window.location="/gologin"
         }
     var serverData = await axios.get(

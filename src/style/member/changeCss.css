@@ -1,10 +1,18 @@
 #changePasswordPageEdi p{
-    font-size: var(--fontSize-H2);
-    margin-bottom: 40px;
+    font-size: 34px;
+    margin-bottom: 30px;
 }
 #changePasswordPageEdi label{
     font-size: var(--fontSize-H5);
 }
 #changePasswordPageEdi input{
     font-size: var(--fontSize-H6);
+}
+#changePasswordPageEdi #changePEdiBtn{
+    background-color: #70a0b4;
+    color: rgb(255, 255, 255);
+}
+#changePasswordPageEdi #changePEdiBtn:hover{
+    background-color: #2d5363;
+    color: rgb(255, 255, 255);
 }

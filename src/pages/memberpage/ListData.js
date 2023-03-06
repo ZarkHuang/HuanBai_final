@@ -3,27 +3,39 @@ import straw2 from "../../img/shop/straw2.png";
 import cupcozy3 from "../../img/shop/cupcozy3.jpg";
 import '../../style/member/edisonPaymentCss.css';
 import axios from "axios";
-import { useEffect } from "react";
+import React, { useEffect} from 'react';
+
 
 
 
 function PayMent() {
 
-    useEffect=()=>{
-        
-    }
+ 
 
-    var responseAuth = axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
-        console.log(responseAuth)
-        if(responseAuth.data==="尚未登入"){
-            alert("你還沒登入！即將轉移到登錄頁面")
-            window.location="/gologin"
+    useEffect(() => {
+        async function checkAuth() {
+          try {
+            const responseAuth = await axios.get('http://localhost:3344/checkAuth', { withCredentials: true });
+            console.log(responseAuth);
+            if (responseAuth.data === '尚未登入') {
+              alert('尚未登入！即將轉移到登錄頁面');
+              window.location = '/gologin';
+            }
+          } catch (error) {
+            console.log(error);
+          }
         }
+        checkAuth();
+      }, []);
 
     return (
+        <React.Fragment>
 
+       
+        <div className="row text-center">
+            <p id='listTopic'>訂單記錄</p>
+        </div>
     <div className="container">
-
        <p className="mt-5" style={{backgroundColor: '#F0F0F0'}}>訂單編號:#05463759</p>
        <section id="EdisonCart" class="section-p1">
        <table width="100%">
@@ -77,6 +89,7 @@ function PayMent() {
 
 
         </div>
+        </React.Fragment>
     );
 };
 
