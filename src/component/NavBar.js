@@ -203,16 +203,16 @@ return(
                    
                     </li>
                     <li className="rwd_navMenu_item">
-                        <a className="rwd_navMenu_item_a" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
+                    {checkIsItLoged()?<Link to="/member/" className="rwd_navMenu_item_a">會員專區</Link>:<Link to="/gologin" className="rwd_navMenu_item_a">會員登入</Link>}
                         <ul className="rwd_navMenu_sub">
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">會員資訊</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">投票紀錄</a></li>
-                            <li className="rwd_navMenu_sub_item"><a className="rwd_navMenu_item_a">訂單記錄</a></li>
+                            <li className="rwd_navMenu_sub_item"><Link to="/member/*" className="rwd_navMenu_item_a">會員資訊</Link></li>
+                            <li className="rwd_navMenu_sub_item"><Link to="/member/vote" className="rwd_navMenu_item_a">投票紀錄</Link></li>
+                            <li className="rwd_navMenu_sub_item"><Link to="/member/list" className="rwd_navMenu_item_a">訂單記錄</Link></li>
                             {
                               checkIsItLoged() ? 
                               
                               <li className="rwd_navMenu_sub_item">
-                                <a /* href="/" 不知道為什麼一定要加上href才可以正常登出 */ className="rwd_navMenu_item_a" onClick={sendlogoutClick}>登出</a></li>:<></>
+                                <Link  className="rwd_navMenu_item_a" onClick={sendlogoutClick}>登出</Link></li>:<></>
 
 
                             }
@@ -282,23 +282,22 @@ return(
           
                     </li>
                 
+
                     <li className="navBar_item">
-                        <a href="/" data-bs-toggle='modal' data-bs-target='#edison'>{checkIsItLoged()?'會員專區':'會員登入'}</a>
+                      {checkIsItLoged()?<><Link to="/member/">會員專區</Link> </>:<><Link to="/gologin">會員登入</Link> </>}          
                         <ul className="drop-menu">
-                            {/* <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
-                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
-                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li> */}
-                          
-                          {  checkIsItLoged() ? (<>
-                            <li className="drop-menu_item"><a href="/member">會員資訊</a></li>
-                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
-                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li>
-                            <li className="drop-menu_item"><a href="/order" onClick={sendlogoutClick}>登出</a></li>
-                            </>):(
-                            <><li className="drop-menu_item"><a href="/member">會員資訊</a></li>
-                            <li className="drop-menu_item"><a href="/voteRecord">投票紀錄</a></li>
-                            <li className="drop-menu_item"><a href="/order">訂單記錄</a></li></> 
-                            )}
+                            <li className="drop-menu_item">
+                              <Link to="/member/">會員資訊</Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/member/vote">投票紀錄</Link>
+                              </li>
+                            <li className="drop-menu_item">
+                            <Link to="/member/list">訂單記錄</Link>
+                              </li>
+                          {checkIsItLoged()?<li className="drop-menu_item">
+                            <Link to="/" onClick={sendlogoutClick}>登出</Link>
+                              </li>:<></>}
                         </ul>
                     </li>
                     {/* <li className="navBar_item"><a href="#"  data-bs-toggle='modal' data-bs-target='#edison'>登入 | 註冊</a></li> */}

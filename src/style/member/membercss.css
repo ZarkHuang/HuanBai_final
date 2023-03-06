@@ -49,6 +49,9 @@
 .tabEdi .col-md-8{
     padding: 10px 0px;
 }
+.tabEdi{
+    margin-top: 50px;
+}
     
 #memberpageLogOutBTN{
     background-color: var(--mainColor-seBlue);
@@ -63,6 +66,3 @@
     margin: 22px 0px;
 }
 
-#firstTab{
-    margin-top: 80px;
-}

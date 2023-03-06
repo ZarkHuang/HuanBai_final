@@ -32,6 +32,7 @@ import Contactus from "./pages/contact";
 import Brand from "./pages/aboutme/aboutme";
 import MemberList from "./pages/memberpage/ListData";
 import MemberVote from "./pages/memberpage/VoteData";
+
 // import './style/'
 
 
@@ -67,8 +68,6 @@ function App(){
             <Route path="/member/*" element={<Member/>} />
             <Route path="/member/list" element={<MemberList/>} />
             <Route path="/member/vote" element={<MemberVote/>} />
-
-            <Route path="/order" element={<Order/>} />
             <Route path="/gologin" element={<GoLogIn/>} />
             <Route path="/gosignup" element={<GoSignUp/>} />
            </Routes>

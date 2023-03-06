@@ -95,7 +95,7 @@ function Cart() {
             <hr></hr>
             <div className='next-pay'>
             
-            <button class="checkout"><span><Link to={`/pay`} className="next" >確認付款</Link></span></button>
+            <button class="checkout"><span><Link to={`/member/pay`} className="next" >確認付款</Link></span></button>
 
             </div>
 
