@@ -41,35 +41,36 @@ const VoteAnswer = () => {
 
   return (
     <React.Fragment>
-      <div className="answerPoll">
-        <div className="question">{votecm.voteName}</div>
-        <div className="voteAnswers">
+      <Link to={"/member/vote"} className=" btnBackToMember  btn" id='btnBackToMember'>回上一頁</Link>
+      <div className="answerPoll" id='answerPoll'>
+        <div className="question" id='memberQuestion'>{votecm.voteName}</div>
+        <div className="voteAnswers" id='voteAnswers'>
           <div>
-            <p className="voteAnswer">
-              <div className='voteAnswerWords'>
+            <p className="voteAnswer" id='voteAnswer'>
+              <div className='voteAnswerWords' id='voteAnswerWords'>
                 {votecm.option1}  {percentage1}%
               </div>
-              <div className='answerBackColor progress-bar '
+              <div className='answerBackColor progress-bar ' id='answerBackColor'
                 style={{ width: `${percentage1}%` }}>
                 <p className='answerBackColorWord'>1000000000</p>
               </div>
             </p>
           </div>
 
-          <p className="voteAnswer" >
+          <p className="voteAnswer"  id='voteAnswer'>
             <div className='voteAnswerWords'>
               {votecm.option2}{percentage2}%
             </div>
-            <div className='answerBackColor progress-bar'
+            <div className='answerBackColor progress-bar' id='answerBackColor'
               style={{ width: `${percentage2}%` }}>
               <p className='answerBackColorWord'>1000000000</p>
             </div>
           </p>
-          <p className="voteAnswer">
+          <p className="voteAnswer" id='voteAnswer' > 
             <div className='voteAnswerWords'>
               {votecm.option3}{percentage3}%
             </div>
-            <div className='answerBackColor progress-bar '
+            <div className='answerBackColor progress-bar ' id='answerBackColor'
               style={{ width: `${percentage3}%` }}
             >
               <p className='answerBackColorWord'>1000000000</p>
@@ -77,11 +78,11 @@ const VoteAnswer = () => {
 
             </div>
           </p>
-          <p className="voteAnswer">
+          <p className="voteAnswer" id='voteAnswer'>
             <div className='voteAnswerWords'>
               {votecm.option4}    {percentage4}%
             </div>
-            <div className='answerBackColor progress-bar '
+            <div className='answerBackColor progress-bar ' id='answerBackColor'
               style={{ width: `${percentage4}%` }}
             >
               <p className='answerBackColorWord'>1000000000</p>

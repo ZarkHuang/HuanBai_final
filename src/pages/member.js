@@ -3,6 +3,7 @@ import { Route, NavLink, Routes } from "react-router-dom";
 import MemberInfo from './memberpage/Info';
 import MemberVote from './memberpage/VoteData';
 import MemberChangePassword from './memberpage/PasswordChange';
+import VoteAnswer from './memberpage/voteAnswer';
 import axios from 'axios';
 import "../style/member/membercss.css";
 
@@ -41,6 +42,7 @@ class Member extends Component {
                     <Route  index='true' element={<MemberInfo/>} />
                     <Route path='/change' element={<MemberChangePassword/>} />
                     <Route path='/vote' element={<MemberVote/>} />
+                    <Route path='/VoteAnswer/:voteId' element={<VoteAnswer/>} />
                     <Route path='/payment' element={<PayMent/>} />
                     </Routes>
                 </div>

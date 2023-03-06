@@ -1,38 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 
-.answerPoll {
+#answerPoll {
     position: relative;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     width: 80%;
     margin-left: 10%;
-    height: 550px;
-    background-color: var(--mainColor-green);
+    height: 450px;
+    background-color: var(--mainColor-gray);
     border-radius: 10px;
     box-shadow: 0 0 20px 5px rgba(35, 30, 128, 0.05);
 }
 
-.votePoll .question {
-    /* padding: 20px; */
+#memberQuestion {
+    padding: 20px;
     font-size: 28px;
-    border-bottom: 1px solid #4C788C;
+    border-bottom: 1px solid #d5e3ea;
     font-weight: bold;
     font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--mainColor-gray);
 }
 
-.votePoll.answers {
+#votePoll #answers {
     padding: 20px 20px 10px;
-    background-color: #4C788C;
+    background-color: #0f1112;
 
 
 }
 
-.voteAnswer {
+#voteAnswer {
     position: relative;
     width: 90%;
-    height: 40px;
+    height: 100px;
     padding: 0px 10px;
-    line-height: 40px;
+    line-height: 20px;
     margin-left: 5%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -49,16 +50,17 @@
 
 
 
-.answerBackColor {
+#answerBackColor {
     width: 100%;
-    background-color: rgb(161, 195, 223);
+    background-color: var(--mainColor-gray);
     color: black;
-    min-width: 25px;
+    min-width: 35px;
     overflow: visible;
-    height: 20px;
+    height: 10px;
+    margin-top: 5px;
 }
 
-.progress-bar {
+#progress-bar {
     height: 18px;
     background-color: rgb(161, 195, 223);
     border-radius: 4px;
@@ -80,30 +82,39 @@
 }
 
 
-.progress-bar {
+#progress-bar {
     animation: progressAnimation 2s ease-out;
 }
 
 
-.voteAnswerWords {
+#voteAnswerWords {
     color: black;
     display: flex;
     vertical-align: middle;
     font-size: 24px;
 }
 
-.voteAnswer.highlight {
+#voteAnswer.highlight {
     border: 2px solid black;
 }
 
-.linkToAnswer {
+#linkToAnswer {
     color: blue;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.answerBackColorWord {
+#answerBackColorWord {
     visibility: hidden
+}
+
+#btnBackToMember {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
 }
 
 #moreVote {
@@ -122,11 +133,11 @@
         margin-top: 5px;
     } */
 
-    .answerPoll .question {
+    #answerPoll #question {
         font-size: 28px;
     }
 
-    .voteAnswer {
+    #voteAnswer {
         font-size: 24px;
         padding: 15px;
         height: auto;
