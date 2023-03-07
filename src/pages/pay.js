@@ -1,7 +1,4 @@
-import cup1 from "../img/shop/cup1.jpg";
-import straw2 from "../img/shop/straw2.png";
-import cupcozy3 from "../img/shop/cupcozy3.jpg";
-
+import { Link } from 'react-router-dom';
 
 function Pay() {
 
@@ -9,56 +6,18 @@ function Pay() {
 
         <div className="container">
 
-       <p style={{backgroundColor: '#F0F0F0'}}>訂單編號:#05463759</p>
-       <section id="cart" class="section-p1">
-       <table width="100%">
+            <div className="Finishorder">
 
-       <thead>
-        <tr>
-            <td>商品</td>
-            <td>名稱</td>
-            <td>顏色</td>
-            <td>金額</td>
-            <td>數量</td>
-        </tr>
+                <h1>訂單完成!</h1>
 
-        </thead>
+            </div>
 
-        <tbody>
-        <tr>
-            <td><img src={cup1} alt="隨行杯"></img></td>
-            <td>客製隨行杯350ml</td>
-            <td>米色</td>
-            <td>NTD 150元</td>
-            <td>1</td>
-        </tr>
+            <div className='next-pay'>
 
-        <tr>
-            <td><img src={straw2} alt="環保吸管"></img></td>
-            <td>環保吸管組</td>
-            <td>五入款</td>
-            <td>NTD 100元</td>
-            <td>1</td>
-        </tr>
+                <button class="checkout"><span><Link to={`/member/payment`} className="next" >訂單紀錄</Link></span></button>
 
-        <tr>
-            <td><img src={cupcozy3} alt="飲料背袋"></img></td>
-            <td>客製飲料背袋</td>
-            <td>米色</td>
-            <td>NTD 100元</td>
-            <td>1</td>
-        </tr>
+            </div>
 
-        <tr className="border-top">
-            <td>運費 : 60元 </td>
-            <td>總額 : 410元</td>
-        </tr>
-
-        </tbody>
-    </table>
-
-
-    </section>
 
 
         </div>
@@ -66,4 +25,3 @@ function Pay() {
 };
 
 export default Pay;
-

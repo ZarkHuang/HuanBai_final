@@ -69,6 +69,7 @@ function Cart() {
                     <tr>
                         <td>總額 : 350元</td>
                     </tr>
+
                 </table>
                 <button class="checkout"><span><Link to={`/checkout`} className="next" >下一步</Link></span></button>
             </div>

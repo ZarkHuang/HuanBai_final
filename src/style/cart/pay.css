@@ -14,3 +14,9 @@
 .count .border-top td {
     border-top: 2px solid gray ;
 }
+
+.Finishorder h1 {
+    text-align: center;
+    color: #57B565;
+    margin-top: 15%;
+}
