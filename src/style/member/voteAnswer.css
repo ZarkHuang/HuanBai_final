@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 
-#answerPoll {
+/* #answerPoll {
     position: relative;
     /* margin-top: 5px; */
-    width: 80%;
+    /* width: 80%;
     margin-left: 10%;
     height: 450px;
     background-color: var(--mainColor-green);
     border-radius: 10px;
     box-shadow: 0 0 20px 5px rgba(35, 30, 128, 0.05);
-}
+} */ */
+
+
 
 #memberQuestion {
     padding: 20px;
@@ -27,6 +29,8 @@
 
 
 }
+
+
 
 #voteAnswer {
     position: relative;
@@ -124,21 +128,48 @@
 }
 
 
-@media only screen and (min-width: 660px) {
-    /* .answerPoll {
-        width: 40%;
-        margin-left: 30%;
+@media only screen and (max-width: 660px) {
+    #answerPoll {
+        width: 80%;
+        margin-left: 10%;
         padding: 15px;
         margin-top: 5px;
-    } */
+        height: 100%;
+        /* background-color: red; */
+    }
 
     #answerPoll #question {
         font-size: 28px;
+
     }
 
     #voteAnswer {
         font-size: 24px;
         padding: 15px;
-        height: auto;
+        height: 70px;
+        /* background-color: red; */
+    }
+}
+
+@media only screen and (min-width: 660px) {
+    #answerPoll {
+        width: 80%;
+        margin-left: 10%;
+        padding: 15px;
+        margin-top: 5px;
+        height: 90%;
+        /* background-color: red; */
+    }
+
+    #answerPoll #question {
+        font-size: 28px;
+
+    }
+
+    #voteAnswer {
+        font-size: 24px;
+        padding: 15px;
+        height: 70px;
+        /* background-color: red; */
     }
 }
