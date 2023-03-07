@@ -49,6 +49,7 @@ function Map() {
     const location = useGeoLocation(); //改版前
     const mapRef = useRef("map");
     const [num, setNum] = useState([]);//數量
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth); //渲染時設定螢幕寬度，在下面JSX做判斷，大於1024px就用網頁版，小於就用手機版
 
     //自己的icon
     const myMarkerIcon = new L.Icon({
@@ -269,7 +270,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -283,7 +288,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -297,7 +306,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -311,7 +324,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -325,7 +342,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -339,7 +360,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -353,7 +378,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>
@@ -367,7 +396,11 @@ function Map() {
                                             <span className={`badge rounded-pill map-span ${item.cupNameColor}`}>{item.cupName}</span>
                                             <p>{item.name}</p>
                                             <p>電話： <a className="mark-link" href={`tel:${item.tel}`}>{item.tel}</a></p>
-                                            <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            {windowWidth > 1024 ? (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`https://www.google.com/maps/place/${item.name}`}>{item.address}</a></p>
+                                            ) : (
+                                                <p>地址：<a className="mark-link" target="_blank" rel="noreferrer noopener" href={`http://maps.apple.com/?q=${item.name}`}>{item.address}</a></p>
+                                            )}
                                             <p>店家：{item.company}</p>
                                         </Popup>
                                     </Marker>

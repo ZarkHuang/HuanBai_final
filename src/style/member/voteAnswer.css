@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 
-/* #answerPoll {
-    position: relative;
-    /* margin-top: 5px; */
-    /* width: 80%;
-    margin-left: 10%;
-    height: 450px;
-    background-color: var(--mainColor-green);
-    border-radius: 10px;
-    box-shadow: 0 0 20px 5px rgba(35, 30, 128, 0.05);
-} */ */
-
-
-
 #memberQuestion {
     padding: 20px;
     font-size: 28px;
