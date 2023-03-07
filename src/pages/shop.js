@@ -3,7 +3,7 @@ import straw2 from "../img/shop/straw2.png";
 import cupcozy3 from "../img/shop/cupcozy3.jpg";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 
 function Shop() {
@@ -14,6 +14,18 @@ function Shop() {
         <div className="container">
 
             {/* <div className="Shop"> */}
+            <div id="toCart">
+
+                <div className="background-button">
+                    <span>
+                        <Link to={`/cart`} className="linkToShop">
+                            <FontAwesomeIcon icon={faCartArrowDown} />
+                        </Link>
+                    </span>
+                </div>
+            </div>
+
+
             <div className="herobox">
                 <section id="shop-hero">
                     <span>自帶環保杯</span>

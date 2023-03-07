@@ -36,7 +36,7 @@ function PayMent() {
             <p id='listTopic'>訂單記錄</p>
         </div>
     <div className="container">
-       <p className="mt-5" style={{backgroundColor: '#F0F0F0'}}>訂單編號:#05463759</p>
+        <p className="mt-5" style={{backgroundColor: '#F0F0F0'}}>訂單編號:#05463759</p>
        <section id="EdisonCart" class="section-p1">
        <table width="100%">
 

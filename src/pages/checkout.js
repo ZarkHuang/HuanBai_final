@@ -67,7 +67,27 @@ function Cart() {
                     <tr>
                         <td>總額 : 410元</td>
                     </tr>
+
+                    <tr>
+                        <td>付款方式 :</td>
+                        <td>
+                                <label>
+                                    <input type="radio" name="main-dish" value="1" checked></input>
+                                    <span>貨到付款</span>
+                                </label>
+                        </td>
+
+                        <td>
+                                <label>
+                                    <input type="radio" name="main-dish" value="2"></input>
+                                    <span>信用卡</span>
+                                </label>
+                        </td>
+                    </tr>
                 </table>
+
+
+
             </div>
 
             <div class="form">
@@ -88,6 +108,8 @@ function Cart() {
                         <option>發票捐贈</option>
                 </select>
 
+                
+
             </div>
 
             </section>
@@ -95,7 +117,7 @@ function Cart() {
             <hr></hr>
             <div className='next-pay'>
             
-            <button class="checkout"><span><Link to={`/member/pay`} className="next" >確認付款</Link></span></button>
+            <button class="checkout"><span><Link to={`/pay`} className="next" >確認付款</Link></span></button>
 
             </div>
 
