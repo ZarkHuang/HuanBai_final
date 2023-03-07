@@ -14,3 +14,5 @@ https://huan-bai.com/
 <br/>
 <h1>Preview</h1>
 Landing Page
+
+https://github.com/ZarkHuang/Huanbai/blob/main/public/assets/images/id1.jpeg
