@@ -11,7 +11,7 @@ const Contactus = () => {
 
     emailjs
       .sendForm(
-        "service_2m44xkr",
+        "service_xhj75se",
         "template_ra0lvvs",
         form.current,
         "YQpfQ9KuQ90YjHVIp"
@@ -19,7 +19,7 @@ const Contactus = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("message sent");
+          alert('我們已收到你的來信，我們將會盡快回覆你。');
           form.current.reset();
         },
         (error) => {
@@ -41,7 +41,7 @@ const Contactus = () => {
                       <form class="contact-form" ref={form} onSubmit={sendEmail}>
                         <div class="form-group">
                               <label>Name </label>
-                              <input type="text" name="user_name" id="" placeholder="Question about your article"></input>
+                              <input type="text" name="user_name" id="" placeholder="Your name"></input>
                           </div>  
                           
                         <div class="form-group">

@@ -9,6 +9,7 @@ import 'leaflet/dist/leaflet.css';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import useGeoLocation from "./map/useGeoLocation";
 import '../style/map/map.scss'
+import Totop from './News/ScrollToTop'
 
 //圖片
 import iconSeven from "../img/map/ico-711.svg";
@@ -167,6 +168,7 @@ function Map() {
 
     return (
         <div className="mapWrap" id="mapWrap">
+            <Totop/>
             <h3 className="text-center mt-4  map-subTitle">Circular Cups Map</h3>
             <h2 className="text-center map-title mt-1">循環杯地圖</h2>
             <div className="map-container position-relative mt-4 map-border p-0">

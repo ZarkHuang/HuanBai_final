@@ -19,7 +19,6 @@ const Content = () => {
             <h4 className="section-head-title feature-head-title">Features</h4>
             <h2 className="section-title">關於我們</h2>
             <p className="section-desc">
-              介紹的敘述
             </p>
             <AllCollapseExample />
           </div>
