@@ -13,6 +13,31 @@ https://huan-bai.com/
 <ht/>
 <br/>
 <h1>Preview</h1>
-Landing Page
 
-![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/assets/images/id1.jpeg)
+<b>首頁</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/1.%E4%B8%BB%E9%A0%81.png)
+
+<b>關於我們</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/2.%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91.png)
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/2.%E9%97%9C%E6%96%BC%E6%88%91%E5%80%912.png)
+
+<b>循環杯介紹</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/4.%E9%97%9C%E6%96%BC%E5%BE%AA%E7%92%B0%E6%9D%AF.png)
+
+<b>最新消息</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/5.%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF.png)
+
+<b>循環杯地圖</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/7.%E5%BE%AA%E7%92%B0%E6%9D%AF%E5%9C%B0%E5%9C%96.png)
+
+<b>循環杯心理測驗</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/9.%E5%BF%83%E7%90%86%E6%B8%AC%E9%A9%97.png)
+
+<b>商品頁</b>
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/img/github/10.%E5%95%86%E5%93%81%E9%A0%81.png)
+
+
+<h1>Log</h1>
+<li>2023.02.18：發布第一版</li>
+
+
