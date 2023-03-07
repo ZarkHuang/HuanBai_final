@@ -15,4 +15,4 @@ https://huan-bai.com/
 <h1>Preview</h1>
 Landing Page
 
-https://github.com/ZarkHuang/Huanbai/blob/main/public/assets/images/id1.jpeg
+![image](https://github.com/ZarkHuang/Huanbai/blob/main/public/assets/images/id1.jpeg)
