@@ -14,8 +14,8 @@ const Answer = ({
 
   return (
     <div
-      className={`answer ${correctAnswerClass}`}
-      id='voteAnswer' onClick={() => {
+      className={`psychAnswer ${correctAnswerClass}`}
+      id='psychAnswer' onClick={() => {
         onSelectAnswer(answerText);
       }}
       >
