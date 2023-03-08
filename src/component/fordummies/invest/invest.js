@@ -9,7 +9,7 @@ const Invest = () => {
         <div class="invest__head">
           <h2 class="invest__title">享受美食 零廢棄！</h2>
           <p class="invest__description">
-          與全台餐飲店家合作，外帶外送直接使用循環容器盛裝你的餐點，享用完畢後，歸還到任一合作店家或自助歸還站。這裡借，那裡還，就是這麼方便！
+          這邊可以查看更多資訊！
           </p>
         </div>
         <div class="invest__body">

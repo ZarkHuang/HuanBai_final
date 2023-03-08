@@ -1,0 +1,140 @@
+
+.Rentway{
+    margin-bottom: 10rem;
+}
+
+
+.boxbox{
+    margin: auto;
+}
+
+.titletitle{
+    position: absolute;
+    left: 50%;
+    z-index: 9;
+    
+}
+
+.brand-btn{
+    width: 80%;
+    max-width: 30rem;
+    height: 20rem;
+    padding: 20px;
+}
+
+.bg1 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYi1WkScphKIorW4C0JLfwq8dCGpKWdtWPg&usqp=CAU");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.bg2{
+    background-image: url("https://www.winnews.com.tw/wp-content/uploads/2022/12/001-15.jpg");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.bg3{
+    background-image: url("https://cdn2.ettoday.net/images/5881/5881811.jpg");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.bg4{
+    background-image: url("https://media.zenfs.com/ko/news_tvbs_com_tw_938/32cc9a7315cd0258f049d0e0840334cb");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.bg5{
+    background-image: url("https://wowlavie-aws.hmgcdn.com/file/article_all/A20221201154009719.jpg");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.sevenimage{
+    background-image: url("https://static.ctwant.com/images/content/19/193919/13f58c967efc97624642ed796b3d7274.jpg");
+    background-size:  cover ;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+
+.brand-btn h1{
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow:2px 3px 5px #4d4d4d
+}
+
+button {
+  font-family: "Poppins", "sans-serif";
+  border: none;
+  background-color: #64C676;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.2s;
+  margin: 1rem;
+  border-radius: 10px;
+}
+.bg1:hover {
+  transform: scale(1.05);
+}
+
+.Rentway {
+  text-align: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(3px);
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 80rem;
+  z-index: 10;
+  background-color: #eee;
+  border-radius: 4px;
+  box-shadow: 0 1rem 1.5rem 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.overlay__header {
+  color: #000;
+  background-color: #64C676;
+  padding: 2rem;
+}
+.overlay__header h3 {
+  font-size: 2.5rem;
+}
+.overlay__content {
+  padding: 2rem;
+}
+.overlay__footer {
+  text-align: right; 
+  margin: 0;
+}
+
+.overlay__footer {
+    min-height: 100px;
+    padding-right: 20px;
+}
+
+.foff-title {
+    color: #eee;
+}

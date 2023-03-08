@@ -34,16 +34,12 @@ a {
   margin: auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem;
   border-bottom: 2px solid #f7f7f7;
-  margin-bottom: 4rem;
 }
 
 .opportunities__head {
   text-align: center;
   max-width: 70rem;
-  margin: 0 auto 8rem;
-  padding: 50px;
 }
 
 .opportunities__title {
@@ -70,7 +66,6 @@ a {
   background-color: #ffffff;
   border-radius: 0.5rem;
   filter: drop-shadow(0 0 0.75rem rgba(27, 31, 35, 0.15));
-  padding: 5rem 2.5rem 2.5rem;
   transition: all 0.3s ease-out;
   margin: 0 auto;
 }

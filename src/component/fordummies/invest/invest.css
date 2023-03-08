@@ -1,21 +1,13 @@
-
-:root{
-  --mainColor-white: #FEFCFC;
---mainColor-blue: #162F3A;
---subColor-blue: #2D5363;
---subColor-lightBlue: #9BC9DD;
---mainColor-green: #64C676;
-}
-
 .fordummies-container{
   background-color: var(--mainColor-white);
-  margin: 10rem auto;
+  margin-top: 5rem auto;
 }
 
 /*End Opportunities*/
 /* Invest*/
 .invest {
     margin: auto;
+    margin-top: 6rem;
   }
   
   .invest__head {
