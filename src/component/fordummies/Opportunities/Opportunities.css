@@ -42,16 +42,21 @@ a {
   max-width: 70rem;
 }
 
-.opportunities__title {
-  font-size: 3.6rem;
+.opportunities__head .opportunities__title {
+  font-size: 40px;
   color: #000000;
 }
 
 .opportunities__description {
   margin-top: 2.5rem;
-  font-size: 1.8rem;
+  font-size: 5rem;
   font-weight: 400;
   color: #263238;
+}
+
+.opportunities__head .opportunities__description {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .opportunities__body {

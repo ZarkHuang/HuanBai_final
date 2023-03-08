@@ -1,4 +1,5 @@
 import React from 'react'
+import Faq from '../component/fordummies/faq/faq';
 import Farm from '../component/fordummies/farm-invest/farm-invest';
 import Hero from '../component/fordummies/hero/hero';
 import HowIsWork from '../component/fordummies/how-is-works/how-is-works';
@@ -18,7 +19,7 @@ const Fordummies = () => {
       <Rentway/>
       <HowIsWork/>
       <Invest/>
-      <Farm/>
+      <Faq/>
     </div>
   )
 }
