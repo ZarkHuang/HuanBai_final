@@ -46,7 +46,7 @@ const VoteAnswer = () => {
         <div className="question" id='memberQuestion'>{votecm.voteName}</div>
         <div className="voteAnswers" id='voteAnswers'>
           <div>
-            <p className="voteAnswer" id='voteAnswer'>
+            <p className="voteMemberAnswer" id='voteMemberAnswer'>
               <div className='voteAnswerWords' id='voteAnswerWords'>
                 {votecm.option1}  {percentage1}%
               </div>
@@ -57,7 +57,7 @@ const VoteAnswer = () => {
             </p>
           </div>
 
-          <p className="voteAnswer"  id='voteAnswer'>
+          <p className="voteMemberAnswer"  id='voteMemberAnswer'>
             <div className='voteAnswerWords'>
               {votecm.option2}{percentage2}%
             </div>
@@ -66,7 +66,7 @@ const VoteAnswer = () => {
               <p className='answerBackColorWord'>1000000000</p>
             </div>
           </p>
-          <p className="voteAnswer" id='voteAnswer' > 
+          <p className="voteMemberAnswer" id='voteMemberAnswer' > 
             <div className='voteAnswerWords'>
               {votecm.option3}{percentage3}%
             </div>
@@ -78,7 +78,7 @@ const VoteAnswer = () => {
 
             </div>
           </p>
-          <p className="voteAnswer" id='voteAnswer'>
+          <p className="voteMemberAnswer" id='voteMemberAnswer'>
             <div className='voteAnswerWords'>
               {votecm.option4}    {percentage4}%
             </div>
