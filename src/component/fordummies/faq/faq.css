@@ -2,7 +2,8 @@
   color: #162F3A;
   margin: auto;
   padding: 4rem;
-  width: 70%;
+  max-width: 1200px;
+  width: 100%;
   margin-bottom: 15rem;
   margin-top: 5rem;
 }
