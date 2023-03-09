@@ -3,8 +3,8 @@ const data = [
       question: "炎熱的夏天裡，你最想來上什麼消消暑?",
       answer1: "汽水",
       answer2: "白開水",
-      answer3: "蘋果",
-      answer4: "冰淇淋",
+      answer3: "無糖綠",
+      answer4: "青草茶",
     },
     {
       question: "此時距離商店還有約莫兩公里的距離，你會選擇怎麼前往?",
@@ -15,9 +15,9 @@ const data = [
     },
     {
       question: "結帳時，你想選擇哪種付費方式?",
-      answer1: "比特幣",
+      answer1: "紙鈔",
       answer2: "信用卡",
-      answer3: "硬幣",
+      answer3: "LINE Pay",
       answer4: "紙鈔",
     },
     {

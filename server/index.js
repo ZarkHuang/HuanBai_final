@@ -519,7 +519,7 @@ app.get("/vote/answer/:voteId", (req, res) => {
 // 會員投票紀錄
 app.get("/userVoteData", loginApi, (req, res) => {
 
-    const q = "SELECT userVote.voteId, votes.* FROM userVote JOIN votes ON userVote.voteId = votes.voteId WHERE userVote.uid = 94;"
+    const q = "SELECT userVote.voteId, votes.* FROM userVote JOIN votes ON userVote.voteId = votes.voteId WHERE userVote.uid = 1;"
     conn.query(q,
         // [req.session.user.uid],
         (err, data) => {
