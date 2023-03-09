@@ -75,8 +75,7 @@
     text-shadow:2px 3px 5px #4d4d4d
 }
 
-button {
-  font-family: "Poppins", "sans-serif";
+.Rentway button {
   border: none;
   background-color: #64C676;
   color: #000;
