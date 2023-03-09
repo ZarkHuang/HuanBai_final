@@ -29,6 +29,7 @@ const Faq = () => {
 
   return (
     <div class="faq-container">
+      <h1 className="titleblock">循環杯常見問題QA</h1>
       <div class="accordion">
         <div class="accordion-item">
           <button id="accordion-button-1" aria-expanded="false">

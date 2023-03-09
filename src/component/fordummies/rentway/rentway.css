@@ -89,6 +89,18 @@
 .bg1:hover {
   transform: scale(1.05);
 }
+.bg2:hover {
+  transform: scale(1.05);
+}
+.bg3:hover {
+  transform: scale(1.05);
+}
+.bg4:hover {
+  transform: scale(1.05);
+}
+.bg5:hover {
+  transform: scale(1.05);
+}
 
 .Rentway {
   text-align: center;

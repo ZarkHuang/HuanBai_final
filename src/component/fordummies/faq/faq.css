@@ -1,10 +1,10 @@
 .faq-container {
   color: #162F3A;
-  display: flex;
   margin: auto;
   padding: 4rem;
-  width: 80%;
+  width: 70%;
   margin-bottom: 15rem;
+  margin-top: 5rem;
 }
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
@@ -95,4 +95,8 @@
   margin: 2em 0;
   padding: 0 2rem;
   color: #66BB6A;
+}
+
+.titleblock{
+  font-size: 40px;
 }
