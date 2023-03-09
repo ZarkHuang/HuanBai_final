@@ -6,7 +6,7 @@
     width: 80%;
 }
 .EtopicDiv{
-    margin-bottom: 50px;
+/*     margin-bottom: 50px; */
 }
 .voteDataTopic {
     margin-top: 25px;
@@ -24,4 +24,14 @@
         margin-left: 20%;
 
     }
+}
+
+.swal2-title{
+    font-size: 22px;
+}
+.swal2-html-container{
+    font-size: 16px;
+}
+.swal2-styled.swal2-confirm{
+    padding: 10px 24px;
 }

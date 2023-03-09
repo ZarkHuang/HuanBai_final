@@ -33,19 +33,20 @@
 
 /* 這是標題 */
 #EdisonGoSignUpContainer p {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 #EdisonGoSignUpContainer label {
-  font-size: 16px;
+  font-size: 20px;
 }
 #EdisonGoSignUpContainer .Ediinput{
-  font-size: 14px;
+  font-size: 18px;
   width: 100%;
+  margin-bottom: 0;
 }
 #EdisonGoSignUpContainer select{
-    font-size: 14px;
+    font-size: 16px;
 }
 #EdisonGoSignUpContainer #GoSignUpBackBTN {
   background-color: var(--mainColor-greenDark);
@@ -64,5 +65,5 @@
 }
 #EdisonGoSignUpContainer span{
   color: rgb(191, 36, 36);
-  font-size: var(--fontSize-SMALL);
+  font-size: var(--fontSize-P);
 }

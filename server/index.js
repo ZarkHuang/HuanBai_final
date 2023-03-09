@@ -98,14 +98,14 @@ app.post('/member/forgotPassword',function(req,res){
         }else{
             let newPasswordSet = req.body.userEmail.slice(0,4);
             let mailOptionsForgetPassword = {
-                from: 'huanbai@huan-bai.com',
+                from:'huanbai@huan-bai.com',
                 to:req.body.userEmail, // 註冊的人的信箱
-                subject: `環唄已將您的密碼更改`,
-                text:`帳號（${req.body.account}）會員您好，我們已將您的密碼重新設定為${newPasswordSet}，請您使用這組密碼來登入`
+                subject: `環唄會員密碼重設`,
+                text:`帳號（${req.body.account}）會員您好，我們已將您的密碼重新設定為${newPasswordSet}，請您使用這組密碼來登入，後續可以再到會員專區內的更改密碼來做修改。`
             }
             bcrypt.hash(newPasswordSet, saltRounds, (err, hash) => {
                 conn.query("update userInfo set password = ? where account = ?", [hash, req.body.account], function (err, rows) {
-                    res.send(JSON.stringify(req.body));
+                    //res.send(JSON.stringify(req.body));
                 })
         
         
@@ -130,8 +130,12 @@ app.post('/member/forgotPassword',function(req,res){
 app.post("/member/signupcheckname", function (req, res) {
     conn.query("select * from userInfo where account = ?", [req.body.account], function (err, rows) {
         if (rows == "") {
+            console.log(rows)
+            console.log(err)
             res.send("success")
         } else {
+            console.log(rows)
+            console.log(err)
             res.send("gowrong")
         }
     })
@@ -193,7 +197,7 @@ app.post("/member/goSignUp", function (req, res) {
             let mailOptionssignup = {
                 from: 'huanbai@huan-bai.com',
                 to:req.body.userEmail, // 註冊的人的信箱
-                subject:req.body.userName+',歡迎使用環唄！',
+                subject:'註冊成功！'+req.body.userName+',歡迎使用環唄.',
                 text:req.body.userName+',感謝您註冊我們環唄網站的會員！我們還有許多功能如：地圖據點探索，綠色商品，心理測驗，更多功能等你來探索！'
             }
             transporter.sendMail(mailOptionssignup,function(err,info){
@@ -518,8 +522,7 @@ app.get("/vote/answer/:voteId", (req, res) => {
 
 // 會員投票紀錄
 app.get("/userVoteData", loginApi, (req, res) => {
-
-    const q = "SELECT userVote.voteId, votes.* FROM userVote JOIN votes ON userVote.voteId = votes.voteId WHERE userVote.uid = 94;"
+    const q = "SELECT userVote.voteId, votes.* FROM userVote JOIN votes ON userVote.voteId = votes.voteId WHERE userVote.uid = 1;"
     conn.query(q,
         // [req.session.user.uid],
         (err, data) => {
