@@ -14,7 +14,7 @@ function saveAsImage() {
         croppedCanvas.height = canvas.height;
 
         // Draw the original canvas onto the cropped canvas with the desired border radius
-        const radius = 55; // Replace with the desired border radius
+        const radius = 70; // Replace with the desired border radius
         croppedCtx.beginPath();
         croppedCtx.moveTo(radius, 0);
         croppedCtx.lineTo(croppedCanvas.width - radius, 0);
