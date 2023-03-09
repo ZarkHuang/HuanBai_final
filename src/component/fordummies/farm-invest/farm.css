@@ -1,41 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--mainColor-white);
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
-section {
-  padding: 5rem 0;
-}
-
-.container {
-  width: 100%;
-  padding: 0 1.5rem;
-  max-width: 144rem;
-  margin: 0 auto;
-}
 
 .w-120 {
   max-width: 120rem;
@@ -386,7 +348,10 @@ a.farm-btn {
   text-align: center;
   background-color: #ffffff;
   filter: drop-shadow(0 0 0.75rem rgba(27, 31, 35, 0.15));
-  margin: 10rem auto;
+  margin: auto;
+
+  margin-bottom: 8rem ;
+  font-size: 20px;
 }
 
 .farm-invest__title {

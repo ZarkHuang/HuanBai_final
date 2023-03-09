@@ -29,18 +29,18 @@
 }
 
 .works__title {
-  font-size: 3.6rem;
+  font-size: 48px;
 }
 
 .works__description {
   margin-top: 2.5rem;
-  font-size: 1.8rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 3rem;
 }
 
 .works__body {
-  margin: 5rem 0 10rem;
+  margin: 10rem 0 10rem;
 }
 
 .form_progressbar {
@@ -51,13 +51,14 @@
 .progressbar__step {
   cursor: pointer;
   border-radius: 50%;
-  width: 7.2rem;
-  height: 7.2rem;
+  width: 8rem;
+  height: 8rem;
   border: 1px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  font-size: 18px;
 }
 .progressbar__step.active {
   background-color: #ffffff;
@@ -123,7 +124,7 @@
 
 .works__step_description {
   flex: 6;
-  font-size: 1.6rem;
+  font-size:18px;
   font-weight: 400;
 }
 
@@ -140,12 +141,13 @@
     justify-content: center;
   }
 
-  .progressbar__step {
-    width: 4.8rem;
-    height: 4.8rem;
+.progressbar__step {
+    width: 5rem;
+    height: 5rem;
+    font-size: 20px;
   }
   .progressbar__step:not(:first-child)::before, .progressbar__step:not(:first-child)::after {
-    width: 7rem;
+    width: 10rem;
   }
 
   .works__step__content {
@@ -202,8 +204,8 @@
   }
 
   .progressbar__step {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 5rem;
+    height: 5rem;
   }
   .progressbar__step:not(:first-child)::before, .progressbar__step:not(:first-child)::after {
     width: 4rem;

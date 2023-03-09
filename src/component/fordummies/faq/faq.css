@@ -1,0 +1,103 @@
+.faq-container {
+  color: #162F3A;
+  margin: auto;
+  padding: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 15rem;
+  margin-top: 5rem;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #66BB6A;
+  margin: auto;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #162F3A;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #66BB6A;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #66BB6A;
+  border: 1px solid #66BB6A;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+  padding: 2rem;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  right: 5rem;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+  
+}
+.accordion button[aria-expanded=true] {
+  color: #66BB6A;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 19em;
+  transition: all 300ms linear;
+  will-change: opacity, max-height;
+  
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 2em 0;
+  padding: 0 2rem;
+  color: #66BB6A;
+}
+
+.titleblock{
+  font-size: 40px;
+}

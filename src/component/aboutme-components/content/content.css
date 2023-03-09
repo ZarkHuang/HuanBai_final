@@ -1,33 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-:root{
-  --mainColor-white: #FEFCFC;
-  --mainColor-blue: #162F3A;
-  --subColor-blue: #2D5363;
-  --subColor-lightBlue: #9BC9DD;
-  --mainColor-green: #64C676;
-}
-
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1 {
-  line-height: 8rem;
-}
-
 .features-container {
   width: 100%;
   max-width: 120rem;
@@ -187,6 +159,7 @@ section {
   margin-left: 5%;
   border-radius: 50px;
   overflow: hidden;
+  margin: auto;
 }
 
 

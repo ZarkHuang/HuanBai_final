@@ -6,17 +6,18 @@
     margin-bottom: 5rem;
 }
 
-:root{
-  --mainColor-white: #FEFCFC;
-  --mainColor-blue: #162F3A;
-  --subColor-blue: #2D5363;
-  --subColor-lightBlue: #9BC9DD;
-  --mainColor-green: #64C676;
+.Accordionoo{
+  font-size: 18px;
+  width: 100%;
 }
 
+.text-tile h4{
+  font-size: 20px;
+  padding: 0 10px;
+}
 
 @media screen and (max-width: 750px) {
-  .Accordion{
+  .Accordionoo{
     width: 100%;
     padding: 0;
     width: 90vw;

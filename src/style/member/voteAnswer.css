@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 
-/* #answerPoll {
-    position: relative;
-    /* margin-top: 5px; */
-    /* width: 80%;
-    margin-left: 10%;
-    height: 450px;
-    background-color: var(--mainColor-green);
-    border-radius: 10px;
-    box-shadow: 0 0 20px 5px rgba(35, 30, 128, 0.05);
-} */ */
-
-
-
 #memberQuestion {
     padding: 20px;
     font-size: 28px;
@@ -32,8 +19,8 @@
 
 
 
-#voteAnswer {
-    position: relative;
+#voteMemberAnswer {
+    /* position: relative; */
     width: 90%;
     height: 100px;
     padding: 0px 10px;
@@ -90,14 +77,14 @@
 }
 
 
-#voteAnswerWords {
+#voteMemberAnswerWords {
     color: black;
     display: flex;
     vertical-align: middle;
     font-size: 24px;
 }
 
-#voteAnswer.highlight {
+#voteMemberAnswer.highlight {
     border: 2px solid black;
 }
 
@@ -130,11 +117,12 @@
 
 @media only screen and (max-width: 660px) {
     #answerPoll {
+        /* display: grid; */
         width: 80%;
         margin-left: 10%;
-        padding: 15px;
         margin-top: 5px;
-        height: 100%;
+        height: 500px;
+        margin-bottom: 100px;
         /* background-color: red; */
     }
 
@@ -143,7 +131,7 @@
 
     }
 
-    #voteAnswer {
+    #voteMemberAnswer {
         font-size: 24px;
         padding: 15px;
         height: 70px;
@@ -157,7 +145,8 @@
         margin-left: 10%;
         padding: 15px;
         margin-top: 5px;
-        height: 90%;
+        margin-bottom: 100px;
+        /* height: 90%; */
         /* background-color: red; */
     }
 
@@ -166,7 +155,7 @@
 
     }
 
-    #voteAnswer {
+    #voteMemberAnswer {
         font-size: 24px;
         padding: 15px;
         height: 70px;

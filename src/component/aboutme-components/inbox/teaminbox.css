@@ -1,27 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 
-
-:root{
-  --mainColor-white: #FEFCFC;
-  --mainColor-blue: #162F3A;
-  --subColor-blue: #2D5363;
-  --subColor-lightBlue: #9BC9DD;
-  --mainColor-green: #64C676;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
 .organizations img {
   width: 5rem;
-}
-
-
-h1 {
-  line-height: 8rem;
 }
 
 
@@ -33,7 +14,7 @@ textarea {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin-bottom: 8rem;
 }
 
@@ -64,7 +45,7 @@ section {
 }
 
 .section-content .litttttt{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   margin: 0 auto;
 }
@@ -153,7 +134,7 @@ section {
   margin: auto;
 }
 .team-text > * {
-  max-width: 45 rem;
+  max-width: 50rem;
 }
 
 .team-head-title {

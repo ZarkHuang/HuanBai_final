@@ -38,16 +38,16 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 20%;
   font-family: "Noto Sans TC", sans-serif;
 }
 
 
-.answer {
+.psychAnswer {
   margin-top: 50px;
-  width: 80%;
-  margin-left: 10%;
+  width: 50%;
+  margin-left: 25%;
   background: #ffffff;
   border: 4px solid var(--mainColor-green);
   border-radius: 15px;
@@ -192,7 +192,21 @@
 
 
 
-@media only screen and (max-width: 557px) {
+@media only screen and (max-width: 768px) {
+
+  .question {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .psychAnswer {
+
+    width: 80%;
+    margin-left: 10%;
+
+  
+  }
+
   .answerImg {
     max-width: 100%;
     object-fit: cover;
@@ -208,6 +222,8 @@
 }
 
 @media only screen and (min-width: 776px) {
+
+
   .answerImg {
     padding-right: 0;
   }

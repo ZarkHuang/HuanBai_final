@@ -3,7 +3,7 @@ import './Accordion.css'
 
 function AllCollapseExample() {
   return (
-    <Accordion className='mt-50 Accordion'>
+    <Accordion className='mt-50 Accordionoo'>
       <Accordion.Item eventKey="0">
         <Accordion.Header className='text-tile'><h4>團隊組成</h4></Accordion.Header>
         <Accordion.Body>
@@ -12,7 +12,7 @@ function AllCollapseExample() {
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
-        <Accordion.Header><h4>動機</h4></Accordion.Header>
+        <Accordion.Header className='text-tile'><h4>動機</h4></Accordion.Header>
         <Accordion.Body>
         自2023年1月起，全台開始實施一次用飲料杯限制，由政府引導各大連鎖業者
 帶頭提供循環杯服務，供民眾盛裝飲品，目標於2023年底全台市佔率達5%。 <br></br>
@@ -22,7 +22,7 @@ function AllCollapseExample() {
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
-        <Accordion.Header><h4>未來目標</h4></Accordion.Header>
+        <Accordion.Header className='text-tile'><h4>未來目標</h4></Accordion.Header>
         <Accordion.Body>
         希望能逐步拓展合作店家與更多品牌廠商，將循環杯地圖與網站推廣給更多人知道！
         希望可以為消費者創造更好的選擇，更好的環境以及更好的未來！

@@ -26,13 +26,15 @@ const News = () => {
     <>
     <ToTop/>
       <ScrollToTop />
-      <Link to="/news" className='blog-goBack' >
-        <span> &#8592; </span> <span>Go Back</span>
-      </Link>
       
       {blog ? (
         <div className='blog-wrap'>
           <header>
+
+          <Link to="/news" className='blog-goBack' >
+        <span> &#8592; </span> <span>Go Back</span>
+      </Link>
+
           <div className='blog-subCategory'>
               {blog.subCategory.map((category, i) => (
                 <div key={i}>
