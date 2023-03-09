@@ -34,9 +34,17 @@
 
 .Etopic{
     font-size: 34px;
-    
-    
+     
 }
 #InfoCanChangeinput input{
     width: 100%;
+}
+#InfoCanChange input{
+    font-size: 16px;
+}
+#InfoCanChange select{
+    font-size: 16px;
+}
+#InfoCanChange label{
+    font-size: 18px;
 }

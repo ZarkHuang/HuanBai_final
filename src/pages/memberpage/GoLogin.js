@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "../../style/member/goLogInCss.css"
+import "../../style/member/goLogInCss.css";
+import Swal from 'sweetalert2';
 
 class GoLogIn extends Component {
   state = { 
@@ -15,7 +16,7 @@ class GoLogIn extends Component {
   render() { 
     return (
       <React.Fragment>
-        <div className='container' id="EdisonGoLogInContainer">
+    <div className='container' id="EdisonGoLogInContainer">
 
       <form method='post'>
 
@@ -41,6 +42,11 @@ class GoLogIn extends Component {
           <input type="password" id='EdisonPasswordGetSee' name="password" className="form-control form-control-lg" value={this.state.loginData.password} onChange={this.passwordLoginChange}/>
         </div>
         </div>
+        <div className='row'>
+          <div className='col-6 mx-auto'>
+            <div id='edisonWrongPairOflog' className='text-center'></div>
+          </div>
+        </div>
         
       <div className='d-flex row mb-5 '>
         <div className='col-6  '>
@@ -51,7 +57,7 @@ class GoLogIn extends Component {
             <label className="form-check-label ms-3" for="showPassword">顯示密碼</label> 
             </div>
 
-            <div><button type='button' id='myforgetBtnEdi' data-bs-toggle="modal" data-bs-target="#thisIsForForgetPassword">忘記密碼?</button></div>
+            <div><button type='button' className='btn btn-outline-secondary rounded' id='myforgetBtnEdi' data-bs-toggle="modal" data-bs-target="#thisIsForForgetPassword">忘記密碼?</button></div>
 
           </div>
         
@@ -77,9 +83,24 @@ class GoLogIn extends Component {
           <div className='col-1'><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
           <div className='row mt-5'>
             <form method='post'>
-               <div className='row'><label className='col-form-label col-3' htmlFor='modalacEdiforget'>會員帳號</label><div className='col-8'><input type='text' id='modalacEdiforget' className='form-control' name="account" value={this.state.forgetData.account} onChange={this.forgetAccountChange} required/></div></div>
-               <div className='row '><label className='col-form-label col-3' htmlFor='modalemEdiforget'>電子信箱</label><div className='col-8'><input type='email' id='modalemEdiforget' className='form-control' name='userEmail' value={this.state.forgetData.userEmail}  onChange={this.forgetusrEmailChange} required/></div></div>
-               <div className='row'><button type='button' className=' col-4 mx-auto btn getpasswordBTN rounded-3' onClick={this.sendForgetPasswordData}>獲得密碼</button></div>
+              <div className='row'>
+                <div className='col-auto'>
+                  <label className='col-form-label col-auto' htmlFor='modalacEdiforget'>會員帳號</label>
+                </div>
+                <div className='col-9'>
+                  <input type='text' id='modalacEdiforget' className='form-control mt-2' name="account" value={this.state.forgetData.account} onChange={this.forgetAccountChange} required/>
+                </div>
+               
+              </div>
+              <div className='row mb-3'>
+                <div className='col-auto'>
+                  <label className='col-form-label col-auto' htmlFor='modalemEdiforget'>電子信箱</label>
+                </div>
+                <div className='col-9'>
+                  <input type='email' id='modalemEdiforget' className='form-control mt-2' name='userEmail' value={this.state.forgetData.userEmail}  onChange={this.forgetusrEmailChange} required/>
+                </div>
+              </div>
+               <div className='row'><button type='button' className=' col-auto mx-auto btn getpasswordBTN rounded-3' onClick={this.sendForgetPasswordData}>獲得密碼</button></div>
             </form>
           </div>
         </div>
@@ -130,8 +151,28 @@ class GoLogIn extends Component {
       alert("帳號或信箱不存在");
     }
     if(forgetRes.data==="成功更改密碼"){
-      alert("密碼已寄送至您的信箱");
-      window.location="/";
+      Swal.fire({
+        icon:'success',
+        title:'密碼已寄送至您的信箱',
+        timer: 1200,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+          forgetRes = setInterval(() => {
+            Swal.getContent().querySelector('strong')
+              .textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        onClose: () => {
+          clearInterval(forgetRes)
+        }
+      }).then((result) => {
+        if (
+          result.dismiss === Swal.DismissReason.timer
+        ) {
+            window.location.href="/" }
+      })
+      
+  
     }
 
   };
@@ -141,14 +182,34 @@ class GoLogIn extends Component {
     console.log(chch);
     console.log(chch.data)
     if(chch.data==="noname"){
-        alert("使用者不存在")
+      document.getElementById('edisonWrongPairOflog').innerText='使用者不存在'
+   
 
     }else if(chch.data==="wrongpair"){
-
-        alert("密碼與帳號組合錯誤")
+      document.getElementById('edisonWrongPairOflog').innerText='密碼與帳號組合錯誤'
     }else if(chch.data==="ya"){
-        alert("登入成功")
-        window.location.href="/"
+      Swal.fire({
+        icon:'success',
+        title:'登入成功',
+        timer: 1200,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+          chch = setInterval(() => {
+            Swal.getContent().querySelector('strong')
+              .textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        onClose: () => {
+          clearInterval(chch)
+        }
+      }).then((result) => {
+        if (
+          result.dismiss === Swal.DismissReason.timer
+        ) {
+            window.location.href="/"       
+        }
+      })
+       
     }
     }
 }

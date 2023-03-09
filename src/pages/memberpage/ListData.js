@@ -1,41 +1,60 @@
-import cup1 from "../../img/shop/cup1.jpg";
+/* import cup1 from "../../img/shop/cup1.jpg";
 import straw2 from "../../img/shop/straw2.png";
-import cupcozy3 from "../../img/shop/cupcozy3.jpg";
+import cupcozy3 from "../../img/shop/cupcozy3.jpg"; */
 import '../../style/member/edisonPaymentCss.css';
 import axios from "axios";
-import React, { useEffect} from 'react';
-
-
-
+import { useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 
 function PayMent() {
-
- 
-
+    let alertDisplayed = false;
+    
     useEffect(() => {
         async function checkAuth() {
-          try {
-            const responseAuth = await axios.get('http://localhost:3344/checkAuth', { withCredentials: true });
-            console.log(responseAuth);
-            if (responseAuth.data === '尚未登入') {
-              alert('尚未登入！即將轉移到登錄頁面');
-              window.location = '/gologin';
+            try {
+                var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
+                console.log(responseAuth)
+                if(responseAuth.data==="尚未登入" && !alertDisplayed) {
+                    Swal.fire({
+                        icon:'warning',
+                        title:'尚未登入',
+                        text:'即將為您跳轉到登入頁面',
+                        timer: 1200,
+                        onBeforeOpen: () => {
+                          Swal.showLoading()
+                          responseAuth = setInterval(() => {
+                            Swal.getContent().querySelector('strong')
+                              .textContent = Swal.getTimerLeft()
+                          }, 100)
+                        },
+                        onClose: () => {
+                          clearInterval(responseAuth)
+                        }
+                      }).then((result) => {
+                        if (
+                          result.dismiss === Swal.DismissReason.timer
+                        ) {
+                            window.location="/gologin"
+                            this.hasAlerted = true 
+                         
+                        }
+                      })
+                }
+            } catch (error) {
+                console.log(error);
             }
-          } catch (error) {
-            console.log(error);
-          }
         }
         checkAuth();
-      }, []);
-
+    }, []);
     return (
-        <React.Fragment>
-
-       
+        <>
         <div className="row text-center">
             <p id='listTopic'>訂單記錄</p>
         </div>
-    <div className="container">
+        <div className="row text-center">
+            <div className="col-12 "> 尚無訂單資訊</div>
+        </div>
+{/*     <div className="container">
         <p className="mt-5" style={{backgroundColor: '#F0F0F0'}}>訂單編號:#05463759</p>
        <section id="EdisonCart" class="section-p1">
        <table width="100%">
@@ -88,8 +107,8 @@ function PayMent() {
     </section>
 
 
-        </div>
-        </React.Fragment>
+        </div> */}
+        </>
     );
 };
 

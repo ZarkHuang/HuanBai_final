@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import "../../style/member/listcss.css"
+import "../../style/member/listcss.css";
+import Swal from 'sweetalert2';
 class MemberInfo extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +16,9 @@ class MemberInfo extends Component {
                 userGender:'',
                 /* 假如沒有填寫日期，預設為今日日期 */
                 userBirth:this.todayDate()
-            }
+            },
+            hasAlerted:false
+            
      } 
 
     this.cantChangeRef = React.createRef();
@@ -37,13 +40,13 @@ class MemberInfo extends Component {
 
         {/* lg開始可視 lg以下隱藏 */}
                     <form id="infoCantChange"ref={this.cantChangeRef} style={{ display: this.state.canChange ? "none" : "block" }}>
-                        <div className="row mb-4  mb-md-5">
+                        <div className="row mb-3  mb-md-3">
                             <div className='col-3'></div>
                             <div className="col-3 col-md-2">
                                 <label className='col-form-label'>名字:</label>
                             </div>
                             <div className='col-auto'>
-                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userName" value={this.state.memberdata.userName} placeholder="尚未填寫" />
+                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userName" value={this.state.memberdata.userName} placeholder="尚未登入" />
                             </div>
                             {/* <div className="col-3 col-md-auto ms-5 ms-sm-5 ms-md-0 d-none d-lg-block">
                                 <label className='col-form-label'>性別:</label>
@@ -56,23 +59,23 @@ class MemberInfo extends Component {
 
 
                                 {/* lg開始隱藏 lg以下可視 */}   
-                        <div className="row mb-4  mb-md-5">
+                        <div className="row mb-3  mb-md-3">
                         <div className='col-3'></div>
                             <div className="col-3 col-md-2 " /* d-block d-lg-none" */>
                                 <label className='col-form-label'>性別:</label>
                             </div>
                             <div className="col-auto" /* d-block d-lg-none" */>
-                                 <input type='text' readOnly className='form-control-plaintext inputWord' name="userGender" value={(this.checkGender())} placeholder='尚未填寫'/>                              
+                                 <input type='text' readOnly className='form-control-plaintext inputWord' name="userGender" value={(this.checkGender())} placeholder='尚未登入'/>                              
                             </div></div>
                                 {/*  lg開始隱藏 lg以下可視 */}
             {/* 以上lg開始可視 lg以下隱藏 */}
-                            <div className='row mb-4  mb-md-5'>
+                            <div className='row mb-3  mb-md-3'>
                             <div className='col-3'></div>
                             <div className="col-3 col-md-2">
                                 <label className='col-form-label'>生日:</label>
                             </div>
                             <div className="col-auto">
-                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userBirth" value={this.state.memberdata.userBirth} placeholder='尚未填寫'/>
+                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userBirth" value={this.state.memberdata.userBirth} placeholder='尚未登入'/>
                             </div>
                             {/* <div className="col-3 col-md-auto ms-5 ms-sm-5 ms-md-0 d-none d-lg-block">
                                 <label className='col-form-label'>聯絡電話:</label>
@@ -85,23 +88,23 @@ class MemberInfo extends Component {
 
 
                                 {/* lg開始隱藏 lg以下可視 */}
-                        <div className="row mb-4  mb-md-5">
+                        <div className="row mb-4  mb-md-4">
                         <div className='col-3'></div>
                             <div className="col-3 col-md-2 " /* d-block d-lg-none" */>
                                 <label className='col-form-label'>聯絡電話:</label>
                             </div>
                             <div className="col-auto" /* d-block d-lg-none" */>
-                                <input type="number" readOnly className="form-control-plaintext inputWord" value={this.state.memberdata.userTelephone}  placeholder="尚未填寫"/>
+                                <input type="number" readOnly className="form-control-plaintext inputWord" value={this.state.memberdata.userTelephone}  placeholder="尚未登入"/>
                             </div>
                         </div>
                                 
-                        <div className="row mb-4  mb-md-5">
+                        <div className="row mb-3  mb-md-3">
                         <div className='col-3'></div>
                             <div className="col-3 col-md-2 "  /* d-block d-lg-none" */>
                                 <label className='col-form-label'>電子信箱:</label>
                             </div>
                             <div className="col-auto" /* d-block d-lg-none" */>
-                                <input type="text" readOnly className="form-control-plaintext inputWord"  name="useremail" value={this.state.memberdata.userEmail} placeholder="尚未填寫"/>
+                                <input type="text" readOnly className="form-control-plaintext inputWord"  name="useremail" value={this.state.memberdata.userEmail} placeholder="尚未登入"/>
                             </div>
                         </div>
                                 {/* lg開始隱藏 lg以下可視 */}
@@ -115,7 +118,7 @@ class MemberInfo extends Component {
                                 <label className='col-form-label'>通訊地址:</label>
                             </div>
                             <div className="col-auto">
-                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userAddress" value={this.state.memberdata.userAddress}  placeholder="尚未填寫"/>
+                                <input type="text" readOnly className="form-control-plaintext inputWord" name="userAddress" value={this.state.memberdata.userAddress}  placeholder="尚未登入"/>
                             </div>
                             {/* <div className="col-3 col-md-2 ms-5 ms-sm-5 ms-md-0 d-none d-lg-block">
                                 <label className='col-form-label'>電子信箱:</label>
@@ -141,7 +144,10 @@ class MemberInfo extends Component {
                             <label>姓名</label>
                             <input type="text" name="userName"  className="form-control form-control-lg" value={this.state.memberdata.userName} onChange={this.userNameDataChange}/>
                         </div></div>
-                        <div className="row mb-4 mb-md-3"><div>
+
+
+                        <div className="row mb-4 mb-md-3">
+                            <div className='col-6 me-auto'>
                         <label>性別</label>
                         <select name="userGender" className="form-select" aria-label="Default select example"  value={this.state.memberdata.userGender} onChange={this.userGenderChange}>
                             <option value="">選擇生理性別</option> 
@@ -149,11 +155,16 @@ class MemberInfo extends Component {
                             <option value="2" >女性</option>
                             <option value="3"  >不透露</option>
                         </select>
-                        </div></div>
-                        <div className="row mb-4 mb-md-3"><div>
+                        </div>
+                       
+                        <div className="col-6 me-auto"><div>
                             <label>生日</label>
                             <input type="date" name="userBirth"  className="form-control" value={this.state.memberdata.userBirth}   onChange={this.userBirthChange}/>
-                        </div></div>
+                        </div>
+                        </div> </div>
+
+
+
                         <div className="row mb-4 mb-md-3"><div>
                             <label>手機號碼</label>
                             <input type="text" name="userTelephone"  className="form-control" value={this.state.memberdata.userTelephone} onChange={this.userTelephoneChange}/>
@@ -239,8 +250,8 @@ class MemberInfo extends Component {
             let newState ={...this.state};
             newState.memberdata.userGender = e.target.value;
             this.setState(newState);
-            alert("現在點到"+e.target.value)
-            alert("現在點到"+newState.memberdata.userGender)
+            //alert("現在點到"+e.target.value)
+            //alert("現在點到"+newState.memberdata.userGender)
     }
     userBirthChange=(e)=>{
         let newState = {...this.state};
@@ -260,19 +271,44 @@ class MemberInfo extends Component {
 
     sendUserDataClick=async()=>{
         await axios.put("http://localhost:3344/member/memberData",this.state.memberdata,{withCredentials:true});
-        window.location="/";
+        window.location="/member";
     }
     componentDidMount=async()=>{
-        var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
-        console.log(responseAuth)
-        if(responseAuth.data==="尚未登入"){
-            alert("尚未登入！即將轉移到登錄頁面")
-            window.location="/gologin"
-        }
-        var serverData = await axios.get('http://localhost:3344/member/memberData',{withCredentials:true});
+       var serverData = await axios.get('http://localhost:3344/member/memberData',{withCredentials:true});
         var newState = {...this.state};
         newState.memberdata = serverData.data;
         this.setState(newState);
+        var responseAuth = await axios.get('http://localhost:3344/checkAuth',{withCredentials:true});
+        console.log(responseAuth)
+        if(responseAuth.data==="尚未登入"){
+            if(!this.hasAlerted) {
+                Swal.fire({
+                    icon:'warning',
+                    title:'尚未登入',
+                    text:'即將為您跳轉到登入頁面',
+                    timer: 1200,
+                    onBeforeOpen: () => {
+                      Swal.showLoading()
+                      responseAuth = setInterval(() => {
+                        Swal.getContent().querySelector('strong')
+                          .textContent = Swal.getTimerLeft()
+                      }, 100)
+                    },
+                    onClose: () => {
+                      clearInterval(responseAuth)
+                    }
+                  }).then((result) => {
+                    if (
+                      result.dismiss === Swal.DismissReason.timer
+                    ) {
+                        window.location="/gologin"
+                        this.hasAlerted = true 
+                     
+                    }
+                  })
+            }
+        }
+ 
     }
 }
  

@@ -29,13 +29,14 @@
 
 
 #EdisonGoLogInContainer p{
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: 500;
 }
 #EdisonGoLogInContainer label{
-    font-size: 18px;
+    font-size: 20px;
 }
 #EdisonGoLogInContainer input{
-    font-size: 16px;
+    font-size: 19px;
     
   
 }
@@ -58,6 +59,7 @@
     color: var(--lightColor-light);
     border-radius: 10px;
     font-weight: 500;
+    outline: 2px black;
 }
 
 
@@ -66,11 +68,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 17px;
 }
 
-#myforgetBtnEdi{
-    background-color:var(--mainColor-white);
-}
+
 #modalForForgetTopic{
     font-weight: 450;
     font-size: 22px;
@@ -87,4 +88,20 @@
     background-color: var(--subColor-blue);
     color: #f4fff6;
     font-weight: 400;
+}
+#EdisonGoLogInContainer #edisonWrongPairOflog{
+    color: rgb(198, 25, 25);
+    font-size: 18px;
+    
+}
+
+#EdisonGoLogInContainer~.modal{
+    --bs-modal-border-color:rgba(136, 129, 129, 0.73);
+    --bs-modal-width:400px;
+    --bs-modal-bg:rgb(236, 229, 229);
+    --bs-modal-border-width:2px;
+    --bs-modal-border-radius:20px;
+}
+#thisIsForForgetPassword input{
+    font-size: 18px;
 }

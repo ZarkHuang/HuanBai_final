@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logoImg from "../img/index/headerLogo.svg";
 import React, {  } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function NavBar() {
   /* 登入頁面假資料宣告 */
@@ -125,8 +126,32 @@ function NavBar() {
     });
     console.log(logoutRes.data);
     if (logoutRes.data === "登出成功") {
-      alert("即將登出");
-      window.location = "/";
+
+      Swal.fire({
+        icon:'warning',
+        title:'即將登出',
+        timer: 1000,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+          logoutRes = setInterval(() => {
+            Swal.getContent().querySelector('strong')
+              .textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        onClose: () => {
+          clearInterval(logoutRes)
+        }
+      }).then((result) => {
+        if (
+          result.dismiss === Swal.DismissReason.timer
+        ) {
+            window.location = "/";
+         
+        }
+      })
+
+
+     
     }
   };
 

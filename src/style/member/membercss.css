@@ -30,13 +30,13 @@
 .tabEdi a{
     background-color:#57B565; 
     border-radius: var(--borderRadius-10);
-    font-size: 18px;
+    font-size: 20px;
     margin: 20px 0px;
 }
 .tabEdi a:hover{
     background-color:rgb(149, 147, 147);
     border-radius: var(--borderRadius-10);
-    font-size: 18px;
+    font-size: 21px;
     margin: 20px 0px;
 }
 .Ediactive{
@@ -51,6 +51,7 @@
 }
 .tabEdi{
     margin-top: 50px;
+    font-weight: 450;
 }
     
 #memberpageLogOutBTN{

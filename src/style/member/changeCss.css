@@ -10,9 +10,21 @@
 }
 #changePasswordPageEdi #changePEdiBtn{
     background-color: #70a0b4;
-    color: rgb(255, 255, 255);
+    color: rgb(14, 14, 14);
+    font-weight: 400px;
 }
 #changePasswordPageEdi #changePEdiBtn:hover{
     background-color: #2d5363;
     color: rgb(255, 255, 255);
+}
+#changePasswordPageEdi  label{
+    margin-bottom: 5px;
+}
+#watcholdpassEdi{
+    text-decoration: underline;
+    text-underline-offset:5px;
+    color: #0e222a;
+}
+#watcholdpassEdi:hover{
+    color:rgb(144, 66, 17);
 }
