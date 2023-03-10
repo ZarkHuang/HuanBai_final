@@ -2,13 +2,15 @@ import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import '../style/contactus/contact.css'
 import ToTop from "../component/ToTop";
+import swal from 'sweetalert';
+
 
 const Contactus = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm(
         "service_xhj75se",
@@ -19,7 +21,7 @@ const Contactus = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert('我們已收到你的來信，我們將會盡快回覆你。');
+          swal('成功', '我們已收到你的來信，我們將會盡快回覆你。', 'success');
           form.current.reset();
         },
         (error) => {

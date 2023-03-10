@@ -20,7 +20,7 @@
   text-align: left;
   width: 100%;
   padding: 1em 0;
-  color: #162F3A;
+  color: #162F3A; 
   font-size: 20px;
   font-weight: 500;
   border: none;
@@ -29,7 +29,7 @@
 }
 .accordion button:hover, .accordion button:focus {
   cursor: pointer;
-  color: #66BB6A;
+  color: #162F3A;
 }
 .accordion button:hover::after, .accordion button:focus::after {
   cursor: pointer;
